@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "weapon": "Sword",
+        "strength": 2,
+        "weakness": 3
+    },
+    {
+        "id": 2,
+        "weapon": "Shield",
+        "strength": 3,
+        "weakness": 1
+    },
+    {
+        "id": 1,
+        "weapon": "Bow",
+        "strength": 1,
+        "weakness": 2
+    }
+]
