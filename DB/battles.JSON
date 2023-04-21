@@ -1,0 +1,11 @@
+[
+    {
+        "battle_id": 1,
+        "player_1": 1,
+        "weapon_1": 1,
+        "player_2": 2,
+        "weapon_2": 3,
+        "health_1": 75,
+        "health_2": 55
+    }
+]
