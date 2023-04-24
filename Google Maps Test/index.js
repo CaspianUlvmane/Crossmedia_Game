@@ -21,22 +21,25 @@ function initMap() {
                         lng: position.coords.longitude,
                     };
                     map = new google.maps.Map(document.getElementById("map"), {
-                      center: { lat: pos.lat, lng: pos.lng },
-                      zoom: 6,
+                      center: { lat: 55.590463, lng: 12.992639 },
+                      zoom: 18,
+                      draggable: false
                     });
-                    infoWindow = new google.maps.InfoWindow();
+                    // infoWindow = new google.maps.InfoWindow();
                     
-                    infoWindow.setPosition(pos);
-                    infoWindow.setContent("Location found.");
-                    infoWindow.open(map);
+                    // infoWindow.setPosition(pos);
+                    // infoWindow.setContent("Location found.");
+                    // infoWindow.open(map);
                     map.setCenter(pos);
                     const image =
-                      "https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png";
-                      new google.maps.Marker({
+                      "./dot.svg";
+                     const icon = new google.maps.Marker({
                       position: { lat: position.coords.latitude, lng: position.coords.longitude },
                       map,
-                      icon: image,
+                      icon: new google.maps.MarkerImage(image, null, null, null, new google.maps.Size(20,20)),
+                      draggable: false
                     });
+                    locationUpdate(icon)
                 },
                 () => {
                     handleLocationError(true, infoWindow, map.getCenter());
@@ -57,6 +60,19 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
       : "Error: Your browser doesn't support geolocation."
   );
   infoWindow.open(map);
+}
+
+function locationUpdate (icon){
+  navigator.geolocation.getCurrentPosition(
+    (position) => {
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+      console.log("log");
+    icon.setPosition(pos)
+  })
+  setTimeout(() => {locationUpdate(icon)}, 5000)
 }
 
 window.initMap = initMap;
