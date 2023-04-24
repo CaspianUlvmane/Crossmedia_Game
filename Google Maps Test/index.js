@@ -32,7 +32,7 @@ function initMap() {
                     // infoWindow.open(map);
                     map.setCenter(pos);
                     const image =
-                      "/dot.svg";
+                      "./dot.svg";
                      const icon = new google.maps.Marker({
                       position: { lat: position.coords.latitude, lng: position.coords.longitude },
                       map,
