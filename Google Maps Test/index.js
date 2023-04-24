@@ -21,7 +21,7 @@ function initMap() {
                         lng: position.coords.longitude,
                     };
                     map = new google.maps.Map(document.getElementById("map"), {
-                      center: { lat: pos.lat, lng: pos.lng },
+                      center: { lat: 55.590463, lng: 12.992639 },
                       zoom: 18,
                       draggable: false
                     });
@@ -63,6 +63,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 function locationUpdate (icon){
+  console.log(icon);
   navigator.geolocation.getCurrentPosition(
     (position) => {
         const pos = {
