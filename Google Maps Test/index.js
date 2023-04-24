@@ -63,15 +63,14 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 function locationUpdate (icon){
-  console.log(icon);
   navigator.geolocation.getCurrentPosition(
     (position) => {
-        const pos = {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-        };
-    icon.position.lat = pos.lat
-    icon.position.lng = pos.lng
+      const pos = {
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      };
+      console.log("log");
+    icon.setPosition(pos)
   })
   setTimeout(() => {locationUpdate(icon)}, 5000)
 }
