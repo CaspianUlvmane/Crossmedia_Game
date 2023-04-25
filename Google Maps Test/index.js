@@ -16,14 +16,16 @@ function initMap() {
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(
                 (position) => {
+              
                     const pos = {
                         lat: position.coords.latitude,
                         lng: position.coords.longitude,
                     };
                     map = new google.maps.Map(document.getElementById("map"), {
-                      center: { lat: 55.590463, lng: 12.992639 },
-                      zoom: 16,
-                      draggable: false
+                      center: { lat: 55.590463, lng: 12.992339 },
+                      zoom: 16.5,
+                      draggable: false,
+                      mapId: "a0111f479c8a0090"
                     });
                     // map.setCenter(pos)
                     const image =
