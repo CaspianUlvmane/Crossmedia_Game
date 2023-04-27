@@ -27,7 +27,7 @@ function initMap() {
                       draggable: false,
                       mapId: "a0111f479c8a0090"
                     });
-                    // map.setCenter(pos)
+                    map.setCenter(pos)
                     const image =
                       "./dot.svg";
                      const icon = new google.maps.Marker({
@@ -36,20 +36,20 @@ function initMap() {
                       icon: new google.maps.MarkerImage(image, null, null, null, new google.maps.Size(20,20)),
                       draggable: false
                     });
-                    locationUpdate(icon)
+                    location_update(icon)
                 },
                 () => {
-                    handleLocationError(true, infoWindow, map.getCenter());
+                  handle_location_error(true, infoWindow, map.getCenter());
         }
       );
     } else {
       // Browser doesn't support Geolocation
-      handleLocationError(false, infoWindow, map.getCenter());
+      handle_location_error(false, infoWindow, map.getCenter());
     }
 //   });
 }
 
-function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+function handle_location_error(browserHasGeolocation, infoWindow, pos) {
   infoWindow.setPosition(pos);
   infoWindow.setContent(
     browserHasGeolocation
@@ -59,7 +59,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-function locationUpdate (icon){
+function location_update (icon){
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const pos = {
@@ -69,7 +69,34 @@ function locationUpdate (icon){
       icon.setPosition(pos)
     })
     console.log(icon);
-  setTimeout(() => {locationUpdate(icon)}, 5000)
+  setTimeout(() => {location_update(icon)}, 5000)
+}
+
+function create_hazard_buttons(){
+  let Hazards = [
+    {
+      hazard: "Fire",
+      color: "red",
+    },
+    {
+      hazard: "Water",
+      color: "blue"
+    }
+  ]
+
+  Hazards.forEach(h => {
+    let div = document.createElement("div")
+    div.classList.add("hazard")
+    div.id = h.hazard
+    div.style.backgroundColor = h.color
+    // div.addEventListener("click", toggle_hazard)
+    document.getElementById("hazard_buttons").append(div)
+  })
+}
+
+function send_hazard(hazard){
+
 }
 
 window.initMap = initMap;
+create_hazard_buttons()

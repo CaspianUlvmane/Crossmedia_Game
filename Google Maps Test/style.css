@@ -31,3 +31,19 @@
   .custom-map-control-button:hover {
     background: rgb(235, 235, 235);
   }
+
+  #hazard_buttons{
+    display: flex;
+    gap: 50px;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .hazard{
+    width: 100px;
+    height: 100px;
+  }
+
+  .hazard:hover{
+    opacity: 0.5;
+  }
