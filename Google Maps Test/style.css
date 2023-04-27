@@ -47,3 +47,18 @@
   .hazard:hover{
     opacity: 0.5;
   }
+
+  .hazard.active{
+    border: 4px solid goldenrod;
+  }
+
+  .fire{
+    background-color: rgba(255, 0, 0, 0.42);
+    border: solid 4px red;
+    border-radius: 50%;
+  }
+  .water{
+    background-color: rgba(0, 187, 255, 0.42);
+    border: solid 4px blue;
+    border-radius: 50%;
+  }
