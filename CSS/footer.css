@@ -1,0 +1,195 @@
+body {
+    margin: 0;
+}
+
+.footer {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(53, 51, 51);
+    height: 20vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.img_user {
+    grid-column: 1/1;
+    grid-row: 1;
+    padding: 10px 0 0 10px;
+    width: 80px;
+    height: 80px;
+}
+
+
+/* .img_life {
+    grid-column: 1/1;
+    grid-row: 2;
+    padding: 3px 0 0 10px;
+    width: 60px;
+    height: 10px;
+} */
+
+.user_district {
+    grid-column: 1/1;
+    grid-row: 2;
+    padding: 3px 0 0 18px;
+    width: 60px;
+    height: 10px;
+    color: white;
+    font-size: 8px;
+    margin: 0;
+}
+
+.quest_icon {
+    grid-column: 3/span 3;
+    grid-row: 1/span 3;
+    padding: 20px 0 0 20px;
+    width: 55px;
+    height: 60px;
+}
+
+.middle_container {
+    display: grid;
+    grid-column: 2;
+    grid-row: 1/span 3;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+}
+
+.apple_icon {
+    width: 35px;
+    height: 48px;
+    position: absolute;
+    top: 8px
+}
+
+.hunger_bar {
+    grid-row: 1;
+    width: 75%;
+    height: 20px;
+    background-color: #ccc;
+    position: relative;
+    margin: 20px 0 0 40px;
+    border: black solid 1px;
+    text-align: right;
+}
+
+.hunger_level {
+    width: 100%;
+    height: 100%;
+    background-color: #81001a;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear;
+}
+
+.water_bar {
+    grid-row: 2;
+    width: 75%;
+    height: 20px;
+    background-color: #ccc;
+    position: relative;
+    margin: 12px 0 0 40px;
+    border: black solid 1px;
+    text-align: right;
+}
+
+.water_icon {
+    width: 38px;
+    height: 48px;
+    position: absolute;
+    top: 42px;
+}
+
+.water_level {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(68, 144, 226);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear;
+}
+
+.heart_icon {
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    top: 90px;
+    padding-left: 5px;
+}
+
+.check_container {
+    display: flex;
+    justify-content: center;
+    grid-row: 3;
+    /* margin: 15px 0 0 28px; */
+    padding: 15px 0 0 40px;
+}
+
+.check_circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.check_circle.checked {
+    background-color: white;
+}
+
+
+/* for profit popup */
+
+.profit_popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profit_container {
+    background-color: black;
+    height: 40vh;
+    width: 65vw;
+    margin-top: 15vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.profit_text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 1;
+    grid-column: 1 /span 2;
+    font-size: 20px;
+    color: white;
+}
+
+.apple_popup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 110px;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.water_popup {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90px;
+    height: 110px;
+    grid-row: 2;
+    grid-column: 2;
+}

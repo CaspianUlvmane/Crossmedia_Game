@@ -1,11 +1,9 @@
-[
-    {
-        "id": 1,
-        "district_id": 1,
-        "image": "",
-        "alive": true,
-        "sword": true,
-        "shield": false,
-        "bow": false
-    }
-]
+[{
+    "id": 1,
+    "district_id": 1,
+    "image": "./IMG/test_user.png",
+    "alive": true,
+    "sword": true,
+    "shield": false,
+    "bow": false
+}]
