@@ -42,6 +42,7 @@
   .hazard{
     width: 100px;
     height: 100px;
+    z-index: 10;
   }
 
   .hazard:hover{
@@ -61,4 +62,17 @@
     background-color: rgba(0, 187, 255, 0.42);
     border: solid 4px blue;
     border-radius: 50%;
+  }
+
+  #pointer{
+    width: 150px;
+    height: 150px;
+    background-color: rgba(0, 0, 0, 0.189);
+    border-radius: 50%;
+    border: solid 4px black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    pointer-events: none;
   }
