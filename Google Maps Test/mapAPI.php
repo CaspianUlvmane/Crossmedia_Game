@@ -51,15 +51,14 @@ if($request_method === "POST"){
 if($request_method === "DELETE"){
     $json = file_get_contents($filename);
     $hazards = json_decode($json, true);
-    $id = $receivedData["id"];
-    var_dump($id);
+    $id = (int)$receivedData["id"];
+   
     foreach($hazards as $index => $hazard){
-        var_dump($hazard)
         if($hazard["id"] === $id){
             array_splice($hazards, $index, 1);
             $json = json_encode($hazards, JSON_PRETTY_PRINT);
             file_put_contents($filename, $json);
-            sendJSON($json);
+            sendJSON($id);
         }
     }
 }
