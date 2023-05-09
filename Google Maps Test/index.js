@@ -4,6 +4,8 @@
 // locate you.
 let map, infoWindow;
 
+const updateTime = 5000;
+
 function initMap() {
   //   const locationButton = document.createElement("button");
 
@@ -48,13 +50,12 @@ function initMap() {
             new google.maps.Size(20, 20)
           ),
           draggable: false,
-          clickable: false
+          clickable: false,
         });
         location_update(icon);
         map.addListener("click", (mapsMouseEvent) => {
           send_hazard(mapsMouseEvent, map);
         });
-        render_hazards();
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
@@ -88,6 +89,7 @@ function location_update(icon) {
     let hazard_zones_array = Array.from(
       document.querySelectorAll(".hazard_area")
     );
+    console.log(hazard_zones_array);
     if (hazard_zones_array[0]) {
       hazard_zones_array.forEach((z) => {
         if (hazard_zone_bool(z, pos)) {
@@ -96,9 +98,10 @@ function location_update(icon) {
       });
     }
   });
+  render_hazards();
   setTimeout(() => {
     location_update(icon);
-  }, 10000);
+  }, updateTime);
 }
 
 function hazard_zone_bool(z, player_pos) {
@@ -187,17 +190,6 @@ function send_hazard(mapsMouseEvent, map) {
   console.log(latLng);
 
   if (hazard_div) {
-    let danger_div = document.createElement("div");
-    danger_div.style.position = "absolute";
-    danger_div.style.top = mapsMouseEvent.domEvent.pageY - 75 + "px";
-    danger_div.style.left = mapsMouseEvent.domEvent.pageX - 75 + "px";
-    danger_div.dataset.lng = latLng[1];
-    danger_div.dataset.lat = latLng[0];
-    danger_div.style.width = "150px";
-    danger_div.style.height = "150px";
-    danger_div.style.zIndex = 10;
-    danger_div.classList.add("hazard_area");
-    danger_div.classList.add(hazard_div.id);
     let time = document.getElementById("time").value * 60 * 1000;
     console.log(time);
 
@@ -215,23 +207,27 @@ function send_hazard(mapsMouseEvent, map) {
       .then((r) => r.text())
       .then((r) => {
         console.log(r);
-        options = {
-          method: "DELETE",
-          body: JSON.stringify({ id: r }),
-          headers: { "Content-Type": "application/json" },
-        };
-        setTimeout(() => {
-          fetch("./mapAPI.php", options);
-        }, time);
+        if (time != 0) {
+          options = {
+            method: "DELETE",
+            body: JSON.stringify({ id: r }),
+            headers: { "Content-Type": "application/json" },
+          };
+          setTimeout(() => {
+            fetch("./mapAPI.php", options);
+          }, time);
+        }
+        render_hazards();
       });
-
-    document.querySelector("body").append(danger_div);
-    if (time != 0) {
-      setTimeout(() => {
-        danger_div.remove();
-      }, time);
-    }
   }
+}
+
+function create_hazard_div(latLng) {
+  let danger_div = document.createElement("div");
+  danger_div.dataset.lng = latLng.lng;
+  danger_div.dataset.lat = latLng.lat;
+  danger_div.classList.add("hazard_area")
+  document.querySelector("#dangers").append(danger_div);
 }
 
 function pointer_position(event) {
@@ -240,10 +236,49 @@ function pointer_position(event) {
   pointer.style.top = event.pageY - 75 + "px";
 }
 
-function render_hazards() {
-  fetch("./mapAPI.PHP")
-    .then((r) => r.json())
-    .then((r) => console.log(r, map));
+async function render_hazards() {
+  let response = await fetch("./mapAPI.php");
+  let resource = await response.json();
+  let hazards = JSON.parse(resource);
+
+  document.querySelector("#dangers").innerHTML = "";
+  hazards.forEach((hazard) => {
+    let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
+    let dangerCircle;
+    if (hazard.type === "fire") {
+      dangerCircle = new google.maps.Circle({
+        strokeColor: "#FF0000",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#FF0000",
+        fillOpacity: 0.35,
+        center: latLng,
+        map,
+        draggable: false,
+        clickable: false,
+        radius: 75,
+      });
+
+    } else {
+      dangerCircle = new google.maps.Circle({
+        strokeColor: "#0000FF",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#0000FF",
+        fillOpacity: 0.35,
+        center: latLng,
+        map,
+        draggable: false,
+        clickable: false,
+        radius: 75,
+      });
+    }
+    create_hazard_div(latLng);
+    console.log(dangerCircle);
+    setTimeout(() => {
+      dangerCircle.setMap(null);
+    }, updateTime + 10);
+  });
 }
 
 window.initMap = initMap;
