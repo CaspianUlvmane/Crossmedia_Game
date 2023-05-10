@@ -25,7 +25,8 @@ if(!file_exists($filename)){
 
 if($request_method === "GET"){
     $json = file_get_contents($filename);
-    sendJSON($json);
+    $hazards = json_decode($json, true);
+    sendJSON($hazards);
 }
 
 if($request_method === "POST"){

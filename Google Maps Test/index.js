@@ -238,8 +238,7 @@ function pointer_position(event) {
 
 async function render_hazards() {
   let response = await fetch("./mapAPI.php");
-  let resource = await response.json();
-  let hazards = JSON.parse(resource);
+  let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
@@ -277,7 +276,7 @@ async function render_hazards() {
     console.log(dangerCircle);
     setTimeout(() => {
       dangerCircle.setMap(null);
-    }, updateTime + 10);
+    }, updateTime + 1);
   });
 }
 
