@@ -1,9 +1,11 @@
 [{
     "id": 1,
     "district_id": 1,
+    "name": "Ella",
     "image": "./IMG/test_user.png",
     "alive": true,
     "sword": true,
     "shield": false,
-    "bow": false
+    "bow": false,
+    "backstory": "Ella är en tjej på 16 år som är född och uppvuxen på en bondgård i Skåne. Hon har länge hjälpt sin far med skötseln av gårdens djur och grödor, och har utvecklat en stark passion för jordbruk och natur. Trots att hon har tvingats arbeta hårt och uppoffra mycket av sin fritid för gården, har hon alltid varit glad att kunna hjälpa till på ett konkret sätt för att bidra till sin familjs försörjning. Ella har en stark vilja och är envis när hon väl har bestämt sig för något. Hon är också mycket lojal mot sin familj och sina vänner, och skulle göra vad som helst för att skydda dem. Hennes liv på landet har gett henne en intuitiv förståelse för naturen och en stark känsla av självförsörjning. Som en del av Skåne-distriktet är Ella väl medveten om de sociala och ekonomiska utmaningar som hennes samhälle står inför på grund av överbefolkning och resursbrist. Hon tror att Skörden kan vara en möjlig lösning, men hon är också övertygad om att det måste finnas bättre sätt att hantera situationen än genom att offra oskyldiga människors liv."
 }]
