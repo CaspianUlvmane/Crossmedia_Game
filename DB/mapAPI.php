@@ -24,8 +24,14 @@ if(!file_exists($filename)){
 // If the user is looking for hazards with the GET method
 
 if($request_method === "GET"){
+    if(isset($_GET["positions"])){
+        $json = file_get_contents("positions.JSON");
+        $positions = json_decode($json, true);
+        sendJSON($json);
+    }
     $json = file_get_contents($filename);
-    sendJSON($json);
+    $hazards = json_decode($json, true);
+    sendJSON($hazards);
 }
 
 if($request_method === "POST"){

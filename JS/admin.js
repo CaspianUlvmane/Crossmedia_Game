@@ -35,7 +35,7 @@ function initMap() {
           mapId: "a0111f479c8a0090",
         });
         map.setCenter(pos);
-        const image = "./dot.svg";
+        const image = "../IMG/dot.svg";
         const icon = new google.maps.Marker({
           position: {
             lat: position.coords.latitude,
@@ -85,11 +85,9 @@ function location_update(icon) {
       lng: position.coords.longitude,
     };
     icon.setPosition(pos);
-    console.log(pos);
     let hazard_zones_array = Array.from(
       document.querySelectorAll(".hazard_area")
     );
-    console.log(hazard_zones_array);
     if (hazard_zones_array[0]) {
       hazard_zones_array.forEach((z) => {
         if (hazard_zone_bool(z, pos)) {
@@ -99,6 +97,7 @@ function location_update(icon) {
     }
   });
   render_hazards();
+  render_users();
   setTimeout(() => {
     location_update(icon);
   }, updateTime);
@@ -113,12 +112,7 @@ function hazard_zone_bool(z, player_pos) {
     player_pos.lng
   );
 
-  console.log(hazard_pos);
-
   let radius = 0.071;
-
-  console.log(newRadius);
-  console.log(radius);
 
   return newRadius <= radius;
 }
@@ -187,11 +181,8 @@ function send_hazard(mapsMouseEvent, map) {
 
   latLng = latLng.split(" ");
 
-  console.log(latLng);
-
   if (hazard_div) {
     let time = document.getElementById("time").value * 60 * 1000;
-    console.log(time);
 
     let options = {
       method: "POST",
@@ -203,10 +194,9 @@ function send_hazard(mapsMouseEvent, map) {
       }),
       headers: { "Content-Type": "application/json" },
     };
-    fetch("./mapAPI.php", options)
+    fetch("../DB/mapAPI.php", options)
       .then((r) => r.text())
       .then((r) => {
-        console.log(r);
         if (time != 0) {
           options = {
             method: "DELETE",
@@ -214,7 +204,7 @@ function send_hazard(mapsMouseEvent, map) {
             headers: { "Content-Type": "application/json" },
           };
           setTimeout(() => {
-            fetch("./mapAPI.php", options);
+            fetch("../DB/mapAPI.php", options);
           }, time);
         }
         render_hazards();
@@ -226,7 +216,7 @@ function create_hazard_div(latLng) {
   let danger_div = document.createElement("div");
   danger_div.dataset.lng = latLng.lng;
   danger_div.dataset.lat = latLng.lat;
-  danger_div.classList.add("hazard_area")
+  danger_div.classList.add("hazard_area");
   document.querySelector("#dangers").append(danger_div);
 }
 
@@ -237,9 +227,8 @@ function pointer_position(event) {
 }
 
 async function render_hazards() {
-  let response = await fetch("./mapAPI.php");
-  let resource = await response.json();
-  let hazards = JSON.parse(resource);
+  let response = await fetch("../DB/mapAPI.php");
+  let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
@@ -258,7 +247,6 @@ async function render_hazards() {
         clickable: false,
         radius: 75,
       });
-
     } else {
       dangerCircle = new google.maps.Circle({
         strokeColor: "#0000FF",
@@ -274,10 +262,41 @@ async function render_hazards() {
       });
     }
     create_hazard_div(latLng);
-    console.log(dangerCircle);
     setTimeout(() => {
       dangerCircle.setMap(null);
-    }, updateTime + 10);
+    }, updateTime * 1.5);
+  });
+}
+
+async function render_users() {
+  let response = await fetch("../DB/mapAPI.php?positions");
+  let resource = await response.json();
+  let positions = JSON.parse(resource);
+  console.log(positions);
+
+  const image = "../IMG/dot.svg";
+  positions.forEach((pos) => {
+    console.log(pos);
+    let player;
+    player = new google.maps.Marker({
+      position: {
+        lat: Number(pos.lat),
+        lng: Number(pos.lng)
+      },
+      map,
+      draggable: false,
+      clickable: false,
+      icon: new google.maps.MarkerImage(
+        image,
+        null,
+        null,
+        null,
+        new google.maps.Size(20, 20)
+      ),
+    });
+    setTimeout(() => {
+      player.setMap(null);
+    }, updateTime);
   });
 }
 
