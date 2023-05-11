@@ -32,7 +32,6 @@ function checkDistrict(player) {
                 }
             });
         });
-
 }
 
 function buildFooter(player, district_number, district_profession) {

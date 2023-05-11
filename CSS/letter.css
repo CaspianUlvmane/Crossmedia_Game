@@ -1,0 +1,264 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.open_letter {
+    z-index: 1001;
+    position: relative;
+    bottom: 150px;
+    font-size: 30px;
+}
+
+#popup img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+
+#letter {
+    animation: shake 0.5s infinite;
+    padding-right: 20px;
+}
+
+@keyframes shake {
+    0% {
+        transform: translateY(-2px);
+    }
+    50% {
+        transform: translateY(2px);
+    }
+    100% {
+        transform: translateY(-2px);
+    }
+}
+
+.letter_container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+#letter_2 {
+    width: 60px;
+    height: 580px;
+}
+
+.logga_img {
+    bottom: 70vh;
+}
+
+.signature {
+    bottom: 27vh;
+}
+
+.date {
+    bottom: 24vh;
+    color: black;
+    z-index: 1005;
+    font-size: 10px;
+}
+
+.clr {
+    bottom: 22vh;
+    color: black;
+    z-index: 1005;
+    font-size: 10px;
+}
+
+.question {
+    bottom: 19vh;
+    color: black;
+    z-index: 1005;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.answer {
+    bottom: 16vh;
+    color: black;
+    z-index: 1005;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.next {
+    bottom: 14vh;
+    left: 70vw;
+}
+
+.logga_img_container {
+    position: relative;
+}
+
+#checkboxContainer {
+    position: absolute;
+    bottom: 16.5vh;
+    left: 55vw;
+    z-index: 1005;
+}
+
+#checkboxContainer input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#checkboxContainer label {
+    position: relative;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+#checkboxContainer input[type="checkbox"]:checked+label {
+    background-color: #000000;
+    /* Change to desired checked color */
+}
+
+.player_img {
+    bottom: 62vh;
+    left: 38vw;
+}
+
+.district_place {
+    bottom: 62vh;
+    left: 55vw;
+    color: black;
+    z-index: 1010;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.district_name {
+    bottom: 64vh;
+    left: 55vw;
+    color: black;
+    z-index: 1010;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.information {
+    bottom: 39vh;
+    color: black;
+    z-index: 1010;
+    font-size: 0.75vh;
+    margin: 0 30vw 0 35vw;
+    line-height: 1.5;
+}
+
+.hourglas_container {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+
+.hourglas {
+    position: absolute;
+    bottom: 55vh;
+}
+
+.wait_text {
+    bottom: 75vh;
+    color: black;
+    z-index: 1010;
+    font-size: 3.2vh;
+    margin: 0 15vw 0 25vw;
+}
+
+.pst_text {
+    bottom: 45vh;
+    color: black;
+    z-index: 1010;
+    font-size: 2vh;
+    margin: 0 15vw 0 25vw;
+    display: flex;
+    justify-content: center;
+}
+
+.info_container {
+    position: absolute;
+    width: 60vw;
+    height: 5vh;
+    z-index: 1005;
+    margin: 0 0 5vh 5vw;
+    background-color: #ffffff;
+    top: 58vh;
+}
+
+.down {
+    position: absolute;
+    z-index: 1005;
+    left: 50vw;
+}
+
+.district_info {
+    margin: 8px 0 0 20px;
+}
+
+.district_text {
+    font-size: 8px;
+    margin: 40px 15px 0 15px;
+    line-height: 1.5;
+}
+
+
+/* .quest_box_opened {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border: 2px solid white;
+    max-width: 80vw;
+}
+
+.quest_box_closed {
+    margin-top: 5px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    text-align: center;
+    height: 80px;
+    border: 2px solid white;
+    max-width: 80vw;
+    transition: padding 0.5s;
+} */
