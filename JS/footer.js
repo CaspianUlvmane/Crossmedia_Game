@@ -1,5 +1,4 @@
 let player = 1;
-getPlayer(player);
 
 //get the player depending on id
 function getPlayer(player) {

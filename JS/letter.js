@@ -159,7 +159,6 @@ function openLetter(letter_img, open_letter, popup) {
     document.body.appendChild(popup);
 
     getPlayerLetter(player);
-
 }
 
 
@@ -296,52 +295,56 @@ function acceptedLetter(popup, letter_container) {
 
         info_container.append(district_text)
     })
+    startGame()
+}
 
+//NOTE:FLYTTA TILL ADMIN SIDAN
 
-    // let div = document.createElement("div");
-    // div.classList.add("box_closed");
-    // div.innerHTML = `
-    //     <h4> Hej </h4>
-    //     <div class="triangle_down"></div>
+function startGame() {
+    let container = document.querySelector(".hourglas_container");
 
-    //   `;
+    let start_button = document.createElement("button");
+    start_button.innerHTML = "STARTA SPEL TEST"
+    start_button.classList.add("start_button")
+    container.appendChild(start_button)
 
-    // hourglas_container.append(div);
-    // let triangle_down_button = div.querySelector(".triangle_down");
-    // triangle_down_button.addEventListener("click", function() {
-    //     triangle_down_button.classList.remove("triangle_down");
-    //     if (div.className == "quest_box_closed") {
-    //         div.className = "quest_box_opened";
-    //         quests_show_more(div, triangle_down_button);
-    //     } else {
-    //         div.className = "quest_box_closed";
-    //     }
-    // });
+    start_button.addEventListener('click', function() {
+        // Send an AJAX request to the server to start the game
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', './DB/gameStatus.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send();
+        checkGameStatus();
 
+        // Optionally, handle the response from the server
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Handle the response from the server if needed
+            }
+        };
+    });
+}
 
-    // function quests_show_more(div, triangle_down_button) {
-    //     console.log(quest);
-    //     div.innerHTML += `< div class = "triangle_up" > < /div>`;
-    //     div.innerHTML += `
-    //     <h1>FRÅGA:</h1>
-    //     <p class="quest_info">hej hej hej hej</p>
-    //     <div class="quest_answers"
-    //     style="display:grid;"></div>
-    //   `;
+function checkGameStatus() {
+    // Send an AJAX request to the server to check the game status
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './DB/gameStatus.php', true);
+    xhr.send();
 
+    // Handle the response from the server
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
 
-    //     let triangle_up_button = div.querySelector(".triangle_up");
-    //     triangle_up_button.addEventListener("click", function() {
-    //         triangle_up_button.classList.remove("triangle_up");
-    //         triangle_up_button.classList.add("triangle_down");
-    //         if (div.className == "quest_box_opened") {
-    //             div.className = "quest_box_closed";
-    //         } else {
-    //             div.className = "quest_box_opened";
+            if (response.gameStarted) {
+                // Game has started, update the page 
+                document.querySelector("#popup").style.display = "none";
+                getPlayer(player)
 
-    //         }
-    //     })
-    // }
-
-
+            } else {
+                // Game hasn't started yet, continue checking
+                setTimeout(checkGameStatus, 2000); // Check again after 2 seconds
+            }
+        }
+    };
 }
