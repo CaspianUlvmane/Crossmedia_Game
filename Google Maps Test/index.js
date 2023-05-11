@@ -85,11 +85,9 @@ function location_update(icon) {
       lng: position.coords.longitude,
     };
     icon.setPosition(pos);
-    console.log(pos);
     let hazard_zones_array = Array.from(
       document.querySelectorAll(".hazard_area")
     );
-    console.log(hazard_zones_array);
     if (hazard_zones_array[0]) {
       hazard_zones_array.forEach((z) => {
         if (hazard_zone_bool(z, pos)) {
@@ -113,12 +111,7 @@ function hazard_zone_bool(z, player_pos) {
     player_pos.lng
   );
 
-  console.log(hazard_pos);
-
   let radius = 0.071;
-
-  console.log(newRadius);
-  console.log(radius);
 
   return newRadius <= radius;
 }
@@ -187,11 +180,8 @@ function send_hazard(mapsMouseEvent, map) {
 
   latLng = latLng.split(" ");
 
-  console.log(latLng);
-
   if (hazard_div) {
     let time = document.getElementById("time").value * 60 * 1000;
-    console.log(time);
 
     let options = {
       method: "POST",
@@ -206,7 +196,6 @@ function send_hazard(mapsMouseEvent, map) {
     fetch("./mapAPI.php", options)
       .then((r) => r.text())
       .then((r) => {
-        console.log(r);
         if (time != 0) {
           options = {
             method: "DELETE",
@@ -240,7 +229,6 @@ async function render_hazards() {
   let response = await fetch("./mapAPI.php");
   let resource = await response.json();
   let hazards = JSON.parse(resource);
-
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
     let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
@@ -274,10 +262,9 @@ async function render_hazards() {
       });
     }
     create_hazard_div(latLng);
-    console.log(dangerCircle);
     setTimeout(() => {
       dangerCircle.setMap(null);
-    }, updateTime + 10);
+    }, updateTime * 1.5);
   });
 }
 
