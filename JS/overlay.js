@@ -2,11 +2,16 @@
 
 function show_overlay() {
   document.getElementById("overlay").style.display = "block";
+  document.getElementById("overlay").style.backgroundImage = "url(./IMG/background.png)";
 
   let close_page = document.createElement("div");
   close_page.classList.add("close");
   overlay.append(close_page);
 
+  let overlay_quest_icon = document.createElement("div");
+  overlay_quest_icon.id = "overlay_quest_icon";
+  overlay_quest_icon.innerHTML = ` <img src="./IMG/quest.png" class="overlay_quest_icon">`;
+  overlay.append(overlay_quest_icon);
   getQuests();
 
   close_page.addEventListener("click", function (event) {
@@ -18,9 +23,6 @@ function show_overlay() {
 function hide_overlay() {
   document.getElementById("overlay").style.display = "none";
 }
-
-//kalla på från questikonen istället
-show_overlay();
 
 function getQuests() {
   let all_quests_div = document.createElement("div");
@@ -87,7 +89,7 @@ function quests_show_more(quest, div) {
       //console.log(correctAnswer);
 
     }
-    all_checkboxes(correctAnswer);
+    all_checkboxes(correctAnswer, div, quest.id);
 
   });
 
@@ -106,7 +108,7 @@ function quests_show_more(quest, div) {
   })
 }
 
-function all_checkboxes(correctAnswer) {
+function all_checkboxes(correctAnswer, div, quest_id) {
   var checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
   checkboxes.forEach(function (checkbox) {
@@ -121,9 +123,16 @@ function all_checkboxes(correctAnswer) {
 
           document.querySelector("." + checkbox.attributes[1].nodeValue).style.backgroundColor = "green";
           console.log("correct");
+          setTimeout(() => {
+            //call profitPopUp here!!
+          //profitPopUp();
+          }, 1000);
         } else {
           document.querySelector("." + checkbox.attributes[1].nodeValue).style.backgroundColor = "red";
           console.log("not correct");
+          setTimeout(() => {
+            lock_quest(div, quest_id);
+          }, 1000);
         }
 
       } else {
@@ -133,4 +142,15 @@ function all_checkboxes(correctAnswer) {
 
   });
 
+}
+
+  //if wrong answer
+function lock_quest(div, quest_id){
+  if (div.className == "quest_box_opened") {
+    div.className = "quest_box_closed";
+    div.innerHTML= `
+    <h4> Uppdrag ${quest_id}</h4>
+    <img src="./IMG/padlock.png" class="padlock">
+    `;
+  } 
 }
