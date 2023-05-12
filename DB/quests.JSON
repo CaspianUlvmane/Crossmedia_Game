@@ -1,70 +1,232 @@
-[{
-        "id": 0,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
-    },
-
+[
     {
         "id": 1,
         "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "question": "Denna kvinna var den första att vinna skörden. Hennes uthållighet och kämparglöd är något alla kommer ihåg och hennes namn har för evigt bränts in i historien av Skörden som en av dess legender.",
+        "answers": [
+            {
+                "answer": "Galatea",
+                "correct": true
+            },
+            {
+                "answer": "Ophelia",
+                "correct": false
+            },
+            {
+                "answer": "Seraphina",
+                "correct": false
+            },
+            {
+                "answer": "Calliope",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 2,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Loremone",
+                "correct": false
+            },
+            {
+                "answer": "Loremtwo",
+                "correct": false
+            },
+            {
+                "answer": "Loremthree",
+                "correct": true
+            },
+            {
+                "answer": "Loremfour",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 3,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 4,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 5,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 6,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 7,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 8,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     },
-
     {
         "id": 9,
         "location": "Lorem Impsum",
         "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
-        "answer": "Lorem"
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "location": "Lorem Impsum",
+        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "answers": [
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            },
+            {
+                "answer": "Lorem",
+                "correct": false
+            }
+        ]
     }
 ]
