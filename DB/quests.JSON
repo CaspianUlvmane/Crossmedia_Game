@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "location": "Lorem Impsum",
+        "location": "Kvinnliga statyn",
         "question": "Denna kvinna var den första att vinna skörden. Hennes uthållighet och kämparglöd är något alla kommer ihåg och hennes namn har för evigt bränts in i historien av Skörden som en av dess legender.",
         "answers": [
             {
@@ -24,115 +24,115 @@
     },
     {
         "id": 2,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "location": "Kupolen",
+        "question": "Ledtråd: Denna kupolen är målad i en viss färg för att representera hopp, lycka och vänskap, känslor skörden representerar för folket och i de mörka tiderna vi har befunnit oss i.",
         "answers": [
             {
-                "answer": "Loremone",
+                "answer": "Grön",
                 "correct": false
             },
             {
-                "answer": "Loremtwo",
+                "answer": "Röd",
                 "correct": false
             },
             {
-                "answer": "Loremthree",
+                "answer": "Gul",
                 "correct": true
             },
             {
-                "answer": "Loremfour",
+                "answer": "Blå",
                 "correct": false
             }
         ]
     },
     {
         "id": 3,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "location": "Brevet",
+        "question": "Presidenten är en person som har lett Sverige till dessa nya tider och som har hållit Sverige enigt i de tuffa tiderna. Presidenten har förmågan att ge stabilitet, säkerhet och välstånd till landet och har gjort det i många år under sitt kända mystiska alias som består av tre bokstäver.",
         "answers": [
             {
-                "answer": "Lorem",
+                "answer": "LCR",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "CRL",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "RLC",
                 "correct": false
             },
             {
-                "answer": "Lorem",
-                "correct": false
+                "answer": "CLR",
+                "correct": true
             }
         ]
     },
     {
         "id": 4,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "location": "Margareta Flickan",
+        "question": "Denna flicka var den första tributen att dö i Skördens första arena, hon var en flicka från distrikt 1 och inför skörden pratade hon om hennes passion för en viss sak som avbildades i statyn med henne.",
         "answers": [
             {
-                "answer": "Lorem",
+                "answer": "Blommor",
+                "correct": true
+            },
+            {
+                "answer": "Djur",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "Godis",
                 "correct": false
             },
             {
-                "answer": "Lorem",
-                "correct": false
-            },
-            {
-                "answer": "Lorem",
+                "answer": "Smycken",
                 "correct": false
             }
         ]
     },
     {
         "id": 5,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "location": "Stentemplet",
+        "question": "Detta tempel är ett monument som byggdes för att påminna alla om revolutionens skador mot samhället och befolkningen. Pelarna är menade att symbolisera antalet miljoner som dog i revolutionen.",
         "answers": [
             {
-                "answer": "Lorem",
+                "answer": "fyra",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "fem",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "åtta",
                 "correct": false
             },
             {
-                "answer": "Lorem",
-                "correct": false
+                "answer": "sex",
+                "correct": true
             }
         ]
     },
     {
         "id": 6,
-        "location": "Lorem Impsum",
-        "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut varius massa.",
+        "location": "Baltiska Utställningen",
+        "question": " Denna utställningen var en utställning där många länder visade och demonstrerade vilka lösningar de hade kommit fram till för att motverka överbefolkningen som plågade hela världen. Året utställningen hölls var samma år som den första vinnaren av Skörden föddes.",
         "answers": [
             {
-                "answer": "Lorem",
+                "answer": "År-1924",
                 "correct": false
             },
             {
-                "answer": "Lorem",
+                "answer": "År-1914",
+                "correct": true
+            },
+            {
+                "answer": "År-1963",
                 "correct": false
             },
             {
-                "answer": "Lorem",
-                "correct": false
-            },
-            {
-                "answer": "Lorem",
+                "answer": "År-2011",
                 "correct": false
             }
         ]
