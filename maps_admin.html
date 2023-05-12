@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Geolocation</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-
-    <link rel="stylesheet" type="text/css" href="./style.css" />
-    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/map_style.css">
+    <title>Skörden Admin</title>
 </head>
-
 <body>
     <div id="dangers"></div>
     <div id="hazard_buttons">
@@ -18,13 +16,7 @@
     
     <div id="map"></div>
     
-    
-    <!-- <script src="./node_modules/eruda/eruda.js"></script> -->
-    <!-- <script>
-        eruda.init();
-    </script> -->
-    <script type="module" src="./index.js"></script>
+    <script type="module" src="./JS/admin.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQqOUpHV9AiXvqrCTbzy9JCzJtzA5SFTg&callback=initMap&v=weekly" defer></script>
 </body>
-
 </html>
