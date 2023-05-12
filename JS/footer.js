@@ -55,6 +55,11 @@ function buildFooter(player, district_number, district_profession) {
                 
         `;
     document.querySelector("body").append(footer);
+    
+    //NEW
+    document.querySelector(".quest_icon").addEventListener("click", function(){
+        show_overlay();
+    })
 
     for (let i = 0; i < 5; i++) {
         let check_circle = document.createElement("div");
