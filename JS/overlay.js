@@ -154,3 +154,7 @@ function lock_quest(div, quest_id){
     `;
   } 
 }
+
+
+//TODO!!! lägg in alla quest i json när de är klara,
+//inga svar som börjar på en siffra ställer till det med koden :)
