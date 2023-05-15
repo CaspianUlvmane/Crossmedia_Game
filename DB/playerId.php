@@ -1,16 +1,16 @@
 <?php
 session_start();
 
-// Handle the "Join Game" request
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//   // Assign a player ID to the user
-//   $playerId = assignPlayerId();
+//Handle the "Join Game" request
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  // Assign a player ID to the user
+  $playerId = assignPlayerId();
 
-//   // Return the assigned player ID as the response
-//   $response = array('playerId' => $playerId);
-//   header('Content-Type: application/json');
-//   echo json_encode($response);
-// }
+  // Return the assigned player ID as the response
+  $response = array('playerId' => $playerId);
+  header('Content-Type: application/json');
+  echo json_encode($response);
+}
 
 // Function to assign a player ID sequentially
 
@@ -54,7 +54,7 @@ function assignPlayerId() {
   // Endpoint to retrieve player information
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
     // Retrieve the assigned player ID from the session or database
-    $assignedPlayerId = $_SESSION['assignedPlayerId'];
+    $assignedPlayerId = $_SESSION['playerInfo'];
   
     // Fetch the player information based on the assigned player ID from your data source (e.g., API, database, etc.)
     // ...
