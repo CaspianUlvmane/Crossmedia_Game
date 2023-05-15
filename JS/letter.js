@@ -242,7 +242,7 @@ function openLetter(letter_img, open_letter, popup) {
             checked = true;
             next.addEventListener("click", function() {
                 acceptedLetter(popup, letter_container)
-                    // start_game()
+                start_game()
             })
         } else {
             checked = false;

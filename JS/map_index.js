@@ -202,16 +202,14 @@ async function render_hazards() {
 }
 
 async function start_game(){
-  let response = await fetch("../DB/API.php?start");
+  let response = await fetch("./DB/API.php?start");
   let resource = await response.json();
   console.log(resource.start);
   
   if (resource.start){
-    window.initMap = initMap;
+    window.initMap = initMap();
   } else{
     setTimeout(() => start_game(), 5000)
   }
 
 }
-
-
