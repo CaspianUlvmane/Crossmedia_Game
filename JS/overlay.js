@@ -123,7 +123,7 @@ function all_checkboxes(correctAnswer, div, quest_id) {
                     setTimeout(() => {
                         //call profitPopUp here!!
                         profitPopUp();
-
+                        lock_quest(div, quest_id);
                     }, 1000);
 
                 } else {
