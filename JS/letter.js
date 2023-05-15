@@ -40,122 +40,125 @@ function getFormattedDate() {
 }
 
 function openLetter(letter_img, open_letter, popup) {
-  letter_img.style.display = "none";
-  open_letter.style.display = "none";
 
-  let letter_container = document.createElement("div");
-  letter_container.classList.add("letter_container");
+    letter_img.style.display = "none";
+    open_letter.style.display = "none";
 
-  let letter_img2 = document.createElement("img");
-  letter_img2.id = "letter_2";
-  letter_img2.src = "./IMG/letter2.png";
-  letter_img2.alt = "Letter Image";
-  letter_img2.style.width = "84vh";
-  letter_img2.style.height = "80vh";
+    let letter_container = document.createElement("div");
+    letter_container.classList.add("letter_container");
 
-  popup.appendChild(letter_container);
-  letter_container.appendChild(letter_img2);
+    let letter_img2 = document.createElement("img");
+    letter_img2.id = "letter_2";
+    letter_img2.src = "./IMG/letter2.png";
+    letter_img2.alt = "Letter Image";
+    letter_img2.style.width = "84vh";
+    letter_img2.style.height = "80vh";
 
-  let logga_img_container = document.createElement("div");
-  logga_img_container.classList.add("logga_img_container");
+    popup.appendChild(letter_container);
+    letter_container.appendChild(letter_img2);
 
-  let logga_img = document.createElement("img");
-  logga_img.src = "./IMG/Logga_black.png";
-  logga_img.alt = "Logga Image";
-  logga_img.classList.add("logga_img");
-  logga_img.style.width = "100px";
-  logga_img.style.position = "absolute";
-  logga_img.style.height = "80px";
+    let logga_img_container = document.createElement("div");
+    logga_img_container.classList.add("logga_img_container");
 
-  letter_container.appendChild(logga_img);
+    let logga_img = document.createElement("img");
+    logga_img.src = "./IMG/Logga_black.png";
+    logga_img.alt = "Logga Image";
+    logga_img.classList.add("logga_img");
+    logga_img.style.width = "100px";
+    logga_img.style.position = "absolute";
+    logga_img.style.height = "80px";
 
-  let signature = document.createElement("img");
-  signature.src = "./IMG/autograph.png";
-  signature.alt = "Signature image";
-  signature.classList.add("signature");
-  signature.style.width = "100px";
-  signature.style.height = "80px";
-  signature.style.position = "absolute";
+    letter_container.appendChild(logga_img);
 
-  letter_container.appendChild(signature);
+    let signature = document.createElement("img");
+    signature.src = "./IMG/autograph.png";
+    signature.alt = "Signature image";
+    signature.classList.add("signature");
+    signature.style.width = "100px";
+    signature.style.height = "80px";
+    signature.style.position = "absolute";
 
-  let date = document.createElement("p");
-  date.classList.add("date");
-  var formattedDate = getFormattedDate();
-  date.innerText = formattedDate;
-  date.style.position = "absolute";
+    letter_container.appendChild(signature);
 
-  letter_container.appendChild(date);
+    let date = document.createElement("p");
+    date.classList.add("date");
+    var formattedDate = getFormattedDate();
+    date.innerText = formattedDate;
+    date.style.position = "absolute";
 
-  let clr = document.createElement("p");
-  clr.classList.add("clr");
-  clr.innerText = "President CLR";
-  clr.style.position = "absolute";
+    letter_container.appendChild(date);
 
-  letter_container.appendChild(clr);
+    let clr = document.createElement("p");
+    clr.classList.add("clr");
+    clr.innerText = "President CLR";
+    clr.style.position = "absolute";
 
-  let question = document.createElement("p");
-  question.classList.add("question");
-  question.innerText = "ANTAR DU UTMANINGEN?";
-  question.style.position = "absolute";
+    letter_container.appendChild(clr);
 
-  letter_container.appendChild(question);
+    let question = document.createElement("p");
+    question.classList.add("question");
+    question.innerText = "ANTAR DU UTMANINGEN?";
+    question.style.position = "absolute";
 
-  let answer = document.createElement("p");
-  answer.classList.add("answer");
-  answer.innerText = "JA";
-  answer.style.position = "absolute";
+    letter_container.appendChild(question);
 
-  letter_container.appendChild(answer);
+    let answer = document.createElement("p");
+    answer.classList.add("answer");
+    answer.innerText = "JA";
+    answer.style.position = "absolute";
 
-  let next = document.createElement("img");
-  next.src = "./IMG/next.png";
-  next.alt = "Next image";
-  next.classList.add("next");
-  next.style.width = "62px";
-  next.style.height = "48px";
-  next.style.position = "absolute";
+    letter_container.appendChild(answer);
 
-  letter_container.appendChild(next);
+    let next = document.createElement("img");
+    next.src = "./IMG/next.png";
+    next.alt = "Next image";
+    next.classList.add("next");
+    next.style.width = "62px";
+    next.style.height = "48px";
+    next.style.position = "absolute";
 
-  // Create checkbox container div
-  var checkboxContainer = document.createElement("div");
-  checkboxContainer.id = "checkboxContainer";
+    letter_container.appendChild(next);
 
-  // Create checkbox input
-  var checkboxInput = document.createElement("input");
-  checkboxInput.type = "checkbox";
-  checkboxInput.id = "myCheckbox";
+    // Create checkbox container div
+    var checkboxContainer = document.createElement("div");
+    checkboxContainer.id = "checkboxContainer";
 
-  // Create label for checkbox
-  var checkboxLabel = document.createElement("label");
-  checkboxLabel.setAttribute("for", "myCheckbox");
+    // Create checkbox input
+    var checkboxInput = document.createElement("input");
+    checkboxInput.type = "checkbox";
+    checkboxInput.id = "myCheckbox";
 
-  // Append input and label to the checkbox container
-  checkboxContainer.appendChild(checkboxInput);
-  checkboxContainer.appendChild(checkboxLabel);
+    // Create label for checkbox
+    var checkboxLabel = document.createElement("label");
+    checkboxLabel.setAttribute("for", "myCheckbox");
 
-  letter_container.appendChild(checkboxContainer);
+    // Append input and label to the checkbox container
+    checkboxContainer.appendChild(checkboxInput);
+    checkboxContainer.appendChild(checkboxLabel);
 
-  // Get the checkbox element
-  var checkbox = document.getElementById("myCheckbox");
 
-  let checked = false;
-  // Add event listener to handle checkbox state changes
-  checkbox.addEventListener("change", function () {
-    if (this.checked) {
-      checked = true;
-      next.addEventListener("click", function () {
-        acceptedLetter(popup, letter_container);
-        start_game()
-      });
-    } else {
-      checked = false;
-    }
-  });
-  document.body.appendChild(popup);
+    letter_container.appendChild(checkboxContainer);
 
-  getPlayerLetter(player);
+
+    // Get the checkbox element
+    var checkbox = document.getElementById("myCheckbox");
+
+    let checked = false;
+    // Add event listener to handle checkbox state changes
+    checkbox.addEventListener("change", function() {
+        if (this.checked) {
+            checked = true;
+            next.addEventListener("click", function() {
+                acceptedLetter(popup, letter_container)
+                start_game()
+            })
+        } else {
+            checked = false;
+        }
+    });
+    document.body.appendChild(popup);
+
+    getPlayerLetter(player);
 }
 
 //get the player depending on id
@@ -227,106 +230,119 @@ function buildPlayerLetter(player, district, district_backstory) {
 }
 
 function acceptedLetter(popup, letter_container) {
-  letter_container.style.display = "none";
 
-  let hourglas_container = document.createElement("div");
-  hourglas_container.classList.add("hourglas_container");
+    letter_container.style.display = "none";
 
-  let wait_text = document.createElement("p");
-  wait_text.classList.add("wait_text");
-  wait_text.innerHTML = "VAR VÄNLIG VÄNTA, LEDAREN KOMMER SNART SLÄPPA IN DIG";
-  wait_text.style.position = "absolute";
 
-  let hourglas = document.createElement("img");
-  hourglas.classList.add("hourglas");
-  hourglas.src = "./IMG/hourglas.png";
-  hourglas.alt = "Hourglas Image";
-  hourglas.style.width = "15vh";
-  hourglas.style.height = "15vh";
+    let hourglas_container = document.createElement("div");
+    hourglas_container.classList.add("hourglas_container");
 
-  let pst_text = document.createElement("p");
-  pst_text.classList.add("pst_text");
-  pst_text.innerHTML = `Pssst...<br>Passa på att läsa om ditt distrikt medans du väntar`;
-  pst_text.style.position = "absolute";
+    let wait_text = document.createElement("p");
+    wait_text.classList.add("wait_text");
+    wait_text.innerHTML = "VAR VÄNLIG VÄNTA, LEDAREN KOMMER SNART SLÄPPA IN DIG"
+    wait_text.style.position = "absolute";
 
-  let info_container = document.createElement("div");
-  info_container.classList.add("info_container");
+    let hourglas = document.createElement("img");
+    hourglas.classList.add("hourglas");
+    hourglas.src = "./IMG/hourglas.png";
+    hourglas.alt = "Hourglas Image";
+    hourglas.style.width = "15vh";
+    hourglas.style.height = "15vh";
 
-  let down = document.createElement("img");
-  down.classList.add("down");
-  down.src = "./IMG/Down.png";
-  down.alt = "down Image";
-  down.style.width = "40px";
-  down.style.height = "40px";
-  down.style.position = "absolute";
+    let pst_text = document.createElement("p");
+    pst_text.classList.add("pst_text");
+    pst_text.innerHTML = `Pssst...<br>Passa på att läsa om ditt distrikt medans du väntar`
+    pst_text.style.position = "absolute";
 
-  let proffesion = district_array.profession;
-  let number = district_array.district_number;
+    let info_container = document.createElement("div");
+    info_container.classList.add("info_container");
 
-  let district_info = document.createElement("p");
-  district_info.classList.add("district_info");
-  district_info.innerHTML = proffesion.toUpperCase() + " - DISTRIKT  " + number;
-  district_info.style.position = "absolute";
 
-  popup.appendChild(hourglas_container);
-  hourglas_container.appendChild(wait_text);
-  hourglas_container.appendChild(hourglas);
-  hourglas_container.appendChild(pst_text);
-  hourglas_container.appendChild(info_container);
-  info_container.append(down);
-  info_container.append(district_info);
+    let down = document.createElement("img");
+    down.classList.add("down");
+    down.src = "./IMG/Down.png";
+    down.alt = "down Image";
+    down.style.width = "40px";
+    down.style.height = "40px";
+    down.style.position = "absolute";
 
-  info_container.addEventListener("click", function () {
-    info_container.style.height = "30vh";
+    let proffesion = district_array.profession
+    let number = district_array.district_number
 
-    let district_text = document.createElement("p");
-    district_text.classList.add("district_text");
-    district_text.innerHTML = district_array.backstory;
-    district_text.style.position = "absolute";
+    let district_info = document.createElement("p");
+    district_info.classList.add("district_info");
+    district_info.innerHTML = proffesion.toUpperCase() + " - DISTRIKT  " + number
+    district_info.style.position = "absolute";
 
-    info_container.append(district_text);
-  });
 
-  // let div = document.createElement("div");
-  // div.classList.add("box_closed");
-  // div.innerHTML = `
-  //     <h4> Hej </h4>
-  //     <div class="triangle_down"></div>
+    popup.appendChild(hourglas_container);
+    hourglas_container.appendChild(wait_text);
+    hourglas_container.appendChild(hourglas);
+    hourglas_container.appendChild(pst_text);
+    hourglas_container.appendChild(info_container);
+    info_container.append(down)
+    info_container.append(district_info)
 
-  //   `;
+    info_container.addEventListener("click", function() {
+        info_container.style.height = "30vh"
 
-  // hourglas_container.append(div);
-  // let triangle_down_button = div.querySelector(".triangle_down");
-  // triangle_down_button.addEventListener("click", function() {
-  //     triangle_down_button.classList.remove("triangle_down");
-  //     if (div.className == "quest_box_closed") {
-  //         div.className = "quest_box_opened";
-  //         quests_show_more(div, triangle_down_button);
-  //     } else {
-  //         div.className = "quest_box_closed";
-  //     }
-  // });
+        let district_text = document.createElement("p");
+        district_text.classList.add("district_text");
+        district_text.innerHTML = district_array.backstory
+        district_text.style.position = "absolute";
 
-  // function quests_show_more(div, triangle_down_button) {
-  //     console.log(quest);
-  //     div.innerHTML += `< div class = "triangle_up" > < /div>`;
-  //     div.innerHTML += `
-  //     <h1>FRÅGA:</h1>
-  //     <p class="quest_info">hej hej hej hej</p>
-  //     <div class="quest_answers"
-  //     style="display:grid;"></div>
-  //   `;
+        info_container.append(district_text)
+    })
+    startGame()
+}
 
-  //     let triangle_up_button = div.querySelector(".triangle_up");
-  //     triangle_up_button.addEventListener("click", function() {
-  //         triangle_up_button.classList.remove("triangle_up");
-  //         triangle_up_button.classList.add("triangle_down");
-  //         if (div.className == "quest_box_opened") {
-  //             div.className = "quest_box_closed";
-  //         } else {
-  //             div.className = "quest_box_opened";
+//NOTE:FLYTTA TILL ADMIN SIDAN
 
-  //         }
-  //     })
-  // }
+function startGame() {
+    let container = document.querySelector(".hourglas_container");
+
+    let start_button = document.createElement("button");
+    start_button.innerHTML = "STARTA SPEL TEST"
+    start_button.classList.add("start_button")
+    container.appendChild(start_button)
+
+    start_button.addEventListener('click', function() {
+        // Send an AJAX request to the server to start the game
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', './DB/gameStatus.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.send();
+        checkGameStatus();
+
+        // Optionally, handle the response from the server
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+                // Handle the response from the server if needed
+            }
+        };
+    });
+}
+
+function checkGameStatus() {
+    // Send an AJAX request to the server to check the game status
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './DB/gameStatus.php', true);
+    xhr.send();
+
+    // Handle the response from the server
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+
+            if (response.gameStarted) {
+                // Game has started, update the page 
+                document.querySelector("#popup").style.display = "none";
+                getPlayer(player)
+
+            } else {
+                // Game hasn't started yet, continue checking
+                setTimeout(checkGameStatus, 2000); // Check again after 2 seconds
+            }
+        }
+    };
 }
