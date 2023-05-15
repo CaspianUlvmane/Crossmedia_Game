@@ -62,7 +62,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
     // Return the player information as a JSON response
     // $playerInfo = $_SESSION['playerInfo'];
     // header('Content-Type: application/json');
-    
+    $playersData = file_get_contents('players.JSON');
+    $players = json_decode($playersData, true);
+    foreach($players as $index => $player){
+      if(!$player["in_use"]){
+        $player["in_use"] = true;
+        $players[$index] = $player;
+        $json = json_encode($players, JSON_PRETTY_PRINT);
+        file_put_contents("players.JSON", $json);
+        $json = json_encode($player, JSON_PRETTY_PRINT);
+        echo $json;
+        exit();
+      }
+
+    }
 
 
     echo json_encode($playerInfo);

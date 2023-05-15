@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     start_game.addEventListener("click", function() {
         getLetter(popup, logga_img, start_game)
-            joinGame()
+            // joinGame()
             // Call fetchPlayerInfo() and then call getPlayerLetter(player) with the updated value
         fetchPlayerInfo()
             // .then((player) => getPlayerLetter(player))
@@ -68,21 +68,21 @@ function getLetter(popup, logga_img, start_game) {
     })
 }
 
-function joinGame() {
-    // Send an AJAX request to the server to join the game
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', './DB/playerId.php', true);
-    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.send();
+// function joinGame() {
+//     // Send an AJAX request to the server to join the game
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', './DB/playerId.php', true);
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.send();
 
-    // Handle the response from the server
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
+//     // Handle the response from the server
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//             var response = JSON.parse(xhr.responseText);
 
-        }
-    };
-}
+//         }
+//     };
+// }
 
 function savePlayerInfo(playerId) {
     localStorage.setItem('playerId', playerId);
