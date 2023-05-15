@@ -172,6 +172,7 @@ body {
     grid-column: 1 /span 2;
     font-size: 20px;
     color: white;
+    text-align: center;
 }
 
 .apple_popup {

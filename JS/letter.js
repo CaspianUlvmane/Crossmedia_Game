@@ -1,42 +1,133 @@
-let district_array;
+let district_array
+let player = 0;
 
-document.addEventListener("DOMContentLoaded", function () {
-  let popup = document.createElement("div");
-  popup.id = "popup";
 
-  let background_img = document.createElement("img");
-  background_img.src = "./IMG/background.png";
-  background_img.classList.add("background_img");
-  background_img.alt = "Background Image";
-  popup.appendChild(background_img);
+document.addEventListener("DOMContentLoaded", function() {
+    let popup = document.createElement("div");
+    popup.id = "popup";
 
-  let open_letter = document.createElement("p");
-  open_letter.innerText = "ÖPPNA BREVET";
-  open_letter.classList.add("open_letter");
-  popup.appendChild(open_letter);
 
-  let letter_img = document.createElement("img");
-  letter_img.id = "letter";
-  letter_img.src = "./IMG/letter.png";
-  letter_img.alt = "Letter Image";
-  letter_img.style.width = "320px";
-  letter_img.style.height = "300px";
-  popup.appendChild(letter_img);
+    let background_img = document.createElement("img");
+    background_img.src = "./IMG/background.png";
+    background_img.classList.add("background_img")
+    background_img.alt = "Background Image";
 
-  document.body.appendChild(popup);
+    let logga_img = document.createElement("img");
+    logga_img.src = "./IMG/Logga_black.png";
+    logga_img.alt = "Logga Image";
+    logga_img.classList.add("logga");
+    logga_img.style.width = "350px";
+    logga_img.style.position = "absolute";
+    logga_img.style.height = "300px";
 
-  letter_img.addEventListener("click", function () {
-    openLetter(letter_img, open_letter, popup);
-  });
+    let start_game = document.createElement("button");
+    start_game.innerHTML = "SPELA"
+    start_game.classList.add("start_game")
+    start_game.style.position = "absolute";
+
+
+    document.body.appendChild(popup);
+    popup.appendChild(background_img);
+    popup.appendChild(logga_img)
+    popup.appendChild(start_game)
+
+    start_game.addEventListener("click", function() {
+        getLetter(popup, logga_img, start_game)
+            // joinGame()
+            // Call fetchPlayerInfo() and then call getPlayerLetter(player) with the updated value
+        fetchPlayerInfo()
+            // .then((player) => getPlayerLetter(player))
+            // .catch((error) => console.log(error));
+    })
 });
 
+function getLetter(popup, logga_img, start_game) {
+
+    logga_img.style.display = "none";
+    start_game.style.display = "none";
+
+
+
+    let open_letter = document.createElement("p");
+    open_letter.innerText = "ÖPPNA BREVET";
+    open_letter.classList.add("open_letter");
+    popup.appendChild(open_letter);
+
+    let letter_img = document.createElement("img");
+    letter_img.id = "letter";
+    letter_img.src = "./IMG/letter.png";
+    letter_img.alt = "Letter Image";
+    letter_img.style.width = "320px";
+    letter_img.style.height = "300px";
+    popup.appendChild(letter_img);
+
+
+
+    letter_img.addEventListener("click", function() {
+        openLetter(letter_img, open_letter, popup)
+    })
+}
+
+// function joinGame() {
+//     // Send an AJAX request to the server to join the game
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('POST', './DB/playerId.php', true);
+//     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//     xhr.send();
+
+//     // Handle the response from the server
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//             var response = JSON.parse(xhr.responseText);
+
+//         }
+//     };
+// }
+
+function savePlayerInfo(playerId) {
+    localStorage.setItem('playerId', playerId);
+}
+
+// Function to retrieve player information from Local Storage
+function getPlayerInfo() {
+    return localStorage.getItem('playerId');
+}
+
+//NOTE: To clear the local storage when the game is over
+// function clearPlayerInfo() {
+//     localStorage.removeItem('playerId');
+//   }
+
+function fetchPlayerInfo() {
+    return new Promise((resolve, reject) => {
+        var xhr = new XMLHttpRequest();
+        xhr.open('GET', './DB/playerId.php?getPlayerInfo=true', true);
+        xhr.send();
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    var playerInfo = JSON.parse(xhr.responseText);
+                    player = playerInfo.id;
+                    savePlayerInfo(player); // Save player information to Local Storage
+                    resolve(player);
+                } else {
+                    reject(xhr.status);
+                }
+            }
+        };
+    });
+}
+
+
+
 function getFormattedDate() {
-  var today = new Date();
-  var year = today.getFullYear().toString();
-  var month = ("0" + (today.getMonth() + 1)).slice(-2);
-  var day = ("0" + today.getDate()).slice(-2);
-  var formattedDate = year + "-" + month + "-" + day;
-  return formattedDate;
+    var today = new Date();
+    var year = today.getFullYear().toString();
+    var month = ("0" + (today.getMonth() + 1)).slice(-2);
+    var day = ("0" + today.getDate()).slice(-2);
+    var formattedDate = year + "-" + month + "-" + day;
+    return formattedDate;
 }
 
 function openLetter(letter_img, open_letter, popup) {
@@ -150,83 +241,86 @@ function openLetter(letter_img, open_letter, popup) {
             checked = true;
             next.addEventListener("click", function() {
                 acceptedLetter(popup, letter_container)
-                start_game()
+                    // start_game()
             })
         } else {
             checked = false;
         }
     });
     document.body.appendChild(popup);
-
-    getPlayerLetter(player);
+    getPlayerLetter(player)
 }
 
 //get the player depending on id
 function getPlayerLetter(player) {
-  fetch(new Request("./DB/players.JSON"))
-    .then((r) => r.json())
-    .then((rsc) => {
-      let players_list = rsc;
 
-      players_list.forEach((p) => {
-        if (p.id == player) {
-          checkDistrictLetter(p);
-        }
-      });
-    });
+    var storedPlayerId = getPlayerInfo();
+
+    fetch(new Request("./DB/players.JSON"))
+        .then(r => r.json())
+        .then(rsc => {
+            let players_list = rsc;
+            players_list.forEach(p => {
+                if (p.id == storedPlayerId) {
+                    checkDistrictLetter(p);
+                }
+            });
+        });
 }
 
 function checkDistrictLetter(player) {
-  fetch(new Request("./DB/districts.JSON"))
-    .then((r) => r.json())
-    .then((rsc) => {
-      let districts_list = rsc;
 
-      districts_list.forEach((d) => {
-        if (d.id == player.id) {
-          district_array = d;
-          district = d.district;
-          district_backstory = d.backstory;
-          buildPlayerLetter(player, district, district_backstory);
-        } else {
-          buildPlayerLetter(player);
-        }
-      });
-    });
+    fetch(new Request("./DB/districts.JSON"))
+        .then(r => r.json())
+        .then(rsc => {
+            let districts_list = rsc;
+
+            districts_list.forEach(d => {
+                if (d.district_number == player.id) {
+                    district_array = d
+                    district = d.district;
+                    district_backstory = d.backstory
+                    buildPlayerLetter(player, district, district_backstory);
+                } else {
+                    // buildPlayerLetter(player)
+                }
+            });
+        });
+
 }
 
 function buildPlayerLetter(player, district, district_backstory) {
-  let player_img = document.createElement("img");
-  player_img.src = `${player.image}`;
-  player_img.alt = "player image";
-  player_img.classList.add("player_img");
-  player_img.style.width = "50px";
-  player_img.style.height = "50px";
-  player_img.style.position = "absolute";
+    let player_img = document.createElement("img");
+    player_img.src = `${player.image}`;
+    player_img.alt = "player image";
+    player_img.classList.add("player_img");
+    player_img.style.width = "50px";
+    player_img.style.height = "50px";
+    player_img.style.position = "absolute";
 
-  let district_place = document.createElement("p");
-  district_place.classList.add("district_place");
-  district_place.innerHTML = district;
-  district_place.style.position = "absolute";
+    let district_place = document.createElement("p");
+    district_place.classList.add("district_place");
+    district_place.innerHTML = district;
+    district_place.style.position = "absolute";
 
-  let district_name = document.createElement("p");
-  district_name.classList.add("district_name");
-  district_name.innerHTML = player.name;
-  district_name.style.position = "absolute";
+    let district_name = document.createElement("p");
+    district_name.classList.add("district_name");
+    district_name.innerHTML = player.name;
+    district_name.style.position = "absolute";
 
-  let information = document.createElement("p");
-  information.classList.add("information");
-  information.innerHTML =
-    "Kära tribut! <br> Det är med stolthet och ödmjukhet jag skriver till dig idag, som en representant för Malmö och hela vårt enade land. Du har blivit vald för att representera ditt distrikt i den årliga Skörden, och jag kan bara föreställa mig hur det måste kännas att stå inför denna utmaning, men jag vill påminna dig om vikten av denna tradition. Vi har skapat Skörden, en chans för dig att visa din styrka och beslutsamhet genom att slåss för ditt distrikts överlevnad. Som du vet är Skörden inte en enkel uppgift. Men jag är övertygad om att du är tillräckligt stark och beslutsam för att överleva och kanske till och med blomstra under denna utmaning. Jag önskar dig all lycka och framgång i din resa genom Skörden, och jag kommer att följa dina framsteg med stolthet och spänning. Må den största framgången vänta på dig vid slutet av denna utmaning.";
+    let information = document.createElement("p");
+    information.classList.add("information");
+    information.innerHTML =
+        "Kära tribut! <br> Det är med stolthet och ödmjukhet jag skriver till dig idag, som en representant för Malmö och hela vårt enade land. Du har blivit vald för att representera ditt distrikt i den årliga Skörden, och jag kan bara föreställa mig hur det måste kännas att stå inför denna utmaning, men jag vill påminna dig om vikten av denna tradition. Vi har skapat Skörden, en chans för dig att visa din styrka och beslutsamhet genom att slåss för ditt distrikts överlevnad. Som du vet är Skörden inte en enkel uppgift. Men jag är övertygad om att du är tillräckligt stark och beslutsam för att överleva och kanske till och med blomstra under denna utmaning. Jag önskar dig all lycka och framgång i din resa genom Skörden, och jag kommer att följa dina framsteg med stolthet och spänning. Må den största framgången vänta på dig vid slutet av denna utmaning.";
 
-  information.style.position = "absolute";
+    information.style.position = "absolute";
 
-  let letter_container = document.querySelector(".letter_container");
+    let letter_container = document.querySelector(".letter_container");
 
-  letter_container.appendChild(player_img);
-  letter_container.appendChild(district_place);
-  letter_container.appendChild(district_name);
-  letter_container.appendChild(information);
+    letter_container.appendChild(player_img);
+    letter_container.appendChild(district_place);
+    letter_container.appendChild(district_name);
+    letter_container.appendChild(information);
 }
 
 function acceptedLetter(popup, letter_container) {
@@ -301,6 +395,7 @@ function acceptedLetter(popup, letter_container) {
 function startGame() {
     let container = document.querySelector(".hourglas_container");
 
+    //Button for starting the game
     let start_button = document.createElement("button");
     start_button.innerHTML = "STARTA SPEL TEST"
     start_button.classList.add("start_button")
@@ -337,7 +432,7 @@ function checkGameStatus() {
             if (response.gameStarted) {
                 // Game has started, update the page 
                 document.querySelector("#popup").style.display = "none";
-                getPlayer(player)
+                getPlayer(player);
 
             } else {
                 // Game hasn't started yet, continue checking

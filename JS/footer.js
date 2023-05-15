@@ -1,5 +1,3 @@
-let player = 1;
-
 //get the player depending on id
 function getPlayer(player) {
     fetch(new Request("./DB/players.JSON"))
@@ -27,13 +25,16 @@ function checkDistrict(player) {
                     let district_proffesion = d.profession
                     buildFooter(player, district_number, district_proffesion);
                 } else {
-                    buildFooter(player)
+                    // buildFooter(player)
                 }
             });
         });
 }
 
 function buildFooter(player, district_number, district_profession) {
+
+    localStorage.removeItem('hungerLevel');
+    localStorage.removeItem('waterLevel');
 
     let footer = document.createElement("div");
     footer.innerHTML = `
@@ -55,9 +56,9 @@ function buildFooter(player, district_number, district_profession) {
                 
         `;
     document.querySelector("body").append(footer);
-    
+
     //NEW
-    document.querySelector(".quest_icon").addEventListener("click", function(){
+    document.querySelector(".quest_icon").addEventListener("click", function() {
         show_overlay();
     })
 
@@ -67,13 +68,16 @@ function buildFooter(player, district_number, district_profession) {
         footer.querySelector(".check_container").append(check_circle);
     }
 
-
     let hunger_level = footer.querySelector(".hunger_level");
-    hunger_level.style.width = "100%";
-
     let water_level = footer.querySelector(".water_level");
-    water_level.style.width = "100%";
 
+    // Retrieve the saved progress from Local Storage
+    const savedHungerLevel = localStorage.getItem('hungerLevel');
+    const savedWaterLevel = localStorage.getItem('waterLevel');
+
+    // Set the initial values of the hunger and water levels
+    hunger_level.style.width = savedHungerLevel ? `${savedHungerLevel}%` : '100%';
+    water_level.style.width = savedWaterLevel ? `${savedWaterLevel}%` : '100%';
 
 
     // add a load event listener to the img element to make sur hunger_level and water_level is executed after the img_user
@@ -88,6 +92,7 @@ function buildFooter(player, district_number, district_profession) {
             const new_width = current_width - 20;
             if (new_width >= 0) {
                 hunger_level.style.width = `${new_width}%`;
+                localStorage.setItem('hungerLevel', new_width); // Save the updated percentage to Local Storage
             } else {
                 // clearInterval(interval_hunger_id);
                 checkFilledCircles();
@@ -99,7 +104,7 @@ function buildFooter(player, district_number, district_profession) {
             const new_width_water = current_width_water - 20;
             if (new_width_water >= 0) {
                 water_level.style.width = `${new_width_water}%`;
-
+                localStorage.setItem('waterLevel', new_width_water); // Save the updated percentage to Local Storage
             } else {
                 // clearInterval(interval_water_id);
                 checkFilledCircles();
@@ -114,7 +119,6 @@ function buildFooter(player, district_number, district_profession) {
             circle.classList.add('checked');
         });
     });
-    clickProfit(footer)
 }
 
 function checkFilledCircles() {
@@ -133,33 +137,40 @@ function checkFilledCircles() {
 
 function profitPopUp() {
 
-    let profit_popup = document.createElement('div');
-    profit_popup.classList.add('profit_popup');
-    profit_popup.innerHTML = `
-           <div class="profit_container">
-           <p class="profit_text">Du svarade rätt, välj ett pris!</p>
-           <img src="./IMG/apple.png" class="apple_popup">
-           <img src="./IMG/water.png" class="water_popup">
-           </div>
-           `;
+    if (!document.querySelector(".profit_popup")) {
+        let profit_popup
+        profit_popup = document.createElement('div');
+        profit_popup.classList.add('profit_popup');
+        profit_popup.innerHTML = `
+               <div class="profit_container">
+               <p class="profit_text"> <span style="color:green;">RÄTT</span> <br> <br>VÄLJ EN GÅVA</p>
+               <img src="./IMG/apple.png" class="apple_popup">
+               <img src="./IMG/water.png" class="water_popup">
+               </div>
+               `;
 
-    document.querySelector('body').append(profit_popup);
+        document.querySelector('body').append(profit_popup);
+        clickProfit()
+    } else {
+        console.log("nope")
+    }
 }
 
-function clickProfit(footer) {
+function clickProfit() {
     //When the user get more food/water by quest and bar goes up
 
     let apple_icon = document.querySelector(".apple_popup");
     let water_icon = document.querySelector(".water_popup");
 
-    let hunger_level = footer.querySelector(".hunger_level");
-    let water_level = footer.querySelector(".water_level");
+    let hunger_level = document.querySelector(".hunger_level");
+    let water_level = document.querySelector(".water_level");
 
     apple_icon.addEventListener('click', () => {
         const current_width = parseInt(hunger_level.style.width, 10);
         const new_width = current_width + 20;
         if (new_width <= 100) {
             hunger_level.style.width = `${new_width}%`;
+            document.querySelector(".profit_popup").remove()
         }
     });
 
@@ -168,8 +179,9 @@ function clickProfit(footer) {
         const new_width = current_width + 20;
         if (new_width <= 100) {
             water_level.style.width = `${new_width}%`;
+            document.querySelector(".profit_popup").remove()
         }
     });
 }
 
-profitPopUp()
+// profitPopUp()
