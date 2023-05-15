@@ -277,7 +277,7 @@ function checkDistrictLetter(player) {
             let districts_list = rsc;
 
             districts_list.forEach(d => {
-                if (d.district_number == player.id) {
+                if (d.district_number == player.district_id) {
                     district_array = d
                     district = d.district;
                     district_backstory = d.backstory
