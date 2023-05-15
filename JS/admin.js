@@ -34,25 +34,9 @@ function initMap() {
           draggable: false,
           mapId: "a0111f479c8a0090",
         });
-        map.setCenter(pos);
-        const image = "../IMG/dot.svg";
-        const icon = new google.maps.Marker({
-          position: {
-            lat: position.coords.latitude,
-            lng: position.coords.longitude,
-          },
-          map,
-          icon: new google.maps.MarkerImage(
-            image,
-            null,
-            null,
-            null,
-            new google.maps.Size(20, 20)
-          ),
-          draggable: false,
-          clickable: false,
-        });
-        location_update(icon);
+        // map.setCenter(pos);
+        render_constants()
+        location_update();
         map.addListener("click", (mapsMouseEvent) => {
           send_hazard(mapsMouseEvent, map);
         });
@@ -78,28 +62,11 @@ function handle_location_error(browserHasGeolocation, infoWindow, pos) {
   infoWindow.open(map);
 }
 
-function location_update(icon) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    const pos = {
-      lat: position.coords.latitude,
-      lng: position.coords.longitude,
-    };
-    icon.setPosition(pos);
-    let hazard_zones_array = Array.from(
-      document.querySelectorAll(".hazard_area")
-    );
-    if (hazard_zones_array[0]) {
-      hazard_zones_array.forEach((z) => {
-        if (hazard_zone_bool(z, pos)) {
-          console.log("damage taken");
-        }
-      });
-    }
-  });
+function location_update() {
   render_hazards();
   render_users();
   setTimeout(() => {
-    location_update(icon);
+    location_update();
   }, updateTime);
 }
 
@@ -226,45 +193,76 @@ function pointer_position(event) {
   pointer.style.top = event.pageY - 75 + "px";
 }
 
+async function render_constants(){
+  let response = await fetch("../DB/mapAPI.php");
+  let hazards = await response.json();
+
+  document.querySelector("#dangers").innerHTML = "";
+  hazards.forEach((hazard) => {
+     if (hazard.time <= 0) {
+      let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
+      let dangerCircle;
+      if (hazard.type === "fire") {
+        dangerCircle = new google.maps.Circle({
+          strokeColor: "#FF0000",
+          strokeOpacity: 0,
+          strokeWeight: 2,
+          fillColor: "#FF0000",
+          fillOpacity: 1,
+          center: latLng,
+          map,
+          draggable: false,
+          clickable: false,
+          radius: 75,
+        });
+      }
+      create_hazard_div(latLng);
+    }
+  })
+}
+
 async function render_hazards() {
   let response = await fetch("../DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
-    let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
-    let dangerCircle;
-    if (hazard.type === "fire") {
-      dangerCircle = new google.maps.Circle({
-        strokeColor: "#FF0000",
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: "#FF0000",
-        fillOpacity: 0.35,
-        center: latLng,
-        map,
-        draggable: false,
-        clickable: false,
-        radius: 75,
-      });
+    if (hazard.time <= 0) {
     } else {
-      dangerCircle = new google.maps.Circle({
-        strokeColor: "#0000FF",
-        strokeOpacity: 0.8,
-        strokeWeight: 2,
-        fillColor: "#0000FF",
-        fillOpacity: 0.35,
-        center: latLng,
-        map,
-        draggable: false,
-        clickable: false,
-        radius: 75,
-      });
+      let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
+      let dangerCircle;
+      if (hazard.type === "fire") {
+        dangerCircle = new google.maps.Circle({
+          strokeColor: "#FF0000",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#FF0000",
+          fillOpacity: 0.35,
+          center: latLng,
+          map,
+          draggable: false,
+          clickable: false,
+          radius: 75,
+        });
+      } else {
+        dangerCircle = new google.maps.Circle({
+          strokeColor: "#0000FF",
+          strokeOpacity: 0.8,
+          strokeWeight: 2,
+          fillColor: "#0000FF",
+          fillOpacity: 0.35,
+          center: latLng,
+          map,
+          draggable: false,
+          clickable: false,
+          radius: 75,
+        });
+      }
+      create_hazard_div(latLng);
+      setTimeout(() => {
+        dangerCircle.setMap(null);
+      }, updateTime * 1.5);
     }
-    create_hazard_div(latLng);
-    setTimeout(() => {
-      dangerCircle.setMap(null);
-    }, updateTime * 1.5);
   });
 }
 
@@ -281,7 +279,7 @@ async function render_users() {
     player = new google.maps.Marker({
       position: {
         lat: Number(pos.lat),
-        lng: Number(pos.lng)
+        lng: Number(pos.lng),
       },
       map,
       draggable: false,
