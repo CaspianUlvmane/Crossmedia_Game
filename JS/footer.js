@@ -150,7 +150,9 @@ function profitPopUp() {
                `;
 
         document.querySelector('body').append(profit_popup);
-        clickProfit()
+        hide_overlay();
+        clickProfit();
+
     } else {
         console.log("nope")
     }
