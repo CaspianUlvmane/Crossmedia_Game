@@ -16,6 +16,19 @@ body {
     align-items: center;
 }
 
+.logga {
+    bottom: 40vh;
+    z-index: 1005;
+}
+
+.start_game {
+    z-index: 1005;
+    bottom: 35vh;
+    padding: 20px 40px 20px 40px;
+    border-radius: 50%;
+    border: 1px black solid
+}
+
 .open_letter {
     z-index: 1001;
     position: relative;
