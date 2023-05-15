@@ -1,4 +1,5 @@
 //get the player depending on id
+
 function getPlayer(player) {
     fetch(new Request("./DB/players.JSON"))
         .then(r => r.json())
@@ -14,13 +15,14 @@ function getPlayer(player) {
 }
 
 function checkDistrict(player) {
+
     fetch(new Request("./DB/districts.JSON"))
         .then(r => r.json())
         .then(rsc => {
             let districts_list = rsc;
 
             districts_list.forEach(d => {
-                if (d.id == player.id) {
+                if (d.district_number == player.id) {
                     let district_number = d.district_number;
                     let district_proffesion = d.profession
                     buildFooter(player, district_number, district_proffesion);
