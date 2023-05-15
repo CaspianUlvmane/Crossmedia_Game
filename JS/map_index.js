@@ -38,10 +38,8 @@ function initMap() {
           draggable: false,
           clickable: false,
         });
+        render_constants()
         location_update(icon);
-        map.addListener("click", (mapsMouseEvent) => {
-          send_hazard(mapsMouseEvent, map);
-        });
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
