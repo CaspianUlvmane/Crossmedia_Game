@@ -26,4 +26,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
   
     exit;
   }
+
+  if($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['end'])){
+    $playersData = file_get_contents('players.JSON');
+    $players = json_decode($playersData, true);
+
+    foreach($players as $index => $player){
+    
+        $player["in_use"] = false;
+        $players[$index] = $player;
+       
+      }
+
+      $json = json_encode($players, JSON_PRETTY_PRINT);
+      file_put_contents("players.JSON", $json);
+      exit;
+  }
 ?>

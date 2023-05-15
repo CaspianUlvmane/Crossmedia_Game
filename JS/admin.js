@@ -125,6 +125,7 @@ function create_hazard_buttons() {
     document.getElementById("hazard_buttons").append(div);
   });
   start()
+  end_button()
 }
 
 function toggle_hazard(event) {
@@ -311,6 +312,23 @@ function start(){
       headers: { "Content-Type": "application/json" },
     };
     fetch("../DB/API.php", options)
+  })
+  document.querySelector("#hazard_buttons").append(button)
+}
+
+function end_button(){
+  let button = document.createElement("button")
+  button.textContent = "END THE GAMES"
+  button.addEventListener("click", () => {
+    let options = {
+      method: "PATCH",
+      body: JSON.stringify({
+        "start": false
+      }),
+      headers: { "Content-Type": "application/json" },
+    };
+    fetch("../DB/API.php", options)
+    fetch("../DB/playerID.php?end")
   })
   document.querySelector("#hazard_buttons").append(button)
 }
