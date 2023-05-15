@@ -124,6 +124,7 @@ function create_hazard_buttons() {
     div.addEventListener("click", toggle_hazard);
     document.getElementById("hazard_buttons").append(div);
   });
+  start()
 }
 
 function toggle_hazard(event) {
@@ -297,6 +298,23 @@ async function render_users() {
     }, updateTime);
   });
 }
+
+function start(){
+  let button = document.createElement("button")
+  button.textContent = "START THE GAMES"
+  button.addEventListener("click", () => {
+    let options = {
+      method: "PATCH",
+      body: JSON.stringify({
+        "start": true
+      }),
+      headers: { "Content-Type": "application/json" },
+    };
+    fetch("../DB/API.php", options)
+  })
+  document.querySelector("#hazard_buttons").append(button)
+}
+
 
 window.initMap = initMap;
 create_hazard_buttons();
