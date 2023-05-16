@@ -87,8 +87,8 @@ function buildFooter(player, district_number, district_profession) {
     let img_user = footer.querySelector(".img_user");
     img_user.addEventListener("load", function() {
 
-        const interval_water_id = setInterval(decreaseWater, 2000);
-        const interval_hunger_id = setInterval(decreaseHunger, 2000);
+        const interval_water_id = setInterval(decreaseWater, 900000);
+        const interval_hunger_id = setInterval(decreaseHunger, 900000);
 
         function decreaseHunger() {
             const current_width = parseInt(hunger_level.style.width, 10);
@@ -126,22 +126,15 @@ function buildFooter(player, district_number, district_profession) {
             if (circle.classList.contains('5')) {
                 popupLose()
 
-                fetch(new Request("./DB/players.JSON"))
-                    .then(response => response.json())
-                    .then(players => {
-                        players.forEach(p => {
-                            if (player.id == p.id)
-                                console.log(player)
-                                //     let options = {
-                                //         method: "PATCH",
-                                //         body: JSON.stringify({
-                                //             "start": true
-                                //         }),
-                                //         headers: { "Content-Type": "application/json" },
-                                //     };
-                                //     fetch("../DB/API.pla", options)
-                        })
-                    })
+                let options = {
+                    method: "PATCH",
+                    body: JSON.stringify({
+                        alive: false,
+                        id: player.id
+                    }),
+                    headers: { "Content-Type": "application/json" },
+                };
+                fetch("./DB/playerId.php", options)
 
             }
         });
@@ -159,6 +152,15 @@ function checkFilledCircles() {
         not_checked[0].classList.add('checked');
     } else if (not_checked.length === 0) {
         popupLose()
+        let options = {
+            method: "PATCH",
+            body: JSON.stringify({
+                alive: false,
+                id: player.id
+            }),
+            headers: { "Content-Type": "application/json" },
+        };
+        fetch("./DB/playerId.php", options)
     }
 }
 

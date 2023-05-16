@@ -213,6 +213,6 @@
         "image": ".\/IMG\/characters\/baker_man.png",
         "alive": true,
         "backstory": "Harry \u00e4r en kreativ och passionerad 16-\u00e5rig kille fr\u00e5n Sm\u00e5land, som har en stor passion f\u00f6r matlagning och bakning. Han har alltid varit intresserad av lokala r\u00e5varor och traditionella recept fr\u00e5n Sm\u00e5land, och hans favoritdel av sk\u00f6rdefestivalen \u00e4r ostkakst\u00e4vlingen. Harrys familj har varit ostkaksbagare i generationer, och han har l\u00e4rt sig alla knepen fr\u00e5n sin farfar som var en m\u00e4stare p\u00e5 att g\u00f6ra den perfekta ostkakan. Harry har sedan tagit vid och utvecklat sina egna recept och tekniker f\u00f6r att skapa sin egen unika smak av ostkaka. Han \u00e4r en envis person och ger aldrig upp n\u00e4r han v\u00e4l best\u00e4mt sig f\u00f6r n\u00e5got. Han tror p\u00e5 h\u00e5rt arbete och att man alltid ska str\u00e4va efter att bli b\u00e4ttre p\u00e5 det man \u00e4lskar att g\u00f6ra. Hans dr\u00f6m \u00e4r att en dag \u00f6ppna en egen ostkaksbutik d\u00e4r han kan dela med sig av sin k\u00e4rlek till den lokala maten och traditionerna i Sm\u00e5land.",
-        "in_use": false
+        "in_use": true
     }
 ]
