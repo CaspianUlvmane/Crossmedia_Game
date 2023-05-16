@@ -105,7 +105,8 @@
         "image": ".\/IMG\/characters\/military_man.png",
         "alive": true,
         "backstory": "Ludvig \u00e4r en v\u00e4ltr\u00e4nad 17-\u00e5rig kille som har vuxit upp i en familj av milit\u00e4rer p\u00e5 Gotland. Han har tr\u00e4nats i kampsport och vapenhantering sedan han var liten och har alltid haft en stark lojalitet gentemot sin familj och land. Ludvig \u00e4r envis och fokuserad, och han tar alltid sina uppgifter p\u00e5 allvar. Han \u00e4r en strategisk t\u00e4nkare och kan t\u00e4nka snabbt under press, vilket g\u00f6r honom till en farlig motst\u00e5ndare i Sk\u00f6rden. Trots sin milit\u00e4ra bakgrund \u00e4r Ludvig ocks\u00e5 en konstn\u00e4rlig sj\u00e4l och \u00e4lskar att spela gitarr och sjunga n\u00e4r han har tid.",
-        "in_use": true
+        "in_use": false
+
     },
     {
         "id": 13,
@@ -114,7 +115,8 @@
         "image": ".\/IMG\/characters\/hoarders_woman.png",
         "alive": true,
         "backstory": "Agnes \u00e4r en 14-\u00e5rig tjej som kommer fr\u00e5n Halland och hon \u00e4r en hoarder. Hon har sv\u00e5rt att sl\u00e4ppa taget om saker, oavsett om det \u00e4r gamla kl\u00e4der, leksaker eller till och med trasiga prylar. Hon har en eklektisk stil som hon skapat genom att samla p\u00e5 sig saker fr\u00e5n olika tidsepoker och kulturer. Hon b\u00e4r ofta p\u00e5 sig flera lager av kl\u00e4der och smycken, vilket g\u00f6r henne synlig fr\u00e5n l\u00e5ngt h\u00e5ll. Hon har ocks\u00e5 en kreativ sida och \u00e4lskar att skapa nya saker med sina samlade f\u00f6rem\u00e5l, vilket g\u00f6r henne till en duktig hantverkare. Trots att hon \u00e4r en hoarder och det kan vara sv\u00e5rt f\u00f6r henne att sl\u00e4ppa taget om saker, s\u00e5 \u00e4r hon en lojal och p\u00e5litlig v\u00e4n som alltid st\u00e4ller upp f\u00f6r dem hon \u00e4lskar.",
-        "in_use": true
+        "in_use": false
+
     },
     {
         "id": 14,
@@ -123,7 +125,8 @@
         "image": ".\/IMG\/characters\/hoarders_man.png",
         "alive": true,
         "backstory": "Hugo \u00e4r en ovanligt stillsam 15-\u00e5rig kille, han pratar s\u00e4llan och verkar alltid f\u00f6rdjupad i sina egna tankar. Han kommer fr\u00e5n en familj av samlare och har sj\u00e4lv en f\u00f6rk\u00e4rlek f\u00f6r att spara p\u00e5 allt m\u00f6jligt, fr\u00e5n sm\u00e5 mynt och sn\u00e4ckskal till stora m\u00f6bler och fordon. Han \u00e4r en skicklig snickare och tinkerer och \u00e4lskar att reparera och \u00e5teranv\u00e4nda saker f\u00f6r att g\u00f6ra dem anv\u00e4ndbara igen. Trots sin hoarding-tendens \u00e4r Hugo mycket organiserad och har en plats f\u00f6r allt i sitt hem, \u00e4ven om det ibland kan se r\u00f6rigt ut f\u00f6r andra. Han \u00e4r mycket noga med att h\u00e5lla reda p\u00e5 vad han sparar och var han har placerat det, och blir l\u00e4tt stressad om hans f\u00f6rem\u00e5l r\u00f6rs om eller flyttas.",
-        "in_use": true
+        "in_use": false
+
     },
     {
         "id": 15,
@@ -132,7 +135,9 @@
         "image": ".\/IMG\/characters\/chef_woman.png",
         "alive": true,
         "backstory": "Ida \u00e4r en 18-\u00e5rig tjej fr\u00e5n Danmark som har en passion f\u00f6r matlagning. Hon har alltid fascinerats av olika kulturers matlagningstekniker och smaker och har rest runt i v\u00e4rlden f\u00f6r att utforska dem. Som en skicklig kock har Ida l\u00e4rt sig att anv\u00e4nda alla sina sinnen f\u00f6r att skapa magiska r\u00e4tter. Hon har en f\u00f6rm\u00e5ga att k\u00e4nna av vad som saknas i en r\u00e4tt och hur man kan g\u00f6ra den \u00e4nnu b\u00e4ttre. Ida \u00e4r ocks\u00e5 en mycket social person som l\u00e4tt knyter kontakter med andra. Hon \u00e4lskar att tr\u00e4ffa nya m\u00e4nniskor och utveckla relationer. Ida \u00e4r ocks\u00e5 mycket empatisk och f\u00f6rst\u00e5ende, och hon har en f\u00f6rm\u00e5ga att lyssna och ge goda r\u00e5d till andra. Trots sin passion f\u00f6r mat och sociala f\u00e4rdigheter \u00e4r Ida inte r\u00e4dd f\u00f6r tuffa utmaningar. Hon har alltid varit en t\u00e4vlingsm\u00e4nniska och en utmaning f\u00f6r henne \u00e4r ett tillf\u00e4lle att v\u00e4xa och l\u00e4ra sig nya saker. Men hon \u00e4r ocks\u00e5 medveten om att Sk\u00f6rden kommer att testa henne p\u00e5 olika s\u00e4tt, och hon \u00e4r beredd att anv\u00e4nda alla sina talanger och f\u00e4rdigheter f\u00f6r att \u00f6verleva och vinna.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 16,
@@ -141,7 +146,9 @@
         "image": ".\/IMG\/characters\/chef_man.png",
         "alive": true,
         "backstory": "Oscar \u00e4r en kreativ och passionerad 17-\u00e5rig kille fr\u00e5n Danmark. Han har alltid varit intresserad av matlagning och har utvecklat en unik f\u00f6rm\u00e5ga att skapa nya smaker och r\u00e4tter fr\u00e5n enkla ingredienser. Hans familj har alltid uppmuntrat hans kulinariska talanger och Oscar har utbildat sig till kock p\u00e5 en av Danmarks fr\u00e4msta kockskolor. Oscar \u00e4r medveten om att hans k\u00e4nslighet f\u00f6r smaker och dofter kan g\u00f6ra honom s\u00e5rbar f\u00f6r attacker fr\u00e5n andra deltagare. Han har tr\u00e4nat p\u00e5 att anv\u00e4nda sina kulinariska f\u00e4rdigheter som vapen, och han \u00e4r \u00f6vertygad om att han kan \u00f6verleva i den h\u00e5rda milj\u00f6n som Sk\u00f6rden erbjuder. Han \u00e4r redo att ta p\u00e5 sig utmaningen och visa upp sin kreativitet och styrka som kock och deltagare.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 17,
@@ -150,7 +157,9 @@
         "image": ".\/IMG\/characters\/doctor_woman.png",
         "alive": true,
         "backstory": "Vera \u00e4r en ambiti\u00f6s och intelligent 16-\u00e5rig tjej fr\u00e5n J\u00e4mtland, med en stark vilja att f\u00f6lja i sin families fotsp\u00e5r och bli en l\u00e4kare. Hon \u00e4r \u00f6vertygad om att hon \u00e4r f\u00f6dd f\u00f6r att hj\u00e4lpa andra och ser det som sin livsuppgift att lindra sm\u00e4rta och lida. Hennes kunskap och skicklighet i medicinsk vetenskap har gjort henne till en imponerande kandidat f\u00f6r Sk\u00f6rden. Vera har alltid varit driven och fokuserad p\u00e5 sina studier, men hon har ocks\u00e5 en passion f\u00f6r \u00e4ventyr och utmaningar. Hon \u00e4r inte r\u00e4dd f\u00f6r att ge sig in i farliga situationer om det inneb\u00e4r att hon kan hj\u00e4lpa till och r\u00e4dda liv. Trots hennes talanger och drivkraft, \u00e4r Vera ocks\u00e5 en f\u00f6rsiktig och f\u00f6rsiktig person, som alltid t\u00e4nker p\u00e5 alla m\u00f6jliga utfall av en situation innan hon agerar. Detta kan ibland g\u00f6ra henne till en blyg och tillbakadragen person, men n\u00e4r det g\u00e4ller att hj\u00e4lpa andra, visar hon alltid mod och beslutsamhet.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 18,
@@ -159,7 +168,9 @@
         "image": ".\/IMG\/characters\/doctor_man.png",
         "alive": true,
         "backstory": "Nils \u00e4r en 18-\u00e5rig kille fr\u00e5n J\u00e4mtland med en imponerande intellektuell kapacitet. Han \u00e4r f\u00f6dd in i en familj av l\u00e4kare, d\u00e4r b\u00e5de hans far och morfar \u00e4r h\u00f6gt ansedda inom medicinens v\u00e4rld. Nils har alltid haft en passion f\u00f6r vetenskap och medicin och har en imponerande kunskap inom dessa omr\u00e5den, trots sin unga \u00e5lder..Nils \u00e4r en stillsam person, vilket g\u00f6r att han l\u00e4tt sm\u00e4lter in i bakgrunden. Han \u00e4r dock mycket analytisk och snabbt\u00e4nkt, vilket g\u00f6r honom till en duktig strateg. Hans utbildning och erfarenhet som l\u00e4kare ger honom en unik f\u00f6rm\u00e5ga att identifiera och hantera medicinska n\u00f6dsituationer, vilket kan vara ov\u00e4rderligt under Sk\u00f6rden. Nils har ett lugnt och metodiskt s\u00e4tt, vilket kan g\u00f6ra honom till ett m\u00e5l f\u00f6r mer aggressiva spelare. Men han \u00e4r inte r\u00e4dd f\u00f6r att ta risker och \u00e4r v\u00e4l medveten om att Sk\u00f6rden kan vara farlig. Han \u00e4r redo att anv\u00e4nda alla sina kunskaper och f\u00e4rdigheter f\u00f6r att \u00f6verleva och k\u00e4mpa f\u00f6r att vinna.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 19,
@@ -168,7 +179,9 @@
         "image": ".\/IMG\/characters\/teacher_woman.png",
         "alive": true,
         "backstory": "Freja \u00e4r en ambiti\u00f6s och sj\u00e4lvst\u00e4ndig 17-\u00e5rig tjej. Hon har alltid varit duktig i skolan och har alltid str\u00e4vat efter att bli l\u00e4rare som de flesta i hennes distrikt. Hon ser sin utn\u00e4mning till Sk\u00f6rden som en m\u00f6jlighet att visa sin styrka och f\u00f6rm\u00e5ga att \u00f6verleva, och hon har tr\u00e4nat h\u00e5rt f\u00f6r att f\u00f6rbereda sig f\u00f6r utmaningen. Freja \u00e4r en utpr\u00e4glad ledare och \u00e4r van vid att ta ansvar. Hon har en stark vilja och en f\u00f6rm\u00e5ga att se m\u00f6jligheter \u00e4ven i de mest hoppl\u00f6sa situationerna. Hennes sj\u00e4lvst\u00e4ndighet och envishet kan dock g\u00f6ra henne lite motstr\u00e4vig n\u00e4r det kommer till att ta emot hj\u00e4lp fr\u00e5n andra. Som person \u00e4r Freja envis och sj\u00e4lvs\u00e4ker, men ocks\u00e5 omt\u00e4nksam och empatisk. Hon \u00e4r \u00f6vertygad om att hon kan g\u00f6ra skillnad i v\u00e4rlden genom att utbilda andra, och hon tror att det \u00e4r hennes \u00f6de att vinna Sk\u00f6rden och forts\u00e4tta sin kamp f\u00f6r att f\u00f6rb\u00e4ttra samh\u00e4llet.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 20,
@@ -177,7 +190,9 @@
         "image": ".\/IMG\/characters\/teacher_man.png",
         "alive": true,
         "backstory": "August \u00e4r en ambiti\u00f6s och intelligent 18-\u00e5rig kille. Han har alltid varit intresserad av att l\u00e4ra sig nya saker och att hj\u00e4lpa andra att g\u00f6ra detsamma, vilket \u00e4r anledningen till att han har valt att bli l\u00e4rare. August har alltid varit en favorit bland sina klasskamrater p\u00e5 grund av sin v\u00e4nliga och hj\u00e4lpsamma natur, och han har alltid varit villig att st\u00e4lla upp f\u00f6r andra. August har ett starkt r\u00e4ttspatos och \u00e4r \u00f6vertygad om att Sk\u00f6rden \u00e4r en om\u00e4nsklig tradition som m\u00e5ste avskaffas. Trots att han har blivit vald till att delta i Sk\u00f6rden, har han best\u00e4mt sig f\u00f6r att anv\u00e4nda sin plattform f\u00f6r att f\u00f6ra upp fr\u00e5gan om Sk\u00f6rdens avskaffande och f\u00f6r att f\u00f6r\u00e4ndra samh\u00e4llet till det b\u00e4ttre. August \u00e4r en duktig strateg och taktiker, vilket g\u00f6r honom till en farlig motst\u00e5ndare i arenan. Han \u00e4r snabb och smidig och har goda \u00f6verlevnadsinstinkter, men han kommer aldrig att d\u00f6da n\u00e5gon annan deltagare i Sk\u00f6rden. Han vill inte bli en del av det han betraktar som en ond cirkel av v\u00e5ld och hat. Ist\u00e4llet planerar han att anv\u00e4nda sin tid i arenan f\u00f6r att vinna st\u00f6d fr\u00e5n folket och pressa myndigheterna att avskaffa Sk\u00f6rden en g\u00e5ng f\u00f6r alla.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 21,
@@ -186,7 +201,9 @@
         "image": ".\/IMG\/characters\/textile_woman.png",
         "alive": true,
         "backstory": "Maja \u00e4r en kreativ och skicklig tjej som \u00e4lskar att arbeta med textilier. Hon kommer fr\u00e5n en familj av textilarbetare i N\u00e4rke, d\u00e4r hennes mor och mormor ocks\u00e5 arbetade inom branschen. Maja har alltid varit fascinerad av det hantverk som kr\u00e4vs f\u00f6r att skapa vackra och funktionella plagg och hon har spenderat m\u00e5nga timmar bakom en symaskin eller med att v\u00e4va p\u00e5 en v\u00e4vstol. Majas passion f\u00f6r textilier har \u00e4ven lett till att hon \u00e4r mycket intresserad av h\u00e5llbarhet och milj\u00f6fr\u00e5gor. Hon str\u00e4var efter att anv\u00e4nda \u00e5tervunna material och att minska avfallet s\u00e5 mycket som m\u00f6jligt i sitt arbete. Hon \u00e4r \u00f6vertygad om att textilindustrin kan f\u00f6r\u00e4ndras och bli mer h\u00e5llbar om fler f\u00f6ljer hennes exempel. Som en del av Sk\u00f6rden \u00e4r Maja hedrad \u00f6ver att f\u00e5 representera sitt distrikt och bransch. Hon ser det som en m\u00f6jlighet att visa upp sitt arbete f\u00f6r resten av nationen och att sprida sin passion f\u00f6r textilier till andra. Maja \u00e4r sj\u00e4lvs\u00e4ker, ambiti\u00f6s och en naturlig ledare, och hon \u00e4r s\u00e4ker p\u00e5 att hon kommer att vara en utm\u00e4rkt representant f\u00f6r N\u00e4rke.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 22,
@@ -195,7 +212,9 @@
         "image": ".\/IMG\/characters\/textile_man.png",
         "alive": true,
         "backstory": "Adam \u00e4r en kreativ och h\u00e4ngiven 16-\u00e5rig kille. Han \u00e4r en passionerad textilarbetare som har arbetat h\u00e5rt f\u00f6r att f\u00f6rb\u00e4ttra sina f\u00e4rdigheter i att v\u00e4va och sy. Adam har ett \u00f6ga f\u00f6r detaljer och en talang f\u00f6r att kombinera f\u00e4rger och material p\u00e5 ett s\u00e4tt som skapar vackra och unika tyger. Adam har ocks\u00e5 en utm\u00e4rkt social f\u00f6rm\u00e5ga och \u00e4r mycket omtyckt av de m\u00e4nniskor han tr\u00e4ffar. Han har en positiv inst\u00e4llning och \u00e4r alltid villig att hj\u00e4lpa till och dela sina kunskaper med andra. Som en blivande textilarbetare ser Adam fram emot att anv\u00e4nda sin passion och talang f\u00f6r att skapa vackra tyger och kl\u00e4der som kommer att gl\u00e4dja och inspirera m\u00e4nniskor runt om i landet. Att bli vald till sk\u00f6rden \u00e4r en stor \u00e4ra f\u00f6r Adam och han \u00e4r fast besluten om att g\u00f6ra sitt b\u00e4sta f\u00f6r att representera sitt distrikt och sina medarbetare p\u00e5 b\u00e4sta m\u00f6jliga s\u00e4tt.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 23,
@@ -204,7 +223,9 @@
         "image": ".\/IMG\/characters\/baker_woman.png",
         "alive": true,
         "backstory": "Ester \u00e4r 18-\u00e5rig tjej fr\u00e5n en l\u00e5ng rad av ostkaksbagare. Hon har vuxit upp med doften av nygr\u00e4ddad ostkaka som fyllde familjens bageri varje morgon. Ester har alltid fascinerats av den konstn\u00e4rliga aspekten av att baka och hennes passion f\u00f6r att skapa nya smaker och texturer med ingredienser har lett till att hon utvecklat en talang f\u00f6r att experimentera med olika recept. Trots sin unga \u00e5lder har Ester blivit en respekterad ostkaksbagare i sitt distrikt och hennes produkter s\u00e4ljs p\u00e5 marknader och butiker runt om i regionen. Hon \u00e4r en envis och ambiti\u00f6s person som alltid str\u00e4var efter att f\u00f6rb\u00e4ttra sin konst och skapa b\u00e4ttre smaker och upplevelser f\u00f6r sina kunder. N\u00e4r Ester blev vald till sk\u00f6rden var det en stor \u00e4ra f\u00f6r henne och hennes familj. Hon ser det som en m\u00f6jlighet att l\u00e4ra sig mer om andra yrken och kulturer i landet samtidigt som hon f\u00e5r visa upp sin egen talang f\u00f6r matlagning och baka. Ester \u00e4r sj\u00e4lvs\u00e4ker i sin kunskap men \u00e4r ocks\u00e5 \u00f6ppen f\u00f6r att l\u00e4ra sig av andra och utveckla sina f\u00e4rdigheter ytterligare.",
-        "in_use": true
+
+        "in_use": false
+
     },
     {
         "id": 24,
