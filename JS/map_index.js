@@ -38,7 +38,7 @@ function initMap() {
           draggable: false,
           clickable: false,
         });
-        // render_constants();
+        render_constants();
         location_update(icon);
       },
       () => {
