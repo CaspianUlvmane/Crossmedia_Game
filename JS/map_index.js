@@ -129,7 +129,7 @@ function create_hazard_div(latLng) {
 }
 
 async function render_constants(){
-  let response = await fetch("../DB/mapAPI.php");
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
@@ -157,7 +157,7 @@ async function render_constants(){
 }
 
 async function render_hazards() {
-  let response = await fetch("../DB/mapAPI.php");
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
@@ -209,7 +209,7 @@ async function start_game(){
   if (resource.start){
     window.initMap = initMap();
   } else{
-    setTimeout(() => start_game(), 5000)
+    // setTimeout(() => start_game(), 5000)
   }
 
 }
