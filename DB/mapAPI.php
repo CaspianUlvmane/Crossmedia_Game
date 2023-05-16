@@ -69,4 +69,20 @@ if($request_method === "DELETE"){
     }
 }
 
+if($request_method === "PATCH"){
+    $filename = "positions.JSON";
+    $json = file_get_contents($filename);
+    $positions = json_decode($json, true);
+
+    foreach($positions as $index => $position){
+        if($position["id"] === $receivedData["user_id"]){
+            $position["lat"] = $receivedData["lat"];
+            $position["lng"] = $receivedData["lng"];
+            $positions[$index] = $position;
+        }
+    }
+    $json = json_encode($positions, JSON_PRETTY_PRINT);
+    file_put_contents($filename, $json);
+}
+
 ?>

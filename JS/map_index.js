@@ -71,6 +71,17 @@ function location_update(icon) {
       lng: position.coords.longitude,
     };
     icon.setPosition(pos);
+    if(localStorage.getItem("playerId") != null){
+      let options = {
+        method: "PATCH",
+        body: JSON.stringify({
+          user_id: localStorage.getItem("playerId"),
+          lat: pos.lat,
+          lng: pos.lng,}),
+        headers: { "Content-Type": "application/json" },
+        }
+      fetch("./DB/mapAPI.php", options)
+    }
     let hazard_zones_array = Array.from(
       document.querySelectorAll(".hazard_area")
     );
