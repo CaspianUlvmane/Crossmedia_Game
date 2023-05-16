@@ -5,6 +5,7 @@
 let map, infoWindow;
 
 const updateTime = 5000;
+localStorage.setItem("hurt", "0")
 
 function initMap() {
   if (navigator.geolocation) {
@@ -15,8 +16,9 @@ function initMap() {
           lng: position.coords.longitude,
         };
         map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 55.590463, lng: 12.992339 },
-          zoom: 16.5,
+          center: { lat: 55.589200, lng: 12.992339 },
+          zoom: 15.5,
+          mapTypeControl: false,
           draggable: false,
           mapId: "a0111f479c8a0090",
         });
@@ -38,7 +40,7 @@ function initMap() {
           draggable: false,
           clickable: false,
         });
-        // render_constants();
+        render_constants();
         location_update(icon);
       },
       () => {
@@ -75,9 +77,22 @@ function location_update(icon) {
     if (hazard_zones_array[0]) {
       hazard_zones_array.forEach((z) => {
         if (hazard_zone_bool(z, pos)) {
-          console.log("damage taken");
+          let hit = localStorage.getItem("hurt")
+          if(hit > 1){
+            console.log("Get out of danger!");
+          } else if(hit == 4){
+            console.log("damage taken, get out!")
+            hit = 0
+            localStorage.setItem("hurt", hit)
+          } else{
+            hit++
+            localStorage.setItem("hurt", hit)
+          }
+          return
         }
+
       });
+      localStorage.setItem("hurt", "0")
     }
   });
   render_hazards();

@@ -22,8 +22,6 @@ function checkDistrict(player) {
             let districts_list = rsc;
 
             districts_list.forEach(d => {
-                console.log(d.district_number)
-                console.log(player.district_id)
                 if (d.district_number == player.district_id) {
                     let district_number = d.district_number;
                     let district_proffesion = d.profession
@@ -60,6 +58,7 @@ function buildFooter(player, district_number, district_profession) {
                 
         `;
     document.querySelector("body").append(footer);
+    document.querySelector(".footer").style.display = "grid";
 
     //NEW
     document.querySelector(".quest_icon").addEventListener("click", function() {
@@ -117,10 +116,34 @@ function buildFooter(player, district_number, district_profession) {
     });
 
     const all_circles = document.querySelectorAll('.check_circle');
+    let count = 0;
 
     all_circles.forEach(circle => {
         circle.addEventListener('click', () => {
             circle.classList.add('checked');
+            count++;
+            circle.classList.add(`${count}`);
+            if (circle.classList.contains('5')) {
+                popupLose()
+
+                fetch(new Request("./DB/players.JSON"))
+                    .then(response => response.json())
+                    .then(players => {
+                        players.forEach(p => {
+                            if (player.id == p.id)
+                                console.log(player)
+                                //     let options = {
+                                //         method: "PATCH",
+                                //         body: JSON.stringify({
+                                //             "start": true
+                                //         }),
+                                //         headers: { "Content-Type": "application/json" },
+                                //     };
+                                //     fetch("../DB/API.pla", options)
+                        })
+                    })
+
+            }
         });
     });
 }
@@ -134,6 +157,8 @@ function checkFilledCircles() {
         not_checked[1].classList.add('checked');
     } else if (not_checked.length === 1) {
         not_checked[0].classList.add('checked');
+    } else if (not_checked.length === 0) {
+        popupLose()
     }
 }
 
@@ -189,5 +214,6 @@ function clickProfit() {
         }
     });
 }
+
 
 // profitPopUp()

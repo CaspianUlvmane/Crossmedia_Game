@@ -40,7 +40,7 @@ function render() {
             // .catch((error) => console.log(error));
     })
 };
-setTimeout(()=> render(), 8000)
+render()
 
 function getLetter(popup, logga_img, start_game) {
 
@@ -139,7 +139,6 @@ function openLetter(letter_img, open_letter, popup) {
 
     let letter_container = document.createElement("div");
     letter_container.classList.add("letter_container");
-    
 
     let letter_img2 = document.createElement("img");
     letter_img2.id = "letter_2";
