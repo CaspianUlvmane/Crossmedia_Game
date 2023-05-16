@@ -40,7 +40,14 @@ function render() {
             // .catch((error) => console.log(error));
     })
 };
-render()
+
+setTimeout(() => {if(getPlayerInfo() != null && start_game()){
+    console.log("getPlayer");
+    getPlayer(localStorage.getItem('playerId'))
+}else{
+    render()
+}}, 2)
+
 
 function getLetter(popup, logga_img, start_game) {
 
