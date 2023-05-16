@@ -43,6 +43,7 @@
     width: 100px;
     height: 100px;
     z-index: 10;
+    border: 4px solid black;
   }
 
   .hazard:hover{
