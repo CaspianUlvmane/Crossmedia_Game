@@ -3,216 +3,216 @@
         "id": 1,
         "district_id": 1,
         "name": "Ella",
-        "image": "./IMG/characters/farmer_woman.png",
+        "image": ".\/IMG\/characters\/farmer_woman.png",
         "alive": true,
-        "backstory": "Ella är en tjej på 16 år som är född och uppvuxen på en bondgård i Skåne. Hon har länge hjälpt sin far med skötseln av gårdens djur och grödor, och har utvecklat en stark passion för jordbruk och natur. Trots att hon har tvingats arbeta hårt och uppoffra mycket av sin fritid för gården, har hon alltid varit glad att kunna hjälpa till på ett konkret sätt för att bidra till sin familjs försörjning. Ella har en stark vilja och är envis när hon väl har bestämt sig för något. Hon är också mycket lojal mot sin familj och sina vänner, och skulle göra vad som helst för att skydda dem. Hennes liv på landet har gett henne en intuitiv förståelse för naturen och en stark känsla av självförsörjning. Som en del av Skåne-distriktet är Ella väl medveten om de sociala och ekonomiska utmaningar som hennes samhälle står inför på grund av överbefolkning och resursbrist. Hon tror att Skörden kan vara en möjlig lösning, men hon är också övertygad om att det måste finnas bättre sätt att hantera situationen än genom att offra oskyldiga människors liv.",
-        "in_use": false
+        "backstory": "Ella \u00e4r en tjej p\u00e5 16 \u00e5r som \u00e4r f\u00f6dd och uppvuxen p\u00e5 en bondg\u00e5rd i Sk\u00e5ne. Hon har l\u00e4nge hj\u00e4lpt sin far med sk\u00f6tseln av g\u00e5rdens djur och gr\u00f6dor, och har utvecklat en stark passion f\u00f6r jordbruk och natur. Trots att hon har tvingats arbeta h\u00e5rt och uppoffra mycket av sin fritid f\u00f6r g\u00e5rden, har hon alltid varit glad att kunna hj\u00e4lpa till p\u00e5 ett konkret s\u00e4tt f\u00f6r att bidra till sin familjs f\u00f6rs\u00f6rjning. Ella har en stark vilja och \u00e4r envis n\u00e4r hon v\u00e4l har best\u00e4mt sig f\u00f6r n\u00e5got. Hon \u00e4r ocks\u00e5 mycket lojal mot sin familj och sina v\u00e4nner, och skulle g\u00f6ra vad som helst f\u00f6r att skydda dem. Hennes liv p\u00e5 landet har gett henne en intuitiv f\u00f6rst\u00e5else f\u00f6r naturen och en stark k\u00e4nsla av sj\u00e4lvf\u00f6rs\u00f6rjning. Som en del av Sk\u00e5ne-distriktet \u00e4r Ella v\u00e4l medveten om de sociala och ekonomiska utmaningar som hennes samh\u00e4lle st\u00e5r inf\u00f6r p\u00e5 grund av \u00f6verbefolkning och resursbrist. Hon tror att Sk\u00f6rden kan vara en m\u00f6jlig l\u00f6sning, men hon \u00e4r ocks\u00e5 \u00f6vertygad om att det m\u00e5ste finnas b\u00e4ttre s\u00e4tt att hantera situationen \u00e4n genom att offra oskyldiga m\u00e4nniskors liv.",
+        "in_use": true
     },
     {
         "id": 2,
         "district_id": 1,
         "name": "Noah",
-        "image": "./IMG/characters/farmer_man.png",
+        "image": ".\/IMG\/characters\/farmer_man.png",
         "alive": true,
-        "backstory": "Noah är en kille som är 16 och är en stark och envis bondpojke från Skåne som har levt hela sitt liv på familjens gård. Han är van vid att arbeta hårt från tidig ålder och har lärt sig att odla grödor och ta hand om djur på ett effektivt sätt. Trots att han har försökt att undvika uppmärksamhet och konflikt har Nils alltid varit medveten om de orättvisor och bristande rättigheter som hans familj och andra bönder har lidit av under Malm-regimen då överbefolkningen resulterar i ett större behov för mat så får Noah och hans familj jobba hårt.",
-        "in_use": false
+        "backstory": "Noah \u00e4r en kille som \u00e4r 16 och \u00e4r en stark och envis bondpojke fr\u00e5n Sk\u00e5ne som har levt hela sitt liv p\u00e5 familjens g\u00e5rd. Han \u00e4r van vid att arbeta h\u00e5rt fr\u00e5n tidig \u00e5lder och har l\u00e4rt sig att odla gr\u00f6dor och ta hand om djur p\u00e5 ett effektivt s\u00e4tt. Trots att han har f\u00f6rs\u00f6kt att undvika uppm\u00e4rksamhet och konflikt har Nils alltid varit medveten om de or\u00e4ttvisor och bristande r\u00e4ttigheter som hans familj och andra b\u00f6nder har lidit av under Malm-regimen d\u00e5 \u00f6verbefolkningen resulterar i ett st\u00f6rre behov f\u00f6r mat s\u00e5 f\u00e5r Noah och hans familj jobba h\u00e5rt.",
+        "in_use": true
     },
     {
         "id": 3,
         "district_id": 2,
         "name": "Leah",
-        "image": "./IMG/characters/influencer_woman.png",
+        "image": ".\/IMG\/characters\/influencer_woman.png",
         "alive": true,
-        "backstory": "Leah är en tjej som är 18 år från Stockholm, en stad där makt och inflytande är värderat högt. Hon har byggt upp sitt rykte genom sociala medier och har en lojal följarskara som beundrar henne för hennes utseende och livsstil. Leah har alltid varit medveten om vikten av att framstå som perfekt och har investerat mycket tid och pengar i sitt utseende och sitt varumärke. Trots att Leah inte har någon erfarenhet av livet på landsbygden, är hon fast besluten om att vinna Skörden och bevisa sin styrka och överlevnadsförmåga för sina följare. Hon är envis och tävlingsinriktad, men hennes rädsla för att förlora kan göra henne impulsiv och övermodig.",
-        "in_use": false
+        "backstory": "Leah \u00e4r en tjej som \u00e4r 18 \u00e5r fr\u00e5n Stockholm, en stad d\u00e4r makt och inflytande \u00e4r v\u00e4rderat h\u00f6gt. Hon har byggt upp sitt rykte genom sociala medier och har en lojal f\u00f6ljarskara som beundrar henne f\u00f6r hennes utseende och livsstil. Leah har alltid varit medveten om vikten av att framst\u00e5 som perfekt och har investerat mycket tid och pengar i sitt utseende och sitt varum\u00e4rke. Trots att Leah inte har n\u00e5gon erfarenhet av livet p\u00e5 landsbygden, \u00e4r hon fast besluten om att vinna Sk\u00f6rden och bevisa sin styrka och \u00f6verlevnadsf\u00f6rm\u00e5ga f\u00f6r sina f\u00f6ljare. Hon \u00e4r envis och t\u00e4vlingsinriktad, men hennes r\u00e4dsla f\u00f6r att f\u00f6rlora kan g\u00f6ra henne impulsiv och \u00f6vermodig.",
+        "in_use": true
     },
     {
         "id": 4,
         "district_id": 2,
         "name": "William",
-        "image": "./IMG/characters/influencer_man.png",
+        "image": ".\/IMG\/characters\/influencer_man.png",
         "alive": true,
-        "backstory": "William är en vältränad och självsäker 18-årig man som är van vid att leva ett liv i lyx och bekvämlighet. Han är en framgångsrik influencer på sociala medier och har en stor följarskara som beundrar hans livsstil. Trots att han är omgiven av människor, känner han sig ofta ensam och längtar efter verklig kärlek och vänskap. William är uppvuxen i en rik familj i Stockholm och har aldrig behövt bekymra sig om pengar eller någon form av kamp. Han har alltid haft allt han velat ha och har lärt sig att utnyttja sitt utseende och sin charm för att få det han vill ha. Hans livsförhållanden har gjort honom något bortskämd och ofta oempatisk mot andra.",
-        "in_use": false
+        "backstory": "William \u00e4r en v\u00e4ltr\u00e4nad och sj\u00e4lvs\u00e4ker 18-\u00e5rig man som \u00e4r van vid att leva ett liv i lyx och bekv\u00e4mlighet. Han \u00e4r en framg\u00e5ngsrik influencer p\u00e5 sociala medier och har en stor f\u00f6ljarskara som beundrar hans livsstil. Trots att han \u00e4r omgiven av m\u00e4nniskor, k\u00e4nner han sig ofta ensam och l\u00e4ngtar efter verklig k\u00e4rlek och v\u00e4nskap. William \u00e4r uppvuxen i en rik familj i Stockholm och har aldrig beh\u00f6vt bekymra sig om pengar eller n\u00e5gon form av kamp. Han har alltid haft allt han velat ha och har l\u00e4rt sig att utnyttja sitt utseende och sin charm f\u00f6r att f\u00e5 det han vill ha. Hans livsf\u00f6rh\u00e5llanden har gjort honom n\u00e5got bortsk\u00e4md och ofta oempatisk mot andra.",
+        "in_use": true
     },
     {
         "id": 5,
         "district_id": 3,
         "name": "Alma",
-        "image": "./IMG/characters/fisher_woman.png",
+        "image": ".\/IMG\/characters\/fisher_woman.png",
         "alive": true,
-        "backstory": "Alma är en 15-årig tjej från Göteborg som har vuxit upp i en familj av fiskare. Hon är van att arbeta hårt och har alltid känt sig som en del av havet. Alma är stark, envis och modig, med en osviklig känsla för rättvisa. Hon är duktig på att navigera och har en djup förståelse för naturen, vilket gör henne till en skicklig fiskare. Trots att Alma har vuxit upp i en familj av fiskare har hon alltid haft en dröm om att bli skådespelare. Hon har ofta övat på att skapa karaktärer och öva på repliker i sin fritid. Alma är också mycket självständig och har en stark vilja att göra det hon vill, oavsett vad andra säger.",
-        "in_use": false
+        "backstory": "Alma \u00e4r en 15-\u00e5rig tjej fr\u00e5n G\u00f6teborg som har vuxit upp i en familj av fiskare. Hon \u00e4r van att arbeta h\u00e5rt och har alltid k\u00e4nt sig som en del av havet. Alma \u00e4r stark, envis och modig, med en osviklig k\u00e4nsla f\u00f6r r\u00e4ttvisa. Hon \u00e4r duktig p\u00e5 att navigera och har en djup f\u00f6rst\u00e5else f\u00f6r naturen, vilket g\u00f6r henne till en skicklig fiskare. Trots att Alma har vuxit upp i en familj av fiskare har hon alltid haft en dr\u00f6m om att bli sk\u00e5despelare. Hon har ofta \u00f6vat p\u00e5 att skapa karakt\u00e4rer och \u00f6va p\u00e5 repliker i sin fritid. Alma \u00e4r ocks\u00e5 mycket sj\u00e4lvst\u00e4ndig och har en stark vilja att g\u00f6ra det hon vill, oavsett vad andra s\u00e4ger.",
+        "in_use": true
     },
     {
         "id": 6,
         "district_id": 3,
         "name": "Matteo",
-        "image": "./IMG/characters/fisher_man.png",
+        "image": ".\/IMG\/characters\/fisher_man.png",
         "alive": true,
-        "backstory": "Matteo är en 17-årig man från Västra Götaland, närmare bestämt Göteborg, som är uppvuxen med fiske som en del av hans kultur. Han är van att ta hand om sig själv och har lärt sig att navigera i de svåra förhållandena på havet. Han är stark och uthållig med en atletisk kropp tack vare många timmars arbete på fiskebåten. Liam är en självständig person som är van vid att arbeta hårt för att nå sina mål. Han är envis och modig, vilket kommer väl till pass i den farliga miljön på havet. Han är också en tyst person som kan vara reserverad och föredrar att lyssna mer än att prata. När han väl öppnar upp sig, är han en lojal vän som alltid är där för att stötta dem han bryr sig om.",
-        "in_use": false
+        "backstory": "Matteo \u00e4r en 17-\u00e5rig man fr\u00e5n V\u00e4stra G\u00f6taland, n\u00e4rmare best\u00e4mt G\u00f6teborg, som \u00e4r uppvuxen med fiske som en del av hans kultur. Han \u00e4r van att ta hand om sig sj\u00e4lv och har l\u00e4rt sig att navigera i de sv\u00e5ra f\u00f6rh\u00e5llandena p\u00e5 havet. Han \u00e4r stark och uth\u00e5llig med en atletisk kropp tack vare m\u00e5nga timmars arbete p\u00e5 fiskeb\u00e5ten. Liam \u00e4r en sj\u00e4lvst\u00e4ndig person som \u00e4r van vid att arbeta h\u00e5rt f\u00f6r att n\u00e5 sina m\u00e5l. Han \u00e4r envis och modig, vilket kommer v\u00e4l till pass i den farliga milj\u00f6n p\u00e5 havet. Han \u00e4r ocks\u00e5 en tyst person som kan vara reserverad och f\u00f6redrar att lyssna mer \u00e4n att prata. N\u00e4r han v\u00e4l \u00f6ppnar upp sig, \u00e4r han en lojal v\u00e4n som alltid \u00e4r d\u00e4r f\u00f6r att st\u00f6tta dem han bryr sig om.",
+        "in_use": true
     },
     {
         "id": 7,
         "district_id": 4,
         "name": "Astrid",
-        "image": "./IMG/characters/miner_woman.png",
+        "image": ".\/IMG\/characters\/miner_woman.png",
         "alive": true,
-        "backstory": "Astrid är en 18-årig tjej från Kiruna, en stad som är känd för sin gruvdrift. Hon kommer från en familj av hårt arbetande gruvarbetare och har själv vuxit upp med att hjälpa till i gruvan sedan hon var liten. Astrid är stark och uthållig, van vid att ta itu med tuffa arbetsförhållanden och klara av fysiskt krävande arbete. Trots att hon har växt upp i en hård miljö har hon en mjuk sida och är mycket empatisk. Hon har en förmåga att förstå och stötta människor i deras känslor och upplevelser. Astrid är modig och envishet, och är fast besluten om att överleva i skörden och att visa att hon är mer än bara en gruvarbetardotter.",
-        "in_use": false
+        "backstory": "Astrid \u00e4r en 18-\u00e5rig tjej fr\u00e5n Kiruna, en stad som \u00e4r k\u00e4nd f\u00f6r sin gruvdrift. Hon kommer fr\u00e5n en familj av h\u00e5rt arbetande gruvarbetare och har sj\u00e4lv vuxit upp med att hj\u00e4lpa till i gruvan sedan hon var liten. Astrid \u00e4r stark och uth\u00e5llig, van vid att ta itu med tuffa arbetsf\u00f6rh\u00e5llanden och klara av fysiskt kr\u00e4vande arbete. Trots att hon har v\u00e4xt upp i en h\u00e5rd milj\u00f6 har hon en mjuk sida och \u00e4r mycket empatisk. Hon har en f\u00f6rm\u00e5ga att f\u00f6rst\u00e5 och st\u00f6tta m\u00e4nniskor i deras k\u00e4nslor och upplevelser. Astrid \u00e4r modig och envishet, och \u00e4r fast besluten om att \u00f6verleva i sk\u00f6rden och att visa att hon \u00e4r mer \u00e4n bara en gruvarbetardotter.",
+        "in_use": true
     },
     {
         "id": 8,
         "district_id": 4,
         "name": "Theo",
-        "image": "./IMG/characters/miner_man.png",
+        "image": ".\/IMG\/characters\/miner_man.png",
         "alive": true,
-        "backstory": "Theo är en stark och tystlåten kille från Kiruna som kommer från en familj av gruvarbetare. Han är van vid att arbeta hårt och kan hantera tung utrustning och maskiner utan problem. Theo  är en 16-årig kille från Luleå och är en utmärkt gruvarbetare och han vet hur man hittar och utvinner värdefulla mineraler och metaller. På fritiden brukar Theo ägna sig åt jakt och fiske, och han har lärt sig hur man överlever i den hårda och ogästvänliga naturen runt Kiruna. Han har också en passion för att reparera och bygga maskiner och bilar, och har ett öga för detaljer och en skicklig hand. Theo är van vid att arbeta ensam och kan ibland vara misstänksam mot andra människor, men han är också lojal mot dem han litar på och kommer alltid att stå upp för dem. Trots sin hårda exteriör har han en mjukare sida, och han bryr sig om rättvisa och rättvisa behandling av människor.",
-        "in_use": false
+        "backstory": "Theo \u00e4r en stark och tystl\u00e5ten kille fr\u00e5n Kiruna som kommer fr\u00e5n en familj av gruvarbetare. Han \u00e4r van vid att arbeta h\u00e5rt och kan hantera tung utrustning och maskiner utan problem. Theo  \u00e4r en 16-\u00e5rig kille fr\u00e5n Lule\u00e5 och \u00e4r en utm\u00e4rkt gruvarbetare och han vet hur man hittar och utvinner v\u00e4rdefulla mineraler och metaller. P\u00e5 fritiden brukar Theo \u00e4gna sig \u00e5t jakt och fiske, och han har l\u00e4rt sig hur man \u00f6verlever i den h\u00e5rda och og\u00e4stv\u00e4nliga naturen runt Kiruna. Han har ocks\u00e5 en passion f\u00f6r att reparera och bygga maskiner och bilar, och har ett \u00f6ga f\u00f6r detaljer och en skicklig hand. Theo \u00e4r van vid att arbeta ensam och kan ibland vara misst\u00e4nksam mot andra m\u00e4nniskor, men han \u00e4r ocks\u00e5 lojal mot dem han litar p\u00e5 och kommer alltid att st\u00e5 upp f\u00f6r dem. Trots sin h\u00e5rda exteri\u00f6r har han en mjukare sida, och han bryr sig om r\u00e4ttvisa och r\u00e4ttvisa behandling av m\u00e4nniskor.",
+        "in_use": true
     },
     {
         "id": 9,
         "district_id": 5,
         "name": "Wilma",
-        "image": "./IMG/characters/hunter_woman.png",
+        "image": ".\/IMG\/characters\/hunter_woman.png",
         "alive": true,
-        "backstory": "Wilma är en självsäker och modig 17-årig tjej från norra regionen Västerbotten, vars familj har en lång tradition av jakt och överlevnad i naturen. Hon har vuxit upp omgiven av skogar och sjöar och är väl förtrogen med naturen och dess utmaningar. Wilma är en utmärkt skytt och jägare och har alltid känt sig bekväm i skogarna, där hon spenderat mycket av sin tid på att utforska och lära sig om djurlivet. Trots sin styrka och fysiska förmåga är Wilma också en mycket analytisk och intelligent person. Hon är kunnig i överlevnadstekniker och har studerat mycket om växter och djur som finns i regionen. Wilma har en instinktiv förmåga att bedöma faror och fatta snabba beslut i stressiga situationer, vilket är en fördel i Skörden. Wilma är dock också en ganska ensam person, som inte har mycket erfarenhet av sociala situationer utanför hennes familj. Hon är oftast tyst och reserverad och kan verka stel i sociala sammanhang.",
-        "in_use": false
+        "backstory": "Wilma \u00e4r en sj\u00e4lvs\u00e4ker och modig 17-\u00e5rig tjej fr\u00e5n norra regionen V\u00e4sterbotten, vars familj har en l\u00e5ng tradition av jakt och \u00f6verlevnad i naturen. Hon har vuxit upp omgiven av skogar och sj\u00f6ar och \u00e4r v\u00e4l f\u00f6rtrogen med naturen och dess utmaningar. Wilma \u00e4r en utm\u00e4rkt skytt och j\u00e4gare och har alltid k\u00e4nt sig bekv\u00e4m i skogarna, d\u00e4r hon spenderat mycket av sin tid p\u00e5 att utforska och l\u00e4ra sig om djurlivet. Trots sin styrka och fysiska f\u00f6rm\u00e5ga \u00e4r Wilma ocks\u00e5 en mycket analytisk och intelligent person. Hon \u00e4r kunnig i \u00f6verlevnadstekniker och har studerat mycket om v\u00e4xter och djur som finns i regionen. Wilma har en instinktiv f\u00f6rm\u00e5ga att bed\u00f6ma faror och fatta snabba beslut i stressiga situationer, vilket \u00e4r en f\u00f6rdel i Sk\u00f6rden. Wilma \u00e4r dock ocks\u00e5 en ganska ensam person, som inte har mycket erfarenhet av sociala situationer utanf\u00f6r hennes familj. Hon \u00e4r oftast tyst och reserverad och kan verka stel i sociala sammanhang.",
+        "in_use": true
     },
     {
         "id": 10,
         "district_id": 5,
         "name": "Olof",
-        "image": "./IMG/characters/hunter_man.png",
+        "image": ".\/IMG\/characters\/hunter_man.png",
         "alive": true,
-        "backstory": "Olof är en tystlåten och stolt 18-årig kille från en släkt av erfarna jägare i Västerbotten. Han är uppvuxen i en liten by, omgiven av skog och fjäll, och har lärt sig att överleva i naturen från en mycket ung ålder. Oliver har alltid varit fascinerad av vildmarken och har en djup respekt för sin makt och skönhet. Han är en skicklig skytt och kan spåra djur och hitta mat i de mest ogästvänliga terräng. Oliver är en envis person som aldrig ger upp, vilket han har ärvt från sin farfar, som överlevde flera månader ensam i vildmarken efter en olycka. Han är tyst och försiktig av naturen, men när det kommer till att försvara sig själv eller sina nära och kära, visar han sig vara en modig och orädd kämpe. Oliver är van vid att leva enkelt och har inga höga ambitioner i livet, men han är fast besluten att överleva Skörden och återvända hem till sin familj.",
-        "in_use": false
+        "backstory": "Olof \u00e4r en tystl\u00e5ten och stolt 18-\u00e5rig kille fr\u00e5n en sl\u00e4kt av erfarna j\u00e4gare i V\u00e4sterbotten. Han \u00e4r uppvuxen i en liten by, omgiven av skog och fj\u00e4ll, och har l\u00e4rt sig att \u00f6verleva i naturen fr\u00e5n en mycket ung \u00e5lder. Oliver har alltid varit fascinerad av vildmarken och har en djup respekt f\u00f6r sin makt och sk\u00f6nhet. Han \u00e4r en skicklig skytt och kan sp\u00e5ra djur och hitta mat i de mest og\u00e4stv\u00e4nliga terr\u00e4ng. Oliver \u00e4r en envis person som aldrig ger upp, vilket han har \u00e4rvt fr\u00e5n sin farfar, som \u00f6verlevde flera m\u00e5nader ensam i vildmarken efter en olycka. Han \u00e4r tyst och f\u00f6rsiktig av naturen, men n\u00e4r det kommer till att f\u00f6rsvara sig sj\u00e4lv eller sina n\u00e4ra och k\u00e4ra, visar han sig vara en modig och or\u00e4dd k\u00e4mpe. Oliver \u00e4r van vid att leva enkelt och har inga h\u00f6ga ambitioner i livet, men han \u00e4r fast besluten att \u00f6verleva Sk\u00f6rden och \u00e5terv\u00e4nda hem till sin familj.",
+        "in_use": true
     },
     {
         "id": 11,
         "district_id": 6,
         "name": "Elsa",
-        "image": "./IMG/characters/military_woman.png",
+        "image": ".\/IMG\/characters\/military_woman.png",
         "alive": true,
-        "backstory": "Elsa är en stark, självständig och disciplinerad 18-årig tjej från Gotland. Hon växte upp i en familj av militärer och har alltid varit fascinerad av taktik och strategi. Elsa har en unik talang för att läsa människor och situationer, vilket gör henne till en utmärkt strateg och ledare. Hon är också utrustad med utmärkta överlevnads färdigheter, vilket hon lärt sig från sin familj och genom att spendera tid i naturen på Gotland. Elsa har alltid känt sig hemma i utmanande och farliga situationer, och hon är redo att ta på sig utmaningen med Skörden. Men samtidigt är hon också medveten om att hennes familjs militära bakgrund kan göra henne till en måltavla för de andra spelarna, och hon är beredd att använda alla sina färdigheter och intelligens för att överleva och komma ut som vinnare.",
-        "in_use": false
+        "backstory": "Elsa \u00e4r en stark, sj\u00e4lvst\u00e4ndig och disciplinerad 18-\u00e5rig tjej fr\u00e5n Gotland. Hon v\u00e4xte upp i en familj av milit\u00e4rer och har alltid varit fascinerad av taktik och strategi. Elsa har en unik talang f\u00f6r att l\u00e4sa m\u00e4nniskor och situationer, vilket g\u00f6r henne till en utm\u00e4rkt strateg och ledare. Hon \u00e4r ocks\u00e5 utrustad med utm\u00e4rkta \u00f6verlevnads f\u00e4rdigheter, vilket hon l\u00e4rt sig fr\u00e5n sin familj och genom att spendera tid i naturen p\u00e5 Gotland. Elsa har alltid k\u00e4nt sig hemma i utmanande och farliga situationer, och hon \u00e4r redo att ta p\u00e5 sig utmaningen med Sk\u00f6rden. Men samtidigt \u00e4r hon ocks\u00e5 medveten om att hennes familjs milit\u00e4ra bakgrund kan g\u00f6ra henne till en m\u00e5ltavla f\u00f6r de andra spelarna, och hon \u00e4r beredd att anv\u00e4nda alla sina f\u00e4rdigheter och intelligens f\u00f6r att \u00f6verleva och komma ut som vinnare.",
+        "in_use": true
     },
     {
         "id": 12,
         "district_id": 6,
         "name": "Ludvig",
-        "image": "./IMG/characters/military_man.png",
+        "image": ".\/IMG\/characters\/military_man.png",
         "alive": true,
-        "backstory": "Ludvig är en vältränad 17-årig kille som har vuxit upp i en familj av militärer på Gotland. Han har tränats i kampsport och vapenhantering sedan han var liten och har alltid haft en stark lojalitet gentemot sin familj och land. Ludvig är envis och fokuserad, och han tar alltid sina uppgifter på allvar. Han är en strategisk tänkare och kan tänka snabbt under press, vilket gör honom till en farlig motståndare i Skörden. Trots sin militära bakgrund är Ludvig också en konstnärlig själ och älskar att spela gitarr och sjunga när han har tid.",
+        "backstory": "Ludvig \u00e4r en v\u00e4ltr\u00e4nad 17-\u00e5rig kille som har vuxit upp i en familj av milit\u00e4rer p\u00e5 Gotland. Han har tr\u00e4nats i kampsport och vapenhantering sedan han var liten och har alltid haft en stark lojalitet gentemot sin familj och land. Ludvig \u00e4r envis och fokuserad, och han tar alltid sina uppgifter p\u00e5 allvar. Han \u00e4r en strategisk t\u00e4nkare och kan t\u00e4nka snabbt under press, vilket g\u00f6r honom till en farlig motst\u00e5ndare i Sk\u00f6rden. Trots sin milit\u00e4ra bakgrund \u00e4r Ludvig ocks\u00e5 en konstn\u00e4rlig sj\u00e4l och \u00e4lskar att spela gitarr och sjunga n\u00e4r han har tid.",
         "in_use": false
     },
     {
         "id": 13,
         "district_id": 7,
         "name": "Agnes",
-        "image": "./IMG/characters/hoarders_woman.png",
+        "image": ".\/IMG\/characters\/hoarders_woman.png",
         "alive": true,
-        "backstory": "Agnes är en 14-årig tjej som kommer från Halland och hon är en hoarder. Hon har svårt att släppa taget om saker, oavsett om det är gamla kläder, leksaker eller till och med trasiga prylar. Hon har en eklektisk stil som hon skapat genom att samla på sig saker från olika tidsepoker och kulturer. Hon bär ofta på sig flera lager av kläder och smycken, vilket gör henne synlig från långt håll. Hon har också en kreativ sida och älskar att skapa nya saker med sina samlade föremål, vilket gör henne till en duktig hantverkare. Trots att hon är en hoarder och det kan vara svårt för henne att släppa taget om saker, så är hon en lojal och pålitlig vän som alltid ställer upp för dem hon älskar.",
+        "backstory": "Agnes \u00e4r en 14-\u00e5rig tjej som kommer fr\u00e5n Halland och hon \u00e4r en hoarder. Hon har sv\u00e5rt att sl\u00e4ppa taget om saker, oavsett om det \u00e4r gamla kl\u00e4der, leksaker eller till och med trasiga prylar. Hon har en eklektisk stil som hon skapat genom att samla p\u00e5 sig saker fr\u00e5n olika tidsepoker och kulturer. Hon b\u00e4r ofta p\u00e5 sig flera lager av kl\u00e4der och smycken, vilket g\u00f6r henne synlig fr\u00e5n l\u00e5ngt h\u00e5ll. Hon har ocks\u00e5 en kreativ sida och \u00e4lskar att skapa nya saker med sina samlade f\u00f6rem\u00e5l, vilket g\u00f6r henne till en duktig hantverkare. Trots att hon \u00e4r en hoarder och det kan vara sv\u00e5rt f\u00f6r henne att sl\u00e4ppa taget om saker, s\u00e5 \u00e4r hon en lojal och p\u00e5litlig v\u00e4n som alltid st\u00e4ller upp f\u00f6r dem hon \u00e4lskar.",
         "in_use": false
     },
     {
         "id": 14,
         "district_id": 7,
         "name": "Hugo",
-        "image": "./IMG/characters/hoarders_man.png",
+        "image": ".\/IMG\/characters\/hoarders_man.png",
         "alive": true,
-        "backstory": "Hugo är en ovanligt stillsam 15-årig kille, han pratar sällan och verkar alltid fördjupad i sina egna tankar. Han kommer från en familj av samlare och har själv en förkärlek för att spara på allt möjligt, från små mynt och snäckskal till stora möbler och fordon. Han är en skicklig snickare och tinkerer och älskar att reparera och återanvända saker för att göra dem användbara igen. Trots sin hoarding-tendens är Hugo mycket organiserad och har en plats för allt i sitt hem, även om det ibland kan se rörigt ut för andra. Han är mycket noga med att hålla reda på vad han sparar och var han har placerat det, och blir lätt stressad om hans föremål rörs om eller flyttas.",
+        "backstory": "Hugo \u00e4r en ovanligt stillsam 15-\u00e5rig kille, han pratar s\u00e4llan och verkar alltid f\u00f6rdjupad i sina egna tankar. Han kommer fr\u00e5n en familj av samlare och har sj\u00e4lv en f\u00f6rk\u00e4rlek f\u00f6r att spara p\u00e5 allt m\u00f6jligt, fr\u00e5n sm\u00e5 mynt och sn\u00e4ckskal till stora m\u00f6bler och fordon. Han \u00e4r en skicklig snickare och tinkerer och \u00e4lskar att reparera och \u00e5teranv\u00e4nda saker f\u00f6r att g\u00f6ra dem anv\u00e4ndbara igen. Trots sin hoarding-tendens \u00e4r Hugo mycket organiserad och har en plats f\u00f6r allt i sitt hem, \u00e4ven om det ibland kan se r\u00f6rigt ut f\u00f6r andra. Han \u00e4r mycket noga med att h\u00e5lla reda p\u00e5 vad han sparar och var han har placerat det, och blir l\u00e4tt stressad om hans f\u00f6rem\u00e5l r\u00f6rs om eller flyttas.",
         "in_use": false
     },
     {
         "id": 15,
         "district_id": 8,
         "name": "Ida",
-        "image": "./IMG/characters/chef_woman.png",
+        "image": ".\/IMG\/characters\/chef_woman.png",
         "alive": true,
-        "backstory": "Ida är en 18-årig tjej från Danmark som har en passion för matlagning. Hon har alltid fascinerats av olika kulturers matlagningstekniker och smaker och har rest runt i världen för att utforska dem. Som en skicklig kock har Ida lärt sig att använda alla sina sinnen för att skapa magiska rätter. Hon har en förmåga att känna av vad som saknas i en rätt och hur man kan göra den ännu bättre. Ida är också en mycket social person som lätt knyter kontakter med andra. Hon älskar att träffa nya människor och utveckla relationer. Ida är också mycket empatisk och förstående, och hon har en förmåga att lyssna och ge goda råd till andra. Trots sin passion för mat och sociala färdigheter är Ida inte rädd för tuffa utmaningar. Hon har alltid varit en tävlingsmänniska och en utmaning för henne är ett tillfälle att växa och lära sig nya saker. Men hon är också medveten om att Skörden kommer att testa henne på olika sätt, och hon är beredd att använda alla sina talanger och färdigheter för att överleva och vinna.",
+        "backstory": "Ida \u00e4r en 18-\u00e5rig tjej fr\u00e5n Danmark som har en passion f\u00f6r matlagning. Hon har alltid fascinerats av olika kulturers matlagningstekniker och smaker och har rest runt i v\u00e4rlden f\u00f6r att utforska dem. Som en skicklig kock har Ida l\u00e4rt sig att anv\u00e4nda alla sina sinnen f\u00f6r att skapa magiska r\u00e4tter. Hon har en f\u00f6rm\u00e5ga att k\u00e4nna av vad som saknas i en r\u00e4tt och hur man kan g\u00f6ra den \u00e4nnu b\u00e4ttre. Ida \u00e4r ocks\u00e5 en mycket social person som l\u00e4tt knyter kontakter med andra. Hon \u00e4lskar att tr\u00e4ffa nya m\u00e4nniskor och utveckla relationer. Ida \u00e4r ocks\u00e5 mycket empatisk och f\u00f6rst\u00e5ende, och hon har en f\u00f6rm\u00e5ga att lyssna och ge goda r\u00e5d till andra. Trots sin passion f\u00f6r mat och sociala f\u00e4rdigheter \u00e4r Ida inte r\u00e4dd f\u00f6r tuffa utmaningar. Hon har alltid varit en t\u00e4vlingsm\u00e4nniska och en utmaning f\u00f6r henne \u00e4r ett tillf\u00e4lle att v\u00e4xa och l\u00e4ra sig nya saker. Men hon \u00e4r ocks\u00e5 medveten om att Sk\u00f6rden kommer att testa henne p\u00e5 olika s\u00e4tt, och hon \u00e4r beredd att anv\u00e4nda alla sina talanger och f\u00e4rdigheter f\u00f6r att \u00f6verleva och vinna.",
         "in_use": false
     },
     {
         "id": 16,
         "district_id": 8,
         "name": "Oscar",
-        "image": "./IMG/characters/chef_man.png",
+        "image": ".\/IMG\/characters\/chef_man.png",
         "alive": true,
-        "backstory": "Oscar är en kreativ och passionerad 17-årig kille från Danmark. Han har alltid varit intresserad av matlagning och har utvecklat en unik förmåga att skapa nya smaker och rätter från enkla ingredienser. Hans familj har alltid uppmuntrat hans kulinariska talanger och Oscar har utbildat sig till kock på en av Danmarks främsta kockskolor. Oscar är medveten om att hans känslighet för smaker och dofter kan göra honom sårbar för attacker från andra deltagare. Han har tränat på att använda sina kulinariska färdigheter som vapen, och han är övertygad om att han kan överleva i den hårda miljön som Skörden erbjuder. Han är redo att ta på sig utmaningen och visa upp sin kreativitet och styrka som kock och deltagare.",
+        "backstory": "Oscar \u00e4r en kreativ och passionerad 17-\u00e5rig kille fr\u00e5n Danmark. Han har alltid varit intresserad av matlagning och har utvecklat en unik f\u00f6rm\u00e5ga att skapa nya smaker och r\u00e4tter fr\u00e5n enkla ingredienser. Hans familj har alltid uppmuntrat hans kulinariska talanger och Oscar har utbildat sig till kock p\u00e5 en av Danmarks fr\u00e4msta kockskolor. Oscar \u00e4r medveten om att hans k\u00e4nslighet f\u00f6r smaker och dofter kan g\u00f6ra honom s\u00e5rbar f\u00f6r attacker fr\u00e5n andra deltagare. Han har tr\u00e4nat p\u00e5 att anv\u00e4nda sina kulinariska f\u00e4rdigheter som vapen, och han \u00e4r \u00f6vertygad om att han kan \u00f6verleva i den h\u00e5rda milj\u00f6n som Sk\u00f6rden erbjuder. Han \u00e4r redo att ta p\u00e5 sig utmaningen och visa upp sin kreativitet och styrka som kock och deltagare.",
         "in_use": false
     },
     {
         "id": 17,
         "district_id": 9,
         "name": "Vera",
-        "image": "./IMG/characters/doctor_woman.png",
+        "image": ".\/IMG\/characters\/doctor_woman.png",
         "alive": true,
-        "backstory": "Vera är en ambitiös och intelligent 16-årig tjej från Jämtland, med en stark vilja att följa i sin families fotspår och bli en läkare. Hon är övertygad om att hon är född för att hjälpa andra och ser det som sin livsuppgift att lindra smärta och lida. Hennes kunskap och skicklighet i medicinsk vetenskap har gjort henne till en imponerande kandidat för Skörden. Vera har alltid varit driven och fokuserad på sina studier, men hon har också en passion för äventyr och utmaningar. Hon är inte rädd för att ge sig in i farliga situationer om det innebär att hon kan hjälpa till och rädda liv. Trots hennes talanger och drivkraft, är Vera också en försiktig och försiktig person, som alltid tänker på alla möjliga utfall av en situation innan hon agerar. Detta kan ibland göra henne till en blyg och tillbakadragen person, men när det gäller att hjälpa andra, visar hon alltid mod och beslutsamhet.",
+        "backstory": "Vera \u00e4r en ambiti\u00f6s och intelligent 16-\u00e5rig tjej fr\u00e5n J\u00e4mtland, med en stark vilja att f\u00f6lja i sin families fotsp\u00e5r och bli en l\u00e4kare. Hon \u00e4r \u00f6vertygad om att hon \u00e4r f\u00f6dd f\u00f6r att hj\u00e4lpa andra och ser det som sin livsuppgift att lindra sm\u00e4rta och lida. Hennes kunskap och skicklighet i medicinsk vetenskap har gjort henne till en imponerande kandidat f\u00f6r Sk\u00f6rden. Vera har alltid varit driven och fokuserad p\u00e5 sina studier, men hon har ocks\u00e5 en passion f\u00f6r \u00e4ventyr och utmaningar. Hon \u00e4r inte r\u00e4dd f\u00f6r att ge sig in i farliga situationer om det inneb\u00e4r att hon kan hj\u00e4lpa till och r\u00e4dda liv. Trots hennes talanger och drivkraft, \u00e4r Vera ocks\u00e5 en f\u00f6rsiktig och f\u00f6rsiktig person, som alltid t\u00e4nker p\u00e5 alla m\u00f6jliga utfall av en situation innan hon agerar. Detta kan ibland g\u00f6ra henne till en blyg och tillbakadragen person, men n\u00e4r det g\u00e4ller att hj\u00e4lpa andra, visar hon alltid mod och beslutsamhet.",
         "in_use": false
     },
     {
         "id": 18,
         "district_id": 9,
         "name": "Nils",
-        "image": "./IMG/characters/doctor_man.png",
+        "image": ".\/IMG\/characters\/doctor_man.png",
         "alive": true,
-        "backstory": "Nils är en 18-årig kille från Jämtland med en imponerande intellektuell kapacitet. Han är född in i en familj av läkare, där både hans far och morfar är högt ansedda inom medicinens värld. Nils har alltid haft en passion för vetenskap och medicin och har en imponerande kunskap inom dessa områden, trots sin unga ålder..Nils är en stillsam person, vilket gör att han lätt smälter in i bakgrunden. Han är dock mycket analytisk och snabbtänkt, vilket gör honom till en duktig strateg. Hans utbildning och erfarenhet som läkare ger honom en unik förmåga att identifiera och hantera medicinska nödsituationer, vilket kan vara ovärderligt under Skörden. Nils har ett lugnt och metodiskt sätt, vilket kan göra honom till ett mål för mer aggressiva spelare. Men han är inte rädd för att ta risker och är väl medveten om att Skörden kan vara farlig. Han är redo att använda alla sina kunskaper och färdigheter för att överleva och kämpa för att vinna.",
+        "backstory": "Nils \u00e4r en 18-\u00e5rig kille fr\u00e5n J\u00e4mtland med en imponerande intellektuell kapacitet. Han \u00e4r f\u00f6dd in i en familj av l\u00e4kare, d\u00e4r b\u00e5de hans far och morfar \u00e4r h\u00f6gt ansedda inom medicinens v\u00e4rld. Nils har alltid haft en passion f\u00f6r vetenskap och medicin och har en imponerande kunskap inom dessa omr\u00e5den, trots sin unga \u00e5lder..Nils \u00e4r en stillsam person, vilket g\u00f6r att han l\u00e4tt sm\u00e4lter in i bakgrunden. Han \u00e4r dock mycket analytisk och snabbt\u00e4nkt, vilket g\u00f6r honom till en duktig strateg. Hans utbildning och erfarenhet som l\u00e4kare ger honom en unik f\u00f6rm\u00e5ga att identifiera och hantera medicinska n\u00f6dsituationer, vilket kan vara ov\u00e4rderligt under Sk\u00f6rden. Nils har ett lugnt och metodiskt s\u00e4tt, vilket kan g\u00f6ra honom till ett m\u00e5l f\u00f6r mer aggressiva spelare. Men han \u00e4r inte r\u00e4dd f\u00f6r att ta risker och \u00e4r v\u00e4l medveten om att Sk\u00f6rden kan vara farlig. Han \u00e4r redo att anv\u00e4nda alla sina kunskaper och f\u00e4rdigheter f\u00f6r att \u00f6verleva och k\u00e4mpa f\u00f6r att vinna.",
         "in_use": false
     },
     {
         "id": 19,
         "district_id": 10,
         "name": "Freja",
-        "image": "./IMG/characters/teacher_woman.png",
+        "image": ".\/IMG\/characters\/teacher_woman.png",
         "alive": true,
-        "backstory": "Freja är en ambitiös och självständig 17-årig tjej. Hon har alltid varit duktig i skolan och har alltid strävat efter att bli lärare som de flesta i hennes distrikt. Hon ser sin utnämning till Skörden som en möjlighet att visa sin styrka och förmåga att överleva, och hon har tränat hårt för att förbereda sig för utmaningen. Freja är en utpräglad ledare och är van vid att ta ansvar. Hon har en stark vilja och en förmåga att se möjligheter även i de mest hopplösa situationerna. Hennes självständighet och envishet kan dock göra henne lite motsträvig när det kommer till att ta emot hjälp från andra. Som person är Freja envis och självsäker, men också omtänksam och empatisk. Hon är övertygad om att hon kan göra skillnad i världen genom att utbilda andra, och hon tror att det är hennes öde att vinna Skörden och fortsätta sin kamp för att förbättra samhället.",
+        "backstory": "Freja \u00e4r en ambiti\u00f6s och sj\u00e4lvst\u00e4ndig 17-\u00e5rig tjej. Hon har alltid varit duktig i skolan och har alltid str\u00e4vat efter att bli l\u00e4rare som de flesta i hennes distrikt. Hon ser sin utn\u00e4mning till Sk\u00f6rden som en m\u00f6jlighet att visa sin styrka och f\u00f6rm\u00e5ga att \u00f6verleva, och hon har tr\u00e4nat h\u00e5rt f\u00f6r att f\u00f6rbereda sig f\u00f6r utmaningen. Freja \u00e4r en utpr\u00e4glad ledare och \u00e4r van vid att ta ansvar. Hon har en stark vilja och en f\u00f6rm\u00e5ga att se m\u00f6jligheter \u00e4ven i de mest hoppl\u00f6sa situationerna. Hennes sj\u00e4lvst\u00e4ndighet och envishet kan dock g\u00f6ra henne lite motstr\u00e4vig n\u00e4r det kommer till att ta emot hj\u00e4lp fr\u00e5n andra. Som person \u00e4r Freja envis och sj\u00e4lvs\u00e4ker, men ocks\u00e5 omt\u00e4nksam och empatisk. Hon \u00e4r \u00f6vertygad om att hon kan g\u00f6ra skillnad i v\u00e4rlden genom att utbilda andra, och hon tror att det \u00e4r hennes \u00f6de att vinna Sk\u00f6rden och forts\u00e4tta sin kamp f\u00f6r att f\u00f6rb\u00e4ttra samh\u00e4llet.",
         "in_use": false
     },
     {
         "id": 20,
         "district_id": 10,
         "name": "August",
-        "image": "./IMG/characters/teacher_man.png",
+        "image": ".\/IMG\/characters\/teacher_man.png",
         "alive": true,
-        "backstory": "August är en ambitiös och intelligent 18-årig kille. Han har alltid varit intresserad av att lära sig nya saker och att hjälpa andra att göra detsamma, vilket är anledningen till att han har valt att bli lärare. August har alltid varit en favorit bland sina klasskamrater på grund av sin vänliga och hjälpsamma natur, och han har alltid varit villig att ställa upp för andra. August har ett starkt rättspatos och är övertygad om att Skörden är en omänsklig tradition som måste avskaffas. Trots att han har blivit vald till att delta i Skörden, har han bestämt sig för att använda sin plattform för att föra upp frågan om Skördens avskaffande och för att förändra samhället till det bättre. August är en duktig strateg och taktiker, vilket gör honom till en farlig motståndare i arenan. Han är snabb och smidig och har goda överlevnadsinstinkter, men han kommer aldrig att döda någon annan deltagare i Skörden. Han vill inte bli en del av det han betraktar som en ond cirkel av våld och hat. Istället planerar han att använda sin tid i arenan för att vinna stöd från folket och pressa myndigheterna att avskaffa Skörden en gång för alla.",
+        "backstory": "August \u00e4r en ambiti\u00f6s och intelligent 18-\u00e5rig kille. Han har alltid varit intresserad av att l\u00e4ra sig nya saker och att hj\u00e4lpa andra att g\u00f6ra detsamma, vilket \u00e4r anledningen till att han har valt att bli l\u00e4rare. August har alltid varit en favorit bland sina klasskamrater p\u00e5 grund av sin v\u00e4nliga och hj\u00e4lpsamma natur, och han har alltid varit villig att st\u00e4lla upp f\u00f6r andra. August har ett starkt r\u00e4ttspatos och \u00e4r \u00f6vertygad om att Sk\u00f6rden \u00e4r en om\u00e4nsklig tradition som m\u00e5ste avskaffas. Trots att han har blivit vald till att delta i Sk\u00f6rden, har han best\u00e4mt sig f\u00f6r att anv\u00e4nda sin plattform f\u00f6r att f\u00f6ra upp fr\u00e5gan om Sk\u00f6rdens avskaffande och f\u00f6r att f\u00f6r\u00e4ndra samh\u00e4llet till det b\u00e4ttre. August \u00e4r en duktig strateg och taktiker, vilket g\u00f6r honom till en farlig motst\u00e5ndare i arenan. Han \u00e4r snabb och smidig och har goda \u00f6verlevnadsinstinkter, men han kommer aldrig att d\u00f6da n\u00e5gon annan deltagare i Sk\u00f6rden. Han vill inte bli en del av det han betraktar som en ond cirkel av v\u00e5ld och hat. Ist\u00e4llet planerar han att anv\u00e4nda sin tid i arenan f\u00f6r att vinna st\u00f6d fr\u00e5n folket och pressa myndigheterna att avskaffa Sk\u00f6rden en g\u00e5ng f\u00f6r alla.",
         "in_use": false
     },
     {
         "id": 21,
         "district_id": 11,
         "name": "Maja",
-        "image": "./IMG/characters/textile_woman.png",
+        "image": ".\/IMG\/characters\/textile_woman.png",
         "alive": true,
-        "backstory": "Maja är en kreativ och skicklig tjej som älskar att arbeta med textilier. Hon kommer från en familj av textilarbetare i Närke, där hennes mor och mormor också arbetade inom branschen. Maja har alltid varit fascinerad av det hantverk som krävs för att skapa vackra och funktionella plagg och hon har spenderat många timmar bakom en symaskin eller med att väva på en vävstol. Majas passion för textilier har även lett till att hon är mycket intresserad av hållbarhet och miljöfrågor. Hon strävar efter att använda återvunna material och att minska avfallet så mycket som möjligt i sitt arbete. Hon är övertygad om att textilindustrin kan förändras och bli mer hållbar om fler följer hennes exempel. Som en del av Skörden är Maja hedrad över att få representera sitt distrikt och bransch. Hon ser det som en möjlighet att visa upp sitt arbete för resten av nationen och att sprida sin passion för textilier till andra. Maja är självsäker, ambitiös och en naturlig ledare, och hon är säker på att hon kommer att vara en utmärkt representant för Närke.",
+        "backstory": "Maja \u00e4r en kreativ och skicklig tjej som \u00e4lskar att arbeta med textilier. Hon kommer fr\u00e5n en familj av textilarbetare i N\u00e4rke, d\u00e4r hennes mor och mormor ocks\u00e5 arbetade inom branschen. Maja har alltid varit fascinerad av det hantverk som kr\u00e4vs f\u00f6r att skapa vackra och funktionella plagg och hon har spenderat m\u00e5nga timmar bakom en symaskin eller med att v\u00e4va p\u00e5 en v\u00e4vstol. Majas passion f\u00f6r textilier har \u00e4ven lett till att hon \u00e4r mycket intresserad av h\u00e5llbarhet och milj\u00f6fr\u00e5gor. Hon str\u00e4var efter att anv\u00e4nda \u00e5tervunna material och att minska avfallet s\u00e5 mycket som m\u00f6jligt i sitt arbete. Hon \u00e4r \u00f6vertygad om att textilindustrin kan f\u00f6r\u00e4ndras och bli mer h\u00e5llbar om fler f\u00f6ljer hennes exempel. Som en del av Sk\u00f6rden \u00e4r Maja hedrad \u00f6ver att f\u00e5 representera sitt distrikt och bransch. Hon ser det som en m\u00f6jlighet att visa upp sitt arbete f\u00f6r resten av nationen och att sprida sin passion f\u00f6r textilier till andra. Maja \u00e4r sj\u00e4lvs\u00e4ker, ambiti\u00f6s och en naturlig ledare, och hon \u00e4r s\u00e4ker p\u00e5 att hon kommer att vara en utm\u00e4rkt representant f\u00f6r N\u00e4rke.",
         "in_use": false
     },
     {
         "id": 22,
         "district_id": 11,
         "name": "Adam",
-        "image": "./IMG/characters/textile_man.png",
+        "image": ".\/IMG\/characters\/textile_man.png",
         "alive": true,
-        "backstory": "Adam är en kreativ och hängiven 16-årig kille. Han är en passionerad textilarbetare som har arbetat hårt för att förbättra sina färdigheter i att väva och sy. Adam har ett öga för detaljer och en talang för att kombinera färger och material på ett sätt som skapar vackra och unika tyger. Adam har också en utmärkt social förmåga och är mycket omtyckt av de människor han träffar. Han har en positiv inställning och är alltid villig att hjälpa till och dela sina kunskaper med andra. Som en blivande textilarbetare ser Adam fram emot att använda sin passion och talang för att skapa vackra tyger och kläder som kommer att glädja och inspirera människor runt om i landet. Att bli vald till skörden är en stor ära för Adam och han är fast besluten om att göra sitt bästa för att representera sitt distrikt och sina medarbetare på bästa möjliga sätt.",
+        "backstory": "Adam \u00e4r en kreativ och h\u00e4ngiven 16-\u00e5rig kille. Han \u00e4r en passionerad textilarbetare som har arbetat h\u00e5rt f\u00f6r att f\u00f6rb\u00e4ttra sina f\u00e4rdigheter i att v\u00e4va och sy. Adam har ett \u00f6ga f\u00f6r detaljer och en talang f\u00f6r att kombinera f\u00e4rger och material p\u00e5 ett s\u00e4tt som skapar vackra och unika tyger. Adam har ocks\u00e5 en utm\u00e4rkt social f\u00f6rm\u00e5ga och \u00e4r mycket omtyckt av de m\u00e4nniskor han tr\u00e4ffar. Han har en positiv inst\u00e4llning och \u00e4r alltid villig att hj\u00e4lpa till och dela sina kunskaper med andra. Som en blivande textilarbetare ser Adam fram emot att anv\u00e4nda sin passion och talang f\u00f6r att skapa vackra tyger och kl\u00e4der som kommer att gl\u00e4dja och inspirera m\u00e4nniskor runt om i landet. Att bli vald till sk\u00f6rden \u00e4r en stor \u00e4ra f\u00f6r Adam och han \u00e4r fast besluten om att g\u00f6ra sitt b\u00e4sta f\u00f6r att representera sitt distrikt och sina medarbetare p\u00e5 b\u00e4sta m\u00f6jliga s\u00e4tt.",
         "in_use": false
     },
     {
         "id": 23,
         "district_id": 12,
         "name": "Ester",
-        "image": "./IMG/characters/baker_woman.png",
+        "image": ".\/IMG\/characters\/baker_woman.png",
         "alive": true,
-        "backstory": "Ester är 18-årig tjej från en lång rad av ostkaksbagare. Hon har vuxit upp med doften av nygräddad ostkaka som fyllde familjens bageri varje morgon. Ester har alltid fascinerats av den konstnärliga aspekten av att baka och hennes passion för att skapa nya smaker och texturer med ingredienser har lett till att hon utvecklat en talang för att experimentera med olika recept. Trots sin unga ålder har Ester blivit en respekterad ostkaksbagare i sitt distrikt och hennes produkter säljs på marknader och butiker runt om i regionen. Hon är en envis och ambitiös person som alltid strävar efter att förbättra sin konst och skapa bättre smaker och upplevelser för sina kunder. När Ester blev vald till skörden var det en stor ära för henne och hennes familj. Hon ser det som en möjlighet att lära sig mer om andra yrken och kulturer i landet samtidigt som hon får visa upp sin egen talang för matlagning och baka. Ester är självsäker i sin kunskap men är också öppen för att lära sig av andra och utveckla sina färdigheter ytterligare.",
+        "backstory": "Ester \u00e4r 18-\u00e5rig tjej fr\u00e5n en l\u00e5ng rad av ostkaksbagare. Hon har vuxit upp med doften av nygr\u00e4ddad ostkaka som fyllde familjens bageri varje morgon. Ester har alltid fascinerats av den konstn\u00e4rliga aspekten av att baka och hennes passion f\u00f6r att skapa nya smaker och texturer med ingredienser har lett till att hon utvecklat en talang f\u00f6r att experimentera med olika recept. Trots sin unga \u00e5lder har Ester blivit en respekterad ostkaksbagare i sitt distrikt och hennes produkter s\u00e4ljs p\u00e5 marknader och butiker runt om i regionen. Hon \u00e4r en envis och ambiti\u00f6s person som alltid str\u00e4var efter att f\u00f6rb\u00e4ttra sin konst och skapa b\u00e4ttre smaker och upplevelser f\u00f6r sina kunder. N\u00e4r Ester blev vald till sk\u00f6rden var det en stor \u00e4ra f\u00f6r henne och hennes familj. Hon ser det som en m\u00f6jlighet att l\u00e4ra sig mer om andra yrken och kulturer i landet samtidigt som hon f\u00e5r visa upp sin egen talang f\u00f6r matlagning och baka. Ester \u00e4r sj\u00e4lvs\u00e4ker i sin kunskap men \u00e4r ocks\u00e5 \u00f6ppen f\u00f6r att l\u00e4ra sig av andra och utveckla sina f\u00e4rdigheter ytterligare.",
         "in_use": false
     },
     {
         "id": 24,
         "district_id": 12,
         "name": "Harry",
-        "image": "./IMG/characters/baker_man.png",
+        "image": ".\/IMG\/characters\/baker_man.png",
         "alive": true,
-        "backstory": "Harry är en kreativ och passionerad 16-årig kille från Småland, som har en stor passion för matlagning och bakning. Han har alltid varit intresserad av lokala råvaror och traditionella recept från Småland, och hans favoritdel av skördefestivalen är ostkakstävlingen. Harrys familj har varit ostkaksbagare i generationer, och han har lärt sig alla knepen från sin farfar som var en mästare på att göra den perfekta ostkakan. Harry har sedan tagit vid och utvecklat sina egna recept och tekniker för att skapa sin egen unika smak av ostkaka. Han är en envis person och ger aldrig upp när han väl bestämt sig för något. Han tror på hårt arbete och att man alltid ska sträva efter att bli bättre på det man älskar att göra. Hans dröm är att en dag öppna en egen ostkaksbutik där han kan dela med sig av sin kärlek till den lokala maten och traditionerna i Småland.",
+        "backstory": "Harry \u00e4r en kreativ och passionerad 16-\u00e5rig kille fr\u00e5n Sm\u00e5land, som har en stor passion f\u00f6r matlagning och bakning. Han har alltid varit intresserad av lokala r\u00e5varor och traditionella recept fr\u00e5n Sm\u00e5land, och hans favoritdel av sk\u00f6rdefestivalen \u00e4r ostkakst\u00e4vlingen. Harrys familj har varit ostkaksbagare i generationer, och han har l\u00e4rt sig alla knepen fr\u00e5n sin farfar som var en m\u00e4stare p\u00e5 att g\u00f6ra den perfekta ostkakan. Harry har sedan tagit vid och utvecklat sina egna recept och tekniker f\u00f6r att skapa sin egen unika smak av ostkaka. Han \u00e4r en envis person och ger aldrig upp n\u00e4r han v\u00e4l best\u00e4mt sig f\u00f6r n\u00e5got. Han tror p\u00e5 h\u00e5rt arbete och att man alltid ska str\u00e4va efter att bli b\u00e4ttre p\u00e5 det man \u00e4lskar att g\u00f6ra. Hans dr\u00f6m \u00e4r att en dag \u00f6ppna en egen ostkaksbutik d\u00e4r han kan dela med sig av sin k\u00e4rlek till den lokala maten och traditionerna i Sm\u00e5land.",
         "in_use": false
     }
 ]

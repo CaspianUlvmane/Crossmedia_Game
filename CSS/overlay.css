@@ -9,6 +9,7 @@
     bottom: 0;
     z-index: 12;
     font-family: 'Bruno Ace SC', cursive;
+    overflow-y: scroll;
 }
 
 .overlay_quest_icon{
