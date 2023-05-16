@@ -42,4 +42,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
       file_put_contents("players.JSON", $json);
       exit;
   }
+
+  $receivedJsonData = file_get_contents("php://input");
+  $receivedData = json_decode($receivedJsonData, true);
+
+function sendJSON($data, $responseCode = 200){
+    header("Content-Type: application/json");
+    http_response_code($responseCode);
+    $json = json_encode($data);
+    echo $json;
+    exit();
+}
+
+  if($_SERVER['REQUEST_METHOD'] === 'PATCH'){
+    // $json = file_get_contents("players.JSON");
+    // $alive = json_decode($json, true);
+
+    $playersData = file_get_contents('players.JSON');
+    $players = json_decode($playersData, true);
+
+    $playerId = $receivedData["id"];
+    $alive = $receivedData["alive"];
+    if(isset($receivedData["id"], $receivedData["alive"])){
+
+      foreach($players as $index => $player){
+        if($player["id"] ==  $playerId){
+          $player["alive"] = $receivedData["alive"];
+          $players[$index] = $player;
+          $json = json_encode($players, JSON_PRETTY_PRINT);
+          file_put_contents("players.JSON", $json);
+          sendJSON($player);
+          
+        }
+      }
+  
+    }
+
+  }
 ?>
