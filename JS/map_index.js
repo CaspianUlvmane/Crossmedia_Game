@@ -39,7 +39,7 @@ function initMap() {
           clickable: false,
         });
         // render_constants();
-        // location_update(icon);
+        location_update(icon);
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
