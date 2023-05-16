@@ -22,7 +22,9 @@ function checkDistrict(player) {
             let districts_list = rsc;
 
             districts_list.forEach(d => {
-                if (d.district_number == player.id) {
+                console.log(d.district_number)
+                console.log(player.district_id)
+                if (d.district_number == player.district_id) {
                     let district_number = d.district_number;
                     let district_proffesion = d.profession
                     buildFooter(player, district_number, district_proffesion);
