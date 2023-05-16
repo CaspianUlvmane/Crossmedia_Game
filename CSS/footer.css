@@ -162,9 +162,9 @@ body {
 /* for profit popup */
 
 .profit_popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 17%;
 }
 
 .profit_container {

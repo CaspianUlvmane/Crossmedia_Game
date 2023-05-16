@@ -27,7 +27,7 @@ body {
 .logga {
     bottom: 30vh;
     z-index: 1005;
-    padding-left: 60px;
+    padding-left: 70px;
     margin-bottom: 50px;
 }
 
@@ -87,6 +87,7 @@ body {
 
 .logga_img {
     bottom: 70vh;
+    padding-left: 7vh;
 }
 
 .signature {

@@ -140,7 +140,6 @@ function openLetter(letter_img, open_letter, popup) {
     let letter_container = document.createElement("div");
     letter_container.classList.add("letter_container");
 
-
     let letter_img2 = document.createElement("img");
     letter_img2.id = "letter_2";
     letter_img2.src = "./IMG/letter2.png";
@@ -333,7 +332,6 @@ function acceptedLetter(popup, letter_container) {
 
     let hourglas_container = document.createElement("div");
     hourglas_container.classList.add("hourglas_container");
-
 
     let wait_text = document.createElement("p");
     wait_text.classList.add("wait_text");
