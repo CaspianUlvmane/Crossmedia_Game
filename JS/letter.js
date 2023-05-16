@@ -2,7 +2,7 @@ let district_array
 let player = 0;
 
 
-document.addEventListener("DOMContentLoaded", function() {
+function render() {
     let popup = document.createElement("div");
     popup.id = "popup";
 
@@ -39,7 +39,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // .then((player) => getPlayerLetter(player))
             // .catch((error) => console.log(error));
     })
-});
+};
+render()
 
 function getLetter(popup, logga_img, start_game) {
 
@@ -144,7 +145,7 @@ function openLetter(letter_img, open_letter, popup) {
     letter_img2.id = "letter_2";
     letter_img2.src = "./IMG/letter2.png";
     letter_img2.alt = "Letter Image";
-    letter_img2.style.width = "84vh";
+    letter_img2.style.width = "90%";
     letter_img2.style.height = "80vh";
 
     popup.appendChild(letter_container);
@@ -405,42 +406,44 @@ function startGame() {
     container.appendChild(start_button)
 
     start_button.addEventListener('click', function() {
-        // Send an AJAX request to the server to start the game
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', './DB/gameStatus.php', true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        xhr.send();
-        checkGameStatus();
+        // // Send an AJAX request to the server to start the game
+        // var xhr = new XMLHttpRequest();
+        // xhr.open('POST', './DB/gameStatus.php', true);
+        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        // xhr.send();
+        // checkGameStatus();
 
-        // Optionally, handle the response from the server
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-                // Handle the response from the server if needed
-            }
-        };
+        // // Optionally, handle the response from the server
+        // xhr.onreadystatechange = function() {
+        //     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+        //         // Handle the response from the server if needed
+        //     }
+        // };
+        document.querySelector("#popup").style.display = "none";
+        getPlayer(player);
     });
 }
 
-function checkGameStatus() {
-    // Send an AJAX request to the server to check the game status
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', './DB/gameStatus.php', true);
-    xhr.send();
+// function checkGameStatus() {
+//     // Send an AJAX request to the server to check the game status
+//     var xhr = new XMLHttpRequest();
+//     xhr.open('GET', './DB/gameStatus.php', true);
+//     xhr.send();
 
-    // Handle the response from the server
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            var response = JSON.parse(xhr.responseText);
+//     // Handle the response from the server
+//     xhr.onreadystatechange = function() {
+//         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//             var response = JSON.parse(xhr.responseText);
 
-            if (response.gameStarted) {
-                // Game has started, update the page 
-                document.querySelector("#popup").style.display = "none";
-                getPlayer(player);
+//             if (response.gameStarted) {
+//                 // Game has started, update the page 
+//                 document.querySelector("#popup").style.display = "none";
+//                 getPlayer(player);
 
-            } else {
-                // Game hasn't started yet, continue checking
-                setTimeout(checkGameStatus, 2000); // Check again after 2 seconds
-            }
-        }
-    };
-}
+//             } else {
+//                 // Game hasn't started yet, continue checking
+//                 setTimeout(checkGameStatus, 2000); // Check again after 2 seconds
+//             }
+//         }
+//     };
+// }

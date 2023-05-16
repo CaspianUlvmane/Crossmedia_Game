@@ -5,6 +5,7 @@
 let map, infoWindow;
 
 const updateTime = 5000;
+localStorage.setItem("hurt", "0")
 
 function initMap() {
   if (navigator.geolocation) {
@@ -15,8 +16,9 @@ function initMap() {
           lng: position.coords.longitude,
         };
         map = new google.maps.Map(document.getElementById("map"), {
-          center: { lat: 55.590463, lng: 12.992339 },
-          zoom: 16.5,
+          center: { lat: 55.589200, lng: 12.992339 },
+          zoom: 15.5,
+          mapTypeControl: false,
           draggable: false,
           mapId: "a0111f479c8a0090",
         });
@@ -38,7 +40,7 @@ function initMap() {
           draggable: false,
           clickable: false,
         });
-        render_constants()
+        render_constants();
         location_update(icon);
       },
       () => {
@@ -75,9 +77,22 @@ function location_update(icon) {
     if (hazard_zones_array[0]) {
       hazard_zones_array.forEach((z) => {
         if (hazard_zone_bool(z, pos)) {
-          console.log("damage taken");
+          let hit = localStorage.getItem("hurt")
+          if(hit > 1){
+            console.log("Get out of danger!");
+          } else if(hit == 4){
+            console.log("damage taken, get out!")
+            hit = 0
+            localStorage.setItem("hurt", hit)
+          } else{
+            hit++
+            localStorage.setItem("hurt", hit)
+          }
+          return
         }
+
       });
+      localStorage.setItem("hurt", "0")
     }
   });
   render_hazards();
@@ -124,17 +139,17 @@ function create_hazard_div(latLng) {
   let danger_div = document.createElement("div");
   danger_div.dataset.lng = latLng.lng;
   danger_div.dataset.lat = latLng.lat;
-  danger_div.classList.add("hazard_area")
+  danger_div.classList.add("hazard_area");
   document.querySelector("#dangers").append(danger_div);
 }
 
-async function render_constants(){
-  let response = await fetch("../DB/mapAPI.php");
+async function render_constants() {
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
-     if (hazard.time <= 0) {
+    if (hazard.time <= 0) {
       let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
       let dangerCircle;
       if (hazard.type === "fire") {
@@ -153,11 +168,11 @@ async function render_constants(){
       }
       create_hazard_div(latLng);
     }
-  })
+  });
 }
 
 async function render_hazards() {
-  let response = await fetch("../DB/mapAPI.php");
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
@@ -201,15 +216,4 @@ async function render_hazards() {
   });
 }
 
-async function start_game(){
-  let response = await fetch("./DB/API.php?start");
-  let resource = await response.json();
-  console.log(resource.start);
-  
-  if (resource.start){
-    window.initMap = initMap();
-  } else{
-    setTimeout(() => start_game(), 5000)
-  }
-
-}
+window.initMap = initMap;

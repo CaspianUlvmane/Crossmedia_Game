@@ -163,7 +163,7 @@ function send_hazard(mapsMouseEvent, map) {
       }),
       headers: { "Content-Type": "application/json" },
     };
-    fetch("../DB/mapAPI.php", options)
+    fetch("./DB/mapAPI.php", options)
       .then((r) => r.text())
       .then((r) => {
         if (time != 0) {
@@ -173,7 +173,7 @@ function send_hazard(mapsMouseEvent, map) {
             headers: { "Content-Type": "application/json" },
           };
           setTimeout(() => {
-            fetch("../DB/mapAPI.php", options);
+            fetch("./DB/mapAPI.php", options);
           }, time);
         }
         render_hazards();
@@ -196,7 +196,7 @@ function pointer_position(event) {
 }
 
 async function render_constants(){
-  let response = await fetch("../DB/mapAPI.php");
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
@@ -224,7 +224,7 @@ async function render_constants(){
 }
 
 async function render_hazards() {
-  let response = await fetch("../DB/mapAPI.php");
+  let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
@@ -269,12 +269,12 @@ async function render_hazards() {
 }
 
 async function render_users() {
-  let response = await fetch("../DB/mapAPI.php?positions");
+  let response = await fetch("./DB/mapAPI.php?positions");
   let resource = await response.json();
   let positions = JSON.parse(resource);
   console.log(positions);
 
-  const image = "../IMG/dot.svg";
+  const image = "./IMG/dot.svg";
   positions.forEach((pos) => {
     console.log(pos);
     let player;
@@ -311,7 +311,7 @@ function start(){
       }),
       headers: { "Content-Type": "application/json" },
     };
-    fetch("../DB/API.php", options)
+    fetch("./DB/API.php", options)
   })
   document.querySelector("#hazard_buttons").append(button)
 }
@@ -327,8 +327,8 @@ function end_button(){
       }),
       headers: { "Content-Type": "application/json" },
     };
-    fetch("../DB/API.php", options)
-    fetch("../DB/playerID.php?end")
+    fetch("./DB/API.php", options)
+    fetch("./DB/playerId.php?end")
   })
   document.querySelector("#hazard_buttons").append(button)
 }
