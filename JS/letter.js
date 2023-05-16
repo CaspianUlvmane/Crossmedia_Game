@@ -145,7 +145,7 @@ function openLetter(letter_img, open_letter, popup) {
     letter_img2.id = "letter_2";
     letter_img2.src = "./IMG/letter2.png";
     letter_img2.alt = "Letter Image";
-    letter_img2.style.width = "84vh";
+    letter_img2.style.width = "90%";
     letter_img2.style.height = "80vh";
 
     popup.appendChild(letter_container);
