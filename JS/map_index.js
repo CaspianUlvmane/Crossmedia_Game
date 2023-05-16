@@ -38,8 +38,8 @@ function initMap() {
           draggable: false,
           clickable: false,
         });
-        render_constants()
-        location_update(icon);
+        // render_constants();
+        // location_update(icon);
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
@@ -124,17 +124,17 @@ function create_hazard_div(latLng) {
   let danger_div = document.createElement("div");
   danger_div.dataset.lng = latLng.lng;
   danger_div.dataset.lat = latLng.lat;
-  danger_div.classList.add("hazard_area")
+  danger_div.classList.add("hazard_area");
   document.querySelector("#dangers").append(danger_div);
 }
 
-async function render_constants(){
+async function render_constants() {
   let response = await fetch("./DB/mapAPI.php");
   let hazards = await response.json();
 
   document.querySelector("#dangers").innerHTML = "";
   hazards.forEach((hazard) => {
-     if (hazard.time <= 0) {
+    if (hazard.time <= 0) {
       let latLng = { lat: Number(hazard.lat), lng: Number(hazard.lng) };
       let dangerCircle;
       if (hazard.type === "fire") {
@@ -153,7 +153,7 @@ async function render_constants(){
       }
       create_hazard_div(latLng);
     }
-  })
+  });
 }
 
 async function render_hazards() {
@@ -201,15 +201,4 @@ async function render_hazards() {
   });
 }
 
-async function start_game(){
-  let response = await fetch("./DB/API.php?start");
-  let resource = await response.json();
-  console.log(resource.start);
-  
-  if (resource.start){
-    window.initMap = initMap();
-  } else{
-    // setTimeout(() => start_game(), 5000)
-  }
-
-}
+window.initMap = initMap;

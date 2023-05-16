@@ -274,7 +274,7 @@ async function render_users() {
   let positions = JSON.parse(resource);
   console.log(positions);
 
-  const image = "../IMG/dot.svg";
+  const image = "./IMG/dot.svg";
   positions.forEach((pos) => {
     console.log(pos);
     let player;
@@ -328,7 +328,7 @@ function end_button(){
       headers: { "Content-Type": "application/json" },
     };
     fetch("./DB/API.php", options)
-    fetch("./DB/playerID.php?end")
+    fetch("./DB/playerId.php?end")
   })
   document.querySelector("#hazard_buttons").append(button)
 }
