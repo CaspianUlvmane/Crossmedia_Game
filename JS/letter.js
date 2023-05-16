@@ -40,7 +40,7 @@ function render() {
             // .catch((error) => console.log(error));
     })
 };
-setTimeout(()=> render(), 8000)
+render()
 
 function getLetter(popup, logga_img, start_game) {
 

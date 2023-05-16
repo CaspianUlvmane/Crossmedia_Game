@@ -4,6 +4,7 @@ function start_game() {
       .then((r) => {
         console.log(r);
         if (r.start) {
+          getPlayer(localStorage.getItem('playerId'))
           document.querySelector("#popup").style.display = "none";
           return true;
         } else {
