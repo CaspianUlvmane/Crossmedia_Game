@@ -41,12 +41,14 @@ function render() {
     })
 };
 
-setTimeout(() => {if(getPlayerInfo() != null && start_game()){
-    console.log("getPlayer");
-    getPlayer(localStorage.getItem('playerId'))
-}else{
-    render()
-}}, 2)
+setTimeout(() => {
+    if (getPlayerInfo() != null && start_game()) {
+        console.log("getPlayer");
+        getPlayer(localStorage.getItem('playerId'))
+    } else {
+        render()
+    }
+}, 2)
 
 
 function getLetter(popup, logga_img, start_game) {
@@ -386,15 +388,26 @@ function acceptedLetter(popup, letter_container) {
     info_container.append(down)
     info_container.append(district_info)
 
+    let is_down = false;
+
+
+    let district_text = document.createElement("p");
+    district_text.classList.add("district_text");
+    info_container.append(district_text)
+
     info_container.addEventListener("click", function() {
-        info_container.style.height = "30vh"
+        if (is_down == false) {
+            info_container.style.height = "30vh"
+            district_text.innerHTML = district_array.backstory
+            district_text.style.position = "absolute";
 
-        let district_text = document.createElement("p");
-        district_text.classList.add("district_text");
-        district_text.innerHTML = district_array.backstory
-        district_text.style.position = "absolute";
 
-        info_container.append(district_text)
+            is_down = true;
+        } else {
+            info_container.style.height = "5vh"
+            district_text.innerHTML = ""
+            is_down = false
+        }
     })
     startGame()
 }

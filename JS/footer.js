@@ -93,11 +93,13 @@ function buildFooter(player, district_number, district_profession) {
         function decreaseHunger() {
             const current_width = parseInt(hunger_level.style.width, 10);
             const new_width = current_width - 20;
-            if (new_width >= 0) {
+            if (new_width >= 20) {
                 hunger_level.style.width = `${new_width}%`;
                 localStorage.setItem('hungerLevel', new_width); // Save the updated percentage to Local Storage
             } else {
                 // clearInterval(interval_hunger_id);
+                hunger_level.style.width = `${new_width}%`;
+                localStorage.setItem('hungerLevel', new_width); // Save the updated percentage to Local Storage
                 checkFilledCircles();
             }
         }
@@ -105,10 +107,12 @@ function buildFooter(player, district_number, district_profession) {
         function decreaseWater() {
             const current_width_water = parseInt(water_level.style.width, 10);
             const new_width_water = current_width_water - 20;
-            if (new_width_water >= 0) {
+            if (new_width_water >= 20) {
                 water_level.style.width = `${new_width_water}%`;
                 localStorage.setItem('waterLevel', new_width_water); // Save the updated percentage to Local Storage
             } else {
+                water_level.style.width = `${new_width_water}%`;
+                localStorage.setItem('waterLevel', new_width_water); // Save the updated percentage to Local Storage
                 // clearInterval(interval_water_id);
                 checkFilledCircles();
             }
@@ -151,6 +155,17 @@ function checkFilledCircles() {
         not_checked[1].classList.add('checked');
     } else if (not_checked.length === 1) {
         not_checked[0].classList.add('checked');
+        popupLose()
+        checkIfOnePlayerLeft()
+        let options = {
+            method: "PATCH",
+            body: JSON.stringify({
+                alive: false,
+                id: player.id
+            }),
+            headers: { "Content-Type": "application/json" },
+        };
+        fetch("./DB/playerId.php", options)
     } else if (not_checked.length === 0) {
         popupLose()
         checkIfOnePlayerLeft()
