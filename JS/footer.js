@@ -117,25 +117,26 @@ function buildFooter(player, district_number, district_profession) {
 
     const all_circles = document.querySelectorAll('.check_circle');
     let count = 0;
-
     all_circles.forEach(circle => {
         circle.addEventListener('click', () => {
-            circle.classList.add('checked');
-            count++;
-            circle.classList.add(`${count}`);
-            if (circle.classList.contains('5')) {
-                popupLose()
+            if (!circle.classList.contains('checked')) {
+                circle.classList.add('checked');
+                count++;
+                circle.classList.add(`${count}`);
+                if (circle.classList.contains('5')) {
+                    popupLose()
+                    checkIfOnePlayerLeft()
 
-                let options = {
-                    method: "PATCH",
-                    body: JSON.stringify({
-                        alive: false,
-                        id: player.id
-                    }),
-                    headers: { "Content-Type": "application/json" },
-                };
-                fetch("./DB/playerId.php", options)
-
+                    let options = {
+                        method: "PATCH",
+                        body: JSON.stringify({
+                            alive: false,
+                            id: player.id
+                        }),
+                        headers: { "Content-Type": "application/json" },
+                    };
+                    fetch("./DB/playerId.php", options)
+                }
             }
         });
     });
@@ -152,6 +153,7 @@ function checkFilledCircles() {
         not_checked[0].classList.add('checked');
     } else if (not_checked.length === 0) {
         popupLose()
+        checkIfOnePlayerLeft()
         let options = {
             method: "PATCH",
             body: JSON.stringify({
