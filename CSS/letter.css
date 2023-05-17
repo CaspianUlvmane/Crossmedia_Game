@@ -205,37 +205,38 @@ body {
 
 .hourglas {
     position: absolute;
-    bottom: 55vh;
+    bottom: 52vh;
 }
 
 .wait_text {
-    bottom: 75vh;
+    bottom: 70vh;
     color: black;
     z-index: 1010;
-    font-size: 3.2vh;
-    margin: 0 15vw 0 25vw;
+    font-size: 3vh;
+    margin: 0 15vw 0 15vw;
+    text-align: center;
 }
 
 .pst_text {
-    bottom: 45vh;
+    bottom: 38vh;
     color: black;
     z-index: 1010;
     font-size: 2vh;
-    margin: 0 15vw 0 25vw;
+    margin: 0 15vw 0 15vw;
     display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 .info_container {
     overflow-y: scroll;
     color: white;
     position: absolute;
-    width: 60vw;
-    height: 5vh;
+    width: 65vw;
+    height: 6vh;
     z-index: 1005;
-    margin: 0 0 5vh 5vw;
+    margin: 0 0 5vh 0;
     background-color: black;
-    top: 58vh;
+    top: 65vh;
 }
 
 .down {
@@ -250,7 +251,7 @@ body {
 }
 
 .district_text {
-    font-size: 8px;
+    font-size: 10px;
     margin: 40px 15px 40px 15px;
     line-height: 1.5;
 }
