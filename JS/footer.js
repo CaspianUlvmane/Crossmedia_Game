@@ -205,8 +205,8 @@ function clickProfit() {
         const new_width = current_width + 20;
         if (new_width <= 100) {
             hunger_level.style.width = `${new_width}%`;
-            document.querySelector(".profit_popup").remove()
         }
+        document.querySelector(".profit_popup").remove()
     });
 
     water_icon.addEventListener('click', () => {
@@ -214,8 +214,8 @@ function clickProfit() {
         const new_width = current_width + 20;
         if (new_width <= 100) {
             water_level.style.width = `${new_width}%`;
-            document.querySelector(".profit_popup").remove()
         }
+        document.querySelector(".profit_popup").remove()
     });
 }
 
