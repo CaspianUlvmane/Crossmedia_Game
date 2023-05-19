@@ -40,13 +40,13 @@ function checkIfOnePlayerLeft() {
     fetch("./DB/players.JSON")
         .then((r) => r.json())
         .then((players) => {
-            console.log(players);
+
             players.forEach((p) => {
                 if (p.in_use == true) {
                     players_in_use.push(p);
                 }
             });
-            console.log(players_in_use);
+
 
             let players_alive = [];
             players_in_use.forEach((play) => {
@@ -54,12 +54,7 @@ function checkIfOnePlayerLeft() {
                     players_alive.push(play);
                 }
             });
-            console.log(players_alive);
-            console.log(player);
 
-            console.log(players_alive.length)
-            console.log(players_alive[0].id)
-            console.log(player)
             if (players_alive.length == 1 || players_alive[0].id == player.id) {
                 console.log("You win!");
                 popupWin()

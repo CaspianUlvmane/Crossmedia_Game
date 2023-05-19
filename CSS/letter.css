@@ -188,7 +188,7 @@ body {
     color: black;
     z-index: 1010;
     font-size: 0.8vh;
-    margin: 0 18vw 0 25vw;
+    margin: 5vh 18vw 0 25vw;
     line-height: 1.4;
     display: flex;
     align-items: center;
