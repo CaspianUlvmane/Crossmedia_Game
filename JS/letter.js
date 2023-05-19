@@ -242,26 +242,26 @@ function openLetter(letter_img, open_letter, popup) {
     letter_container.appendChild(checkboxContainer);
 
 
-    // Get the checkbox element
     var checkbox = document.getElementById("myCheckbox");
 
     let checked = false;
+
     // Add event listener to handle checkbox state changes
     checkbox.addEventListener("change", function() {
         if (this.checked) {
             checked = true;
+            checkbox.disabled = true; // Disable the checkbox when checked
+
             next.addEventListener("click", function() {
-                acceptedLetter(popup, letter_container)
-                start_game()
-            })
-        } else {
-            checked = false;
+                acceptedLetter(popup, letter_container);
+                start_game();
+            });
         }
     });
-    document.body.appendChild(popup);
-    getPlayerLetter(player)
-}
 
+    document.body.appendChild(popup);
+    getPlayerLetter(player);
+}
 //get the player depending on id
 function getPlayerLetter(player) {
 
@@ -322,7 +322,7 @@ function buildPlayerLetter(player, district, district_backstory) {
     let information = document.createElement("p");
     information.classList.add("information");
     information.innerHTML =
-        "Kära tribut! <br> Det är med stolthet och ödmjukhet jag skriver till dig idag, som en representant för Malmö och hela vårt enade land. Du har blivit vald för att representera ditt distrikt i den årliga Skörden, och jag kan bara föreställa mig hur det måste kännas att stå inför denna utmaning, men jag vill påminna dig om vikten av denna tradition. Vi har skapat Skörden, en chans för dig att visa din styrka och beslutsamhet genom att slåss för ditt distrikts överlevnad. Som du vet är Skörden inte en enkel uppgift. Men jag är övertygad om att du är tillräckligt stark och beslutsam för att överleva och kanske till och med blomstra under denna utmaning. Jag önskar dig all lycka och framgång i din resa genom Skörden, och jag kommer att följa dina framsteg med stolthet och spänning. Må den största framgången vänta på dig vid slutet av denna utmaning.";
+        "Kära tribut! <br> Det är med stolthet och ödmjukhet jag skriver till dig idag, som en representant för Malmö och hela vårt enade land. Du har blivit vald för att representera ditt distrikt i den årliga Skörden. Vi har skapat Skörden, en chans för dig att visa din styrka och beslutsamhet genom att slåss för ditt distrikts överlevnad. Som du vet är Skörden inte en enkel uppgift, men jag är övertygad om att du är tillräckligt stark och beslutsam för att överleva. Jag önskar dig all lycka och framgång i din resa genom Skörden, och jag kommer att följa dina framsteg med stolthet och spänning. Må den största framgången vänta på dig vid slutet av denna utmaning.";
 
     information.style.position = "absolute";
 
@@ -397,7 +397,7 @@ function acceptedLetter(popup, letter_container) {
 
     info_container.addEventListener("click", function() {
         if (is_down == false) {
-            info_container.style.height = "30vh"
+            info_container.style.height = "20vh"
             district_text.innerHTML = district_array.backstory
             district_text.style.position = "absolute";
 

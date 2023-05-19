@@ -35,8 +35,8 @@ function checkDistrict(player) {
 
 function buildFooter(player, district_number, district_profession) {
 
-    localStorage.removeItem('hungerLevel');
-    localStorage.removeItem('waterLevel');
+    // localStorage.removeItem('hungerLevel');
+    // localStorage.removeItem('waterLevel');
 
     let footer = document.createElement("div");
     footer.innerHTML = `
@@ -74,13 +74,14 @@ function buildFooter(player, district_number, district_profession) {
     let hunger_level = footer.querySelector(".hunger_level");
     let water_level = footer.querySelector(".water_level");
 
-    // Retrieve the saved progress from Local Storage
-    const savedHungerLevel = localStorage.getItem('hungerLevel');
-    const savedWaterLevel = localStorage.getItem('waterLevel');
+
+
+    const savedHungerLevel = parseInt(localStorage.getItem('hungerLevel'));
+    const savedWaterLevel = parseInt(localStorage.getItem('waterLevel'));
 
     // Set the initial values of the hunger and water levels
-    hunger_level.style.width = savedHungerLevel ? `${savedHungerLevel}%` : '100%';
-    water_level.style.width = savedWaterLevel ? `${savedWaterLevel}%` : '100%';
+    hunger_level.style.width = !isNaN(savedHungerLevel) ? `${savedHungerLevel}%` : '100%';
+    water_level.style.width = !isNaN(savedWaterLevel) ? `${savedWaterLevel}%` : '100%';
 
 
     // add a load event listener to the img element to make sur hunger_level and water_level is executed after the img_user
@@ -130,6 +131,8 @@ function buildFooter(player, district_number, district_profession) {
                 if (circle.classList.contains('5')) {
                     popupLose()
                     checkIfOnePlayerLeft()
+                    localStorage.removeItem('hungerLevel');
+                    localStorage.removeItem('waterLevel');
 
                     let options = {
                         method: "PATCH",
@@ -157,6 +160,8 @@ function checkFilledCircles() {
         not_checked[0].classList.add('checked');
         popupLose()
         checkIfOnePlayerLeft()
+        localStorage.removeItem('hungerLevel');
+        localStorage.removeItem('waterLevel');
         let options = {
             method: "PATCH",
             body: JSON.stringify({
@@ -166,9 +171,13 @@ function checkFilledCircles() {
             headers: { "Content-Type": "application/json" },
         };
         fetch("./DB/playerId.php", options)
+        localStorage.removeItem('hungerLevel');
+        localStorage.removeItem('waterLevel');
     } else if (not_checked.length === 0) {
         popupLose()
         checkIfOnePlayerLeft()
+        localStorage.removeItem('hungerLevel');
+        localStorage.removeItem('waterLevel');
         let options = {
             method: "PATCH",
             body: JSON.stringify({
@@ -220,6 +229,7 @@ function clickProfit() {
         const new_width = current_width + 20;
         if (new_width <= 100) {
             hunger_level.style.width = `${new_width}%`;
+            localStorage.setItem('hungerLevel', new_width);
         }
         document.querySelector(".profit_popup").remove()
     });
@@ -229,6 +239,7 @@ function clickProfit() {
         const new_width = current_width + 20;
         if (new_width <= 100) {
             water_level.style.width = `${new_width}%`;
+            localStorage.setItem('waterLevel', new_width);
         }
         document.querySelector(".profit_popup").remove()
     });
