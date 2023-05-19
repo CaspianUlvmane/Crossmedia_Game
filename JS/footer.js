@@ -87,8 +87,8 @@ function buildFooter(player, district_number, district_profession) {
     let img_user = footer.querySelector(".img_user");
     img_user.addEventListener("load", function() {
 
-        const interval_water_id = setInterval(decreaseWater, 900000);
-        const interval_hunger_id = setInterval(decreaseHunger, 900000);
+        const interval_water_id = setInterval(decreaseWater, 300000);
+        const interval_hunger_id = setInterval(decreaseHunger, 300000);
 
         function decreaseHunger() {
             const current_width = parseInt(hunger_level.style.width, 10);
