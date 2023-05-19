@@ -17,13 +17,14 @@ function initMap() {
         };
         map = new google.maps.Map(document.getElementById("map"), {
           center: { lat: 55.589200, lng: 12.992339 },
-          zoom: 15.5,
+          zoom: 15,
           mapTypeControl: false,
           draggable: false,
+          clickable: false,
           mapId: "a0111f479c8a0090",
         });
         // map.setCenter(pos);
-        const image = "./dot.svg";
+        const image = "./IMG/dot.svg";
         const icon = new google.maps.Marker({
           position: {
             lat: position.coords.latitude,
@@ -42,6 +43,7 @@ function initMap() {
         });
         render_constants();
         location_update(icon);
+        console.log(icon);
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
@@ -70,6 +72,8 @@ function location_update(icon) {
       lat: position.coords.latitude,
       lng: position.coords.longitude,
     };
+    console.log(icon.position.lat, icon.position.lng);
+    console.log(pos);
     icon.setPosition(pos);
     if(localStorage.getItem("playerId") != null){
       let options = {
@@ -80,7 +84,10 @@ function location_update(icon) {
           lng: pos.lng,}),
         headers: { "Content-Type": "application/json" },
         }
+        console.log(options);
       fetch("./DB/mapAPI.php", options)
+      .then(r => r.json())
+      .then(r => console.log(r))
     }
     let hazard_zones_array = Array.from(
       document.querySelectorAll(".hazard_area")

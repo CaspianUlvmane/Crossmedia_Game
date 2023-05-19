@@ -75,14 +75,15 @@ if($request_method === "PATCH"){
     $positions = json_decode($json, true);
 
     foreach($positions as $index => $position){
-        if($position["id"] === $receivedData["user_id"]){
+        if($position["id"] === (int)$receivedData["user_id"]){
             $position["lat"] = $receivedData["lat"];
             $position["lng"] = $receivedData["lng"];
             $positions[$index] = $position;
+            $json = json_encode($positions, JSON_PRETTY_PRINT);
+            file_put_contents($filename, $json);
+            sendJSON($position);
         }
     }
-    $json = json_encode($positions, JSON_PRETTY_PRINT);
-    file_put_contents($filename, $json);
 }
 
 ?>
