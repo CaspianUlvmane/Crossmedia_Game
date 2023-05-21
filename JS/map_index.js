@@ -3,11 +3,11 @@
 // failed.", it means you probably did not give permission for the browser to
 // locate you.
 let map, infoWindow;
-
+let updateTimeout;
 const updateTime = 5000;
-localStorage.setItem("hurt", "0")
 
 function initMap() {
+  localStorage.setItem("hurt", "0")
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(
       (position) => {
@@ -72,8 +72,7 @@ function location_update(icon) {
       lat: position.coords.latitude,
       lng: position.coords.longitude,
     };
-    console.log(icon.position.lat, icon.position.lng);
-    console.log(pos);
+    map.setCenter(pos)
     icon.setPosition(pos);
     if(localStorage.getItem("playerId") != null){
       let options = {
@@ -93,28 +92,31 @@ function location_update(icon) {
       document.querySelectorAll(".hazard_area")
     );
     if (hazard_zones_array[0]) {
-      hazard_zones_array.forEach((z) => {
-        if (hazard_zone_bool(z, pos)) {
-          let hit = localStorage.getItem("hurt")
-          if(hit > 1){
-            console.log("Get out of danger!");
-          } else if(hit == 4){
-            console.log("damage taken, get out!")
-            hit = 0
-            localStorage.setItem("hurt", hit)
+      if(hazard_zones_array.some(z => hazard_zone_bool(z, pos))){
+        let hit = localStorage.getItem("hurt")
+          if(hit < 1){
+            let popup = document.getElementById("danger_popup")
+            popup.style.display = "flex"
+            popup.textContent = "Your're in a hazard zone! Leave immediately"
+            setTimeout(() => {popup.style.display = "none"}, 3000)
+            localStorage.setItem("hurt", ++hit)
+          } else if(hit % 5 == 0){
+            let popup = document.getElementById("danger_popup")
+            popup.style.display = "flex"
+            popup.textContent = "You took damage from the hazard! Leave immediately"
+            setTimeout(() => {popup.style.display = "none"}, 3000)
+            checkFilledCircles()
+            localStorage.setItem("hurt", ++hit)
           } else{
-            hit++
-            localStorage.setItem("hurt", hit)
+            localStorage.setItem("hurt", ++hit)
           }
-          return
-        }
-
-      });
-      localStorage.setItem("hurt", "0")
+      } else{
+        localStorage.setItem("hurt", "0")
+      };
     }
   });
   render_hazards();
-  setTimeout(() => {
+  updateTimeout = setTimeout(() => {
     location_update(icon);
   }, updateTime);
 }

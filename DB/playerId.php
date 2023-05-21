@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
     $players = json_decode($playersData, true);
 
     foreach($players as $index => $player){
-    
+        $player["alive"] = true;
         $player["in_use"] = false;
         $players[$index] = $player;
        

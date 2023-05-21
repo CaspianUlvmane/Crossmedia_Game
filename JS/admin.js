@@ -329,6 +329,7 @@ function end_button(){
     };
     fetch("./DB/API.php", options)
     fetch("./DB/playerId.php?end")
+    fetch("./DB/API.php?end")
   })
   document.querySelector("#hazard_buttons").append(button)
 }
