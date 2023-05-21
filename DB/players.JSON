@@ -1,11 +1,12 @@
-[{
+[
+    {
         "id": 1,
         "district_id": 1,
         "name": "Ella",
         "image": ".\/IMG\/characters\/farmer_woman.png",
         "alive": true,
         "backstory": "Ella \u00e4r en tjej p\u00e5 16 \u00e5r som \u00e4r f\u00f6dd och uppvuxen p\u00e5 en bondg\u00e5rd i Sk\u00e5ne. Hon har l\u00e4nge hj\u00e4lpt sin far med sk\u00f6tseln av g\u00e5rdens djur och gr\u00f6dor, och har utvecklat en stark passion f\u00f6r jordbruk och natur. Trots att hon har tvingats arbeta h\u00e5rt och uppoffra mycket av sin fritid f\u00f6r g\u00e5rden, har hon alltid varit glad att kunna hj\u00e4lpa till p\u00e5 ett konkret s\u00e4tt f\u00f6r att bidra till sin familjs f\u00f6rs\u00f6rjning. Ella har en stark vilja och \u00e4r envis n\u00e4r hon v\u00e4l har best\u00e4mt sig f\u00f6r n\u00e5got. Hon \u00e4r ocks\u00e5 mycket lojal mot sin familj och sina v\u00e4nner, och skulle g\u00f6ra vad som helst f\u00f6r att skydda dem. Hennes liv p\u00e5 landet har gett henne en intuitiv f\u00f6rst\u00e5else f\u00f6r naturen och en stark k\u00e4nsla av sj\u00e4lvf\u00f6rs\u00f6rjning. Som en del av Sk\u00e5ne-distriktet \u00e4r Ella v\u00e4l medveten om de sociala och ekonomiska utmaningar som hennes samh\u00e4lle st\u00e5r inf\u00f6r p\u00e5 grund av \u00f6verbefolkning och resursbrist. Hon tror att Sk\u00f6rden kan vara en m\u00f6jlig l\u00f6sning, men hon \u00e4r ocks\u00e5 \u00f6vertygad om att det m\u00e5ste finnas b\u00e4ttre s\u00e4tt att hantera situationen \u00e4n genom att offra oskyldiga m\u00e4nniskors liv.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 2,
@@ -14,7 +15,7 @@
         "image": ".\/IMG\/characters\/farmer_man.png",
         "alive": true,
         "backstory": "Noah \u00e4r en kille som \u00e4r 16 och \u00e4r en stark och envis bondpojke fr\u00e5n Sk\u00e5ne som har levt hela sitt liv p\u00e5 familjens g\u00e5rd. Han \u00e4r van vid att arbeta h\u00e5rt fr\u00e5n tidig \u00e5lder och har l\u00e4rt sig att odla gr\u00f6dor och ta hand om djur p\u00e5 ett effektivt s\u00e4tt. Trots att han har f\u00f6rs\u00f6kt att undvika uppm\u00e4rksamhet och konflikt har Nils alltid varit medveten om de or\u00e4ttvisor och bristande r\u00e4ttigheter som hans familj och andra b\u00f6nder har lidit av under Malm-regimen d\u00e5 \u00f6verbefolkningen resulterar i ett st\u00f6rre behov f\u00f6r mat s\u00e5 f\u00e5r Noah och hans familj jobba h\u00e5rt.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 3,
@@ -23,7 +24,7 @@
         "image": ".\/IMG\/characters\/influencer_woman.png",
         "alive": true,
         "backstory": "Leah \u00e4r en tjej som \u00e4r 18 \u00e5r fr\u00e5n Stockholm, en stad d\u00e4r makt och inflytande \u00e4r v\u00e4rderat h\u00f6gt. Hon har byggt upp sitt rykte genom sociala medier och har en lojal f\u00f6ljarskara som beundrar henne f\u00f6r hennes utseende och livsstil. Leah har alltid varit medveten om vikten av att framst\u00e5 som perfekt och har investerat mycket tid och pengar i sitt utseende och sitt varum\u00e4rke. Trots att Leah inte har n\u00e5gon erfarenhet av livet p\u00e5 landsbygden, \u00e4r hon fast besluten om att vinna Sk\u00f6rden och bevisa sin styrka och \u00f6verlevnadsf\u00f6rm\u00e5ga f\u00f6r sina f\u00f6ljare. Hon \u00e4r envis och t\u00e4vlingsinriktad, men hennes r\u00e4dsla f\u00f6r att f\u00f6rlora kan g\u00f6ra henne impulsiv och \u00f6vermodig.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 4,
@@ -32,7 +33,7 @@
         "image": ".\/IMG\/characters\/influencer_man.png",
         "alive": true,
         "backstory": "William \u00e4r en v\u00e4ltr\u00e4nad och sj\u00e4lvs\u00e4ker 18-\u00e5rig man som \u00e4r van vid att leva ett liv i lyx och bekv\u00e4mlighet. Han \u00e4r en framg\u00e5ngsrik influencer p\u00e5 sociala medier och har en stor f\u00f6ljarskara som beundrar hans livsstil. Trots att han \u00e4r omgiven av m\u00e4nniskor, k\u00e4nner han sig ofta ensam och l\u00e4ngtar efter verklig k\u00e4rlek och v\u00e4nskap. William \u00e4r uppvuxen i en rik familj i Stockholm och har aldrig beh\u00f6vt bekymra sig om pengar eller n\u00e5gon form av kamp. Han har alltid haft allt han velat ha och har l\u00e4rt sig att utnyttja sitt utseende och sin charm f\u00f6r att f\u00e5 det han vill ha. Hans livsf\u00f6rh\u00e5llanden har gjort honom n\u00e5got bortsk\u00e4md och ofta oempatisk mot andra.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 5,
@@ -95,7 +96,7 @@
         "image": ".\/IMG\/characters\/military_woman.png",
         "alive": true,
         "backstory": "Elsa \u00e4r en stark, sj\u00e4lvst\u00e4ndig och disciplinerad 18-\u00e5rig tjej fr\u00e5n Gotland. Hon v\u00e4xte upp i en familj av milit\u00e4rer och har alltid varit fascinerad av taktik och strategi. Elsa har en unik talang f\u00f6r att l\u00e4sa m\u00e4nniskor och situationer, vilket g\u00f6r henne till en utm\u00e4rkt strateg och ledare. Hon \u00e4r ocks\u00e5 utrustad med utm\u00e4rkta \u00f6verlevnads f\u00e4rdigheter, vilket hon l\u00e4rt sig fr\u00e5n sin familj och genom att spendera tid i naturen p\u00e5 Gotland. Elsa har alltid k\u00e4nt sig hemma i utmanande och farliga situationer, och hon \u00e4r redo att ta p\u00e5 sig utmaningen med Sk\u00f6rden. Men samtidigt \u00e4r hon ocks\u00e5 medveten om att hennes familjs milit\u00e4ra bakgrund kan g\u00f6ra henne till en m\u00e5ltavla f\u00f6r de andra spelarna, och hon \u00e4r beredd att anv\u00e4nda alla sina f\u00e4rdigheter och intelligens f\u00f6r att \u00f6verleva och komma ut som vinnare.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 12,
@@ -104,7 +105,7 @@
         "image": ".\/IMG\/characters\/military_man.png",
         "alive": true,
         "backstory": "Ludvig \u00e4r en v\u00e4ltr\u00e4nad 17-\u00e5rig kille som har vuxit upp i en familj av milit\u00e4rer p\u00e5 Gotland. Han har tr\u00e4nats i kampsport och vapenhantering sedan han var liten och har alltid haft en stark lojalitet gentemot sin familj och land. Ludvig \u00e4r envis och fokuserad, och han tar alltid sina uppgifter p\u00e5 allvar. Han \u00e4r en strategisk t\u00e4nkare och kan t\u00e4nka snabbt under press, vilket g\u00f6r honom till en farlig motst\u00e5ndare i Sk\u00f6rden. Trots sin milit\u00e4ra bakgrund \u00e4r Ludvig ocks\u00e5 en konstn\u00e4rlig sj\u00e4l och \u00e4lskar att spela gitarr och sjunga n\u00e4r han har tid.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 13,
@@ -113,7 +114,7 @@
         "image": ".\/IMG\/characters\/hoarders_woman.png",
         "alive": true,
         "backstory": "Agnes \u00e4r en 14-\u00e5rig tjej som kommer fr\u00e5n Halland och hon \u00e4r en hoarder. Hon har sv\u00e5rt att sl\u00e4ppa taget om saker, oavsett om det \u00e4r gamla kl\u00e4der, leksaker eller till och med trasiga prylar. Hon har en eklektisk stil som hon skapat genom att samla p\u00e5 sig saker fr\u00e5n olika tidsepoker och kulturer. Hon b\u00e4r ofta p\u00e5 sig flera lager av kl\u00e4der och smycken, vilket g\u00f6r henne synlig fr\u00e5n l\u00e5ngt h\u00e5ll. Hon har ocks\u00e5 en kreativ sida och \u00e4lskar att skapa nya saker med sina samlade f\u00f6rem\u00e5l, vilket g\u00f6r henne till en duktig hantverkare. Trots att hon \u00e4r en hoarder och det kan vara sv\u00e5rt f\u00f6r henne att sl\u00e4ppa taget om saker, s\u00e5 \u00e4r hon en lojal och p\u00e5litlig v\u00e4n som alltid st\u00e4ller upp f\u00f6r dem hon \u00e4lskar.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 14,

@@ -36,3 +36,17 @@
     width: 80%;
     text-align: center;
 }
+
+#danger_popup{
+    position: absolute;
+    top: 25vh;
+    left: calc(50vw - 120px);
+    width: 200px;
+    height: 100px;
+    background-color: #0c0500bd;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: antiquewhite;
+}

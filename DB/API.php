@@ -18,6 +18,19 @@ if($request_method === "GET"){
         $start = json_decode($json, true);
         sendJSON($start);
     }
+
+    if(isset($_GET["end"])){
+        $json = file_get_contents("./positions.JSON");
+        $positions = json_decode($json, true);
+        foreach($positions as $index =>$position){
+            $position["lat"] = 0;
+            $position["lng"] = 0;
+            $positions[$index] = $position;
+        }
+        $json = json_encode($positions, JSON_PRETTY_PRINT);
+        file_put_contents("./positions.JSON", $json);
+        sendJSON("Game END");
+    }
 }
 
 if($request_method === "PATCH"){

@@ -13,6 +13,7 @@ function popupLose() {
     lose_text.innerHTML = `Du dog`
     lose_text.style.position = "absolute";
     lose_container.append(lose_text)
+    clearTimeout(updateTimeout)
 }
 
 function popupWin() {
