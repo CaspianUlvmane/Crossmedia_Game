@@ -13,7 +13,7 @@ function popupLose() {
     lose_text.innerHTML = `Du dog`
     lose_text.style.position = "absolute";
     lose_container.append(lose_text)
-        // clearTimeout(updateTimeout)
+    decrease_intervals.forEach(i => clearInterval(i))
 }
 
 function popupWin() {
@@ -31,6 +31,7 @@ function popupWin() {
     win_text.innerHTML = `DU ÄR VINNARE AV SKÖRDEN!!!`
     win_text.style.position = "absolute";
     win_container.append(win_text)
+    decrease_intervals.forEach(i => clearInterval(i))
 }
 
 
@@ -57,11 +58,11 @@ function checkIfOnePlayerLeft() {
                     players_alive.push(play);
                 }
             });
-
-            if (players_alive.length == 1 && players_alive[0].id == player.id) {
+            player = JSON.parse(localStorage.getItem('playerId'))
+            if (players_alive.length == 1 && players_alive[0].id == player) {
                 console.log("You win!");
                 popupWin()
-            } else {
+            } else if(players_alive.some(p => p.id == player)) {
                 setTimeout(() => checkIfOnePlayerLeft(), 10000)
             }
         });
