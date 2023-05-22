@@ -3,7 +3,7 @@ let player = 0;
 
 
 function render() {
-    // localStorage.clear();
+    localStorage.clear();
     let popup = document.createElement("div");
     popup.id = "popup";
 
@@ -53,8 +53,6 @@ setTimeout(() => {
 
 
 function getLetter(popup, logga_img, start_game) {
-
-    getPlayerLetter(player);
 
     logga_img.style.display = "none";
     start_game.style.display = "none";
@@ -143,6 +141,8 @@ function getFormattedDate() {
 }
 
 function openLetter(letter_img, open_letter, popup) {
+
+    getPlayerLetter(player);
 
     letter_img.style.display = "none";
     open_letter.style.display = "none";
