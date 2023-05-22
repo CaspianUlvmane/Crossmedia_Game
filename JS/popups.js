@@ -13,7 +13,7 @@ function popupLose() {
     lose_text.innerHTML = `Du dog`
     lose_text.style.position = "absolute";
     lose_container.append(lose_text)
-    clearTimeout(updateTimeout)
+        // clearTimeout(updateTimeout)
 }
 
 function popupWin() {
@@ -37,6 +37,8 @@ function popupWin() {
 
 function checkIfOnePlayerLeft() {
     let players_in_use = [];
+
+    console.log("check if one player is left")
 
     fetch("./DB/players.JSON")
         .then((r) => r.json())
