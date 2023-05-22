@@ -83,6 +83,14 @@ function buildFooter(player, district_number, district_profession) {
     hunger_level.style.width = !isNaN(savedHungerLevel) ? `${savedHungerLevel}%` : '100%';
     water_level.style.width = !isNaN(savedWaterLevel) ? `${savedWaterLevel}%` : '100%';
 
+    if (savedWaterLevel <= 0) {
+        water_level.style.width = "0%";
+    }
+
+    if (savedHungerLevel <= 0) {
+        hunger_level.style.width = "0%";
+    }
+
 
     // add a load event listener to the img element to make sur hunger_level and water_level is executed after the img_user
     let img_user = footer.querySelector(".img_user");
@@ -96,7 +104,7 @@ function buildFooter(player, district_number, district_profession) {
             const new_width = current_width - 20;
             if (new_width >= 20) {
                 hunger_level.style.width = `${new_width}%`;
-                localStorage.setItem('hungerLevel', new_width); // Save the updated percentage to Local Storage
+                localStorage.setItem('hungerLevel', new_width); // Save the updated percentage to Local Storage    
             } else {
                 // clearInterval(interval_hunger_id);
                 hunger_level.style.width = `${new_width}%`;
@@ -117,6 +125,7 @@ function buildFooter(player, district_number, district_profession) {
                 // clearInterval(interval_water_id);
                 checkFilledCircles();
             }
+
         }
     });
 
