@@ -3,7 +3,6 @@ let player = 0;
 
 
 function render() {
-    localStorage.clear();
     let popup = document.createElement("div");
     popup.id = "popup";
 
@@ -33,6 +32,7 @@ function render() {
     popup.appendChild(start_game)
 
     start_game.addEventListener("click", function() {
+        localStorage.clear();
         getLetter(popup, logga_img, start_game)
             // joinGame()
             // Call fetchPlayerInfo() and then call getPlayerLetter(player) with the updated value
