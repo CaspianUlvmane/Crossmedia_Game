@@ -1,5 +1,7 @@
 //get the player depending on id
 
+let circlesArray = []
+
 function getPlayer(player) {
     fetch(new Request("./DB/players.JSON"))
         .then(r => r.json())
@@ -96,8 +98,8 @@ function buildFooter(player, district_number, district_profession) {
     let img_user = footer.querySelector(".img_user");
     img_user.addEventListener("load", function() {
 
-        const interval_water_id = setInterval(decreaseWater, 15000);
-        const interval_hunger_id = setInterval(decreaseHunger, 15000);
+        const interval_water_id = setInterval(decreaseWater, 5000);
+        const interval_hunger_id = setInterval(decreaseHunger, 5000);
 
         function decreaseHunger() {
             const current_width = parseInt(hunger_level.style.width, 10);
@@ -123,21 +125,22 @@ function buildFooter(player, district_number, district_profession) {
                 water_level.style.width = `${new_width_water}%`;
                 localStorage.setItem('waterLevel', new_width_water); // Save the updated percentage to Local Storage
                 // clearInterval(interval_water_id);
-                checkFilledCircles();
+                checkFilledCircles()
             }
 
         }
     });
 
     const all_circles = document.querySelectorAll('.check_circle');
-    let count = 0;
+    // let count = 0;
     all_circles.forEach(circle => {
         circle.addEventListener('click', () => {
             if (!circle.classList.contains('checked')) {
                 circle.classList.add('checked');
-                count++;
-                circle.classList.add(`${count}`);
-                if (circle.classList.contains('5')) {
+                // count++;
+                // circle.classList.add(`${count}`);
+                circlesArray.push("1")
+                if (circlesArray.length == 5) {
                     popupLose()
                     localStorage.removeItem('hungerLevel');
                     localStorage.removeItem('waterLevel');
@@ -164,23 +167,44 @@ function checkFilledCircles() {
     if (not_checked.length >= 2) {
         not_checked[0].classList.add('checked');
         not_checked[1].classList.add('checked');
+        circlesArray.push("1")
+        circlesArray.push("1")
+        if (circlesArray.length == 5) {
+            popupLose()
+            localStorage.removeItem('hungerLevel');
+            localStorage.removeItem('waterLevel');
+            let options = {
+                method: "PATCH",
+                body: JSON.stringify({
+                    alive: false,
+                    id: player.id
+                }),
+                headers: { "Content-Type": "application/json" },
+            }
+            fetch("./DB/playerId.php", options)
+        };
     } else if (not_checked.length === 1) {
         not_checked[0].classList.add('checked');
-        popupLose()
-        localStorage.removeItem('hungerLevel');
-        localStorage.removeItem('waterLevel');
-        let options = {
-            method: "PATCH",
-            body: JSON.stringify({
-                alive: false,
-                id: player.id
-            }),
-            headers: { "Content-Type": "application/json" },
+        circlesArray.push("1")
+        if (circlesArray.length == 5) {
+            popupLose()
+            localStorage.removeItem('hungerLevel');
+            localStorage.removeItem('waterLevel');
+            let options = {
+                method: "PATCH",
+                body: JSON.stringify({
+                    alive: false,
+                    id: player.id
+                }),
+                headers: { "Content-Type": "application/json" },
+            }
+            fetch("./DB/playerId.php", options)
         };
-        fetch("./DB/playerId.php", options)
 
     } else if (not_checked.length === 0) {
-        popupLose()
+        circlesArray.push("1")
+        if (circlesArray.length == 5)
+            popupLose()
         localStorage.removeItem('hungerLevel');
         localStorage.removeItem('waterLevel');
         let options = {
