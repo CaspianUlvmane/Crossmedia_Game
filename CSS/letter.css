@@ -87,7 +87,7 @@ body {
 
 .logga_img {
     bottom: 70vh;
-    padding-left: 7vh;
+    padding-left: 5vh;
 }
 
 .signature {
@@ -187,7 +187,8 @@ body {
 .information {
     color: black;
     z-index: 1010;
-    font-size: 0.8vh;
+    /* font-size: 0.8vh; */
+    font-size: 7.8px;
     margin: 5vh 18vw 0 25vw;
     line-height: 1.4;
     display: flex;
@@ -261,3 +262,5 @@ body {
     z-index: 1005;
     top: 90vh;
 }
+
+

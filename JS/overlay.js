@@ -43,7 +43,7 @@ function getQuests() {
                 let triangle_down_div = document.createElement("div");
                 triangle_down_div.classList.add("triangle_down");
                 div.innerHTML = `
-          <h4> Uppdrag ${quest.id}</h4>
+          <h4>${quest.location}</h4>
         `;
                 div.append(triangle_down_div);
                 all_quests_div.append(div);
@@ -61,7 +61,7 @@ function getQuests() {
                 if (isQuestLocked(quest.id)) {
                     div.className = "quest_box_closed";
                     div.innerHTML = `
-            <h4> Uppdrag ${quest.id}</h4>
+            <h4>${quest.location}</h4>
             <img src="./IMG/padlock.png" class="padlock">
           `;
                 }
@@ -73,8 +73,9 @@ function quests_show_more(quest, div) {
     console.log(quest);
     let triangle_up_div = document.createElement("div");
     triangle_up_div.classList.add("triangle_up");
+    // <h4> Uppdrag ${quest.id}</h4>
     div.innerHTML = `
-    <h4> Uppdrag ${quest.id}</h4>
+    <h4>${quest.location}</h4>
     <h1>FRÅGA:</h1>
     <p class="quest_info">${quest.question}</p>
     <div class="quest_answers"></div>
@@ -105,14 +106,14 @@ function quests_show_more(quest, div) {
                     console.log("correct");
                     setTimeout(() => {
                         profitPopUp();
-                        lock_quest_for_checkbox(div, checkbox);
+                        lock_quest_for_checkbox(div, checkbox, quest.location);
                         saveLockedQuest(quest.id); // Save the locked quest ID
                     }, 1000);
                 } else {
                     document.querySelector("." + checkbox.attributes[1].nodeValue).style.backgroundColor = "red";
                     console.log("not correct");
                     setTimeout(() => {
-                        lock_quest_for_checkbox(div, checkbox);
+                        lock_quest_for_checkbox(div, checkbox, quest.location);
                         console.log(quest.id);
                         saveLockedQuest(quest.id); // Save the locked quest ID
                     }, 1000);
@@ -136,13 +137,13 @@ function quests_show_more(quest, div) {
     });
 }
 
-function lock_quest_for_checkbox(div, checkbox) {
-    let quest_id = div.querySelector("h4").textContent.replace("Uppdrag ", "");
+function lock_quest_for_checkbox(div, checkbox, location) {
+    //let quest_id = div.querySelector("h4").textContent.replace("Uppdrag ", "");
     let parentDiv = checkbox.closest(".quest_box_opened");
     if (parentDiv == div) {
         parentDiv.className = "quest_box_closed";
         parentDiv.innerHTML = `
-      <h4> Uppdrag ${quest_id}</h4>
+      <h4>${location}</h4>
       <img src="./IMG/padlock.png" class="padlock">
     `;
     }

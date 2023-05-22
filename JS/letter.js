@@ -251,7 +251,7 @@ function openLetter(letter_img, open_letter, popup) {
         if (this.checked) {
             checked = true;
             checkbox.disabled = true; // Disable the checkbox when checked
-
+            
             next.addEventListener("click", function() {
                 acceptedLetter(popup, letter_container);
                 start_game();
