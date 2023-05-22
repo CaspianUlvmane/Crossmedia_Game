@@ -47,6 +47,7 @@ setTimeout(() => {
         getPlayer(localStorage.getItem('playerId'))
     } else {
         render()
+        localStorage.clear();
     }
 }, 2)
 
