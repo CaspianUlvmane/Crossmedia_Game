@@ -121,9 +121,9 @@
         "district_id": 7,
         "name": "Hugo",
         "image": ".\/IMG\/characters\/hoarders_man.png",
-        "alive": true,
+        "alive": false,
         "backstory": "Hugo \u00e4r en ovanligt stillsam 15-\u00e5rig kille, han pratar s\u00e4llan och verkar alltid f\u00f6rdjupad i sina egna tankar. Han kommer fr\u00e5n en familj av samlare och har sj\u00e4lv en f\u00f6rk\u00e4rlek f\u00f6r att spara p\u00e5 allt m\u00f6jligt, fr\u00e5n sm\u00e5 mynt och sn\u00e4ckskal till stora m\u00f6bler och fordon. Han \u00e4r en skicklig snickare och tinkerer och \u00e4lskar att reparera och \u00e5teranv\u00e4nda saker f\u00f6r att g\u00f6ra dem anv\u00e4ndbara igen. Trots sin hoarding-tendens \u00e4r Hugo mycket organiserad och har en plats f\u00f6r allt i sitt hem, \u00e4ven om det ibland kan se r\u00f6rigt ut f\u00f6r andra. Han \u00e4r mycket noga med att h\u00e5lla reda p\u00e5 vad han sparar och var han har placerat det, och blir l\u00e4tt stressad om hans f\u00f6rem\u00e5l r\u00f6rs om eller flyttas.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 15,

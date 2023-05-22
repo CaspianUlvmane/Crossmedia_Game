@@ -61,6 +61,8 @@ function checkIfOnePlayerLeft() {
             if (players_alive.length == 1 || players_alive[0].id == player.id) {
                 console.log("You win!");
                 popupWin()
+            } else {
+                setTimeout(() => checkIfOnePlayerLeft(), 10000)
             }
         });
 }

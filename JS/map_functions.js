@@ -6,7 +6,7 @@ function start_game() {
             if (r.start) {
                 getPlayer(localStorage.getItem('playerId'))
                 document.querySelector("#popup").style.display = "none";
-                setTimeout(() => checkIfOnePlayerLeft(), 10000);
+                checkIfOnePlayerLeft()
                 return true;
             } else {
                 setTimeout(() => start_game(), 5000);
