@@ -53,10 +53,10 @@ setTimeout(() => {
 
 function getLetter(popup, logga_img, start_game) {
 
+    getPlayerLetter(player);
+
     logga_img.style.display = "none";
     start_game.style.display = "none";
-
-
 
     let open_letter = document.createElement("p");
     open_letter.innerText = "ÖPPNA BREVET";
@@ -143,7 +143,6 @@ function getFormattedDate() {
 }
 
 function openLetter(letter_img, open_letter, popup) {
-    getPlayerLetter(player);
 
     letter_img.style.display = "none";
     open_letter.style.display = "none";
