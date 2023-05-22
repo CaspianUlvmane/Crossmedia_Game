@@ -1,10 +1,8 @@
-[
-    {
+[{
         "id": 1,
         "location": "Kvinnliga statyn",
         "question": "Denna kvinna var den första att vinna skörden. Hennes uthållighet och kämparglöd är något alla kommer ihåg och hennes namn har för evigt bränts in i historien av Skörden som en av dess legender.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "Galatea",
                 "correct": true
             },
@@ -26,8 +24,7 @@
         "id": 2,
         "location": "Kupolen",
         "question": "Ledtråd: Denna kupolen är målad i en viss färg för att representera hopp, lycka och vänskap, känslor skörden representerar för folket och i de mörka tiderna vi har befunnit oss i.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "Grön",
                 "correct": false
             },
@@ -49,8 +46,7 @@
         "id": 3,
         "location": "Brevet",
         "question": "Presidenten är en person som har lett Sverige till dessa nya tider och som har hållit Sverige enigt i de tuffa tiderna. Presidenten har förmågan att ge stabilitet, säkerhet och välstånd till landet och har gjort det i många år under sitt kända mystiska alias som består av tre bokstäver.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "LCR",
                 "correct": false
             },
@@ -72,8 +68,7 @@
         "id": 4,
         "location": "Margareta Flickan",
         "question": "Denna flicka var den första tributen att dö i Skördens första arena, hon var en flicka från distrikt 1 och inför skörden pratade hon om hennes passion för en viss sak som avbildades i statyn med henne.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "Blommor",
                 "correct": true
             },
@@ -95,8 +90,7 @@
         "id": 5,
         "location": "Stentemplet",
         "question": "Detta tempel är ett monument som byggdes för att påminna alla om revolutionens skador mot samhället och befolkningen. Pelarna är menade att symbolisera antalet miljoner som dog i revolutionen.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "fyra",
                 "correct": false
             },
@@ -118,8 +112,7 @@
         "id": 6,
         "location": "Baltiska Utställningen",
         "question": " Denna utställningen var en utställning där många länder visade och demonstrerade vilka lösningar de hade kommit fram till för att motverka överbefolkningen som plågade hela världen. Året utställningen hölls var samma år som den första vinnaren av Skörden föddes.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "År-1924",
                 "correct": false
             },
@@ -141,8 +134,7 @@
         "id": 7,
         "location": "Vattenspel",
         "question": "Centrerad i den stora sjön i arenan finns där ett antal fontäner som ska påminna om den vattenbrist som plågade Sverige innan revolutionen. Antal fontäner som sprutar vatten ska representera det antal liter vatten man fick av regeringen i veckan för att överleva före revolutionen.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "fyra",
                 "correct": false
             },
@@ -164,8 +156,7 @@
         "id": 8,
         "location": "Rosenträdgården",
         "question": "Denna trädgården är dedikerad till Sveriges sista monark som var älskad av folket på grund av deras arbete med barn rättigheter som dessvärre hjälpte till att öka befolkningen. I revolutionen bestämdes det för att avskaffa monarkin då de hade en monopolisering av resurser som befolkningen inte tyckte var värdiga.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "Silvia-Renate",
                 "correct": true
             },
@@ -187,8 +178,7 @@
         "id": 9,
         "location": "Fåglar",
         "question": "På grund av överbefolkningen så ledde det till att många djurarter dog ut men många av några av de kunde anpassa sig snabbt, en av dessa var en fågel som kännetecknar sig för sin röda näbb och ben färgade som blodet av deras nya matkälla som där finns överskott på, människor.",
-        "answers": [
-            {
+        "answers": [{
                 "answer": "Grönfink",
                 "correct": false
             },
@@ -210,21 +200,20 @@
         "id": 10,
         "location": "Vita stenen",
         "question": "Denna vita stenen, formad som ett rätblock, är ett monument dedikerat till revolutionen.  Inristat på den är tidsperioden som revolutionen varade, det var 4 långa år men ut ur revolutionen uppstod ett starkare Sverige.",
-        "answers": [
-            {
-                "answer": "1914-1918",
+        "answers": [{
+                "answer": "År1914-1918",
                 "correct": false
             },
             {
-                "answer": "1924-1928",
+                "answer": "År1924-1928",
                 "correct": true
             },
             {
-                "answer": "1920-1924",
+                "answer": "År1920-1924",
                 "correct": false
             },
             {
-                "answer": "1918-1922",
+                "answer": "År1918-1922",
                 "correct": false
             }
         ]
