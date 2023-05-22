@@ -3,7 +3,7 @@ let player = 0;
 
 
 function render() {
-    localStorage.clear();
+    // localStorage.clear();
     let popup = document.createElement("div");
     popup.id = "popup";
 
