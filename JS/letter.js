@@ -143,6 +143,7 @@ function getFormattedDate() {
 }
 
 function openLetter(letter_img, open_letter, popup) {
+    getPlayerLetter(player);
 
     letter_img.style.display = "none";
     open_letter.style.display = "none";
@@ -261,7 +262,7 @@ function openLetter(letter_img, open_letter, popup) {
     });
 
     document.body.appendChild(popup);
-    getPlayerLetter(player);
+
 }
 //get the player depending on id
 function getPlayerLetter(player) {
