@@ -3,6 +3,7 @@ let player = 0;
 
 
 function render() {
+    localStorage.clear();
     let popup = document.createElement("div");
     popup.id = "popup";
 
@@ -74,7 +75,6 @@ function getLetter(popup, logga_img, start_game) {
 
 
     letter_img.addEventListener("click", function() {
-        localStorage.clear();
         openLetter(letter_img, open_letter, popup)
     })
 }
