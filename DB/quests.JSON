@@ -161,7 +161,7 @@
                 "correct": true
             },
             {
-                "answer": " Carl-XVI-Gustaf",
+                "answer": "Carl-XVI-Gustaf",
                 "correct": false
             },
             {
@@ -187,7 +187,7 @@
                 "correct": false
             },
             {
-                "answer": " Talgoxe",
+                "answer": "Talgoxe",
                 "correct": false
             },
             {
@@ -201,19 +201,19 @@
         "location": "Vita stenen",
         "question": "Denna vita stenen, formad som ett rätblock, är ett monument dedikerat till revolutionen.  Inristat på den är tidsperioden som revolutionen varade, det var 4 långa år men ut ur revolutionen uppstod ett starkare Sverige.",
         "answers": [{
-                "answer": "År1914-1918",
+                "answer": "År-1914-1918",
                 "correct": false
             },
             {
-                "answer": "År1924-1928",
+                "answer": "År-1924-1928",
                 "correct": true
             },
             {
-                "answer": "År1920-1924",
+                "answer": "År-1920-1924",
                 "correct": false
             },
             {
-                "answer": "År1918-1922",
+                "answer": "År-1918-1922",
                 "correct": false
             }
         ]
