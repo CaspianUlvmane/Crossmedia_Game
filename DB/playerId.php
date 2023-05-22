@@ -40,7 +40,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['getPlayerInfo'])) {
 
       $json = json_encode($players, JSON_PRETTY_PRINT);
       file_put_contents("players.JSON", $json);
-      exit;
+      
+      sendJSON($players);
   }
 
   $receivedJsonData = file_get_contents("php://input");
