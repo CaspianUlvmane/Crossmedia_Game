@@ -174,7 +174,8 @@ body {
 
 #checkboxContainer {
     position: absolute;
-    bottom: 16.5vh;
+    /* bottom: 16.5vh; */
+    bottom: 15.5vh;
     left: 55vw;
     z-index: 1005;
 }
@@ -272,7 +273,8 @@ body {
     overflow-y: scroll;
     color: white;
     position: absolute;
-    width: 65vw;
+    /* width: 65vw; */
+    width: 70vw;
     height: 6vh;
     z-index: 1005;
     margin: 0 0 5vh 0;
