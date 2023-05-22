@@ -47,7 +47,6 @@ setTimeout(() => {
         getPlayer(localStorage.getItem('playerId'))
     } else {
         render()
-        localStorage.clear();
     }
 }, 2)
 
@@ -75,6 +74,7 @@ function getLetter(popup, logga_img, start_game) {
 
 
     letter_img.addEventListener("click", function() {
+        localStorage.clear();
         openLetter(letter_img, open_letter, popup)
     })
 }
@@ -252,7 +252,7 @@ function openLetter(letter_img, open_letter, popup) {
         if (this.checked) {
             checked = true;
             checkbox.disabled = true; // Disable the checkbox when checked
-            
+
             next.addEventListener("click", function() {
                 acceptedLetter(popup, letter_container);
                 start_game();
