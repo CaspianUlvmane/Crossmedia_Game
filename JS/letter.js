@@ -367,8 +367,8 @@ function acceptedLetter(popup, letter_container) {
     down.classList.add("down");
     down.src = "./IMG/Down.png";
     down.alt = "down Image";
-    down.style.width = "40px";
-    down.style.height = "40px";
+    down.style.width = "27px";
+    down.style.height = "20px";
     down.style.position = "absolute";
 
     let proffesion = district_array.profession
