@@ -45,6 +45,7 @@ function render() {
 setTimeout(() => {
     if (getPlayerInfo() != null && start_game()) {
         console.log("getPlayer");
+        player = localStorage.getItem('playerId')
         getPlayer(localStorage.getItem('playerId'))
     } else {
         render()
