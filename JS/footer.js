@@ -1,7 +1,6 @@
 //get the player depending on id
 
 let circlesArray = []
-let decrease_intervals = []
 
 function getPlayer(player) {
     fetch(new Request("./DB/players.JSON"))
@@ -101,8 +100,7 @@ function buildFooter(player, district_number, district_profession) {
 
         const interval_water_id = setInterval(decreaseWater, 5000);
         const interval_hunger_id = setInterval(decreaseHunger, 5000);
-        decrease_intervals.push(interval_water_id)
-        decrease_intervals.push(interval_hunger_id)
+
         function decreaseHunger() {
             const current_width = parseInt(hunger_level.style.width, 10);
             const new_width = current_width - 20;
