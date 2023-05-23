@@ -173,59 +173,6 @@ function isQuestLocked(questID) {
     return lockedQuests.includes(questID);
 }
 
-function profitPopUp() {
-
-    if (!document.querySelector(".profit_popup")) {
-        let profit_popup
-        profit_popup = document.createElement('div');
-        profit_popup.classList.add('profit_popup');
-        profit_popup.innerHTML = `
-             <div class="profit_container">
-             <p class="profit_text"> <span style="color:green;">RÄTT</span> <br> <br>VÄLJ EN GÅVA</p>
-             <img src="./IMG/apple.png" class="apple_popup">
-             <img src="./IMG/water.png" class="water_popup">
-             </div>
-             `;
-
-        document.querySelector('body').append(profit_popup);
-        hide_overlay();
-        clickProfit();
-
-    } else {
-        console.log("nope")
-    }
-}
-
-function clickProfit() {
-    //When the user get more food/water by quest and bar goes up
-
-    let apple_icon = document.querySelector(".apple_popup");
-    let water_icon = document.querySelector(".water_popup");
-
-    let hunger_level = document.querySelector(".hunger_level");
-    let water_level = document.querySelector(".water_level");
-
-    apple_icon.addEventListener('click', () => {
-        const current_width = parseInt(hunger_level.style.width, 10);
-        const new_width = current_width + 20;
-        if (new_width <= 100) {
-            hunger_level.style.width = `${new_width}%`;
-            localStorage.setItem('hungerLevel', new_width);
-        }
-        document.querySelector(".profit_popup").remove()
-    });
-
-    water_icon.addEventListener('click', () => {
-        const current_width = parseInt(water_level.style.width, 10);
-        const new_width = current_width + 20;
-        if (new_width <= 100) {
-            water_level.style.width = `${new_width}%`;
-            localStorage.setItem('waterLevel', new_width);
-        }
-        document.querySelector(".profit_popup").remove()
-    });
-}
-
 //GAMLA KOD
 
 // function quests_show_more(quest, div) {
