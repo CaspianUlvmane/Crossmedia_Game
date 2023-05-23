@@ -398,51 +398,51 @@ function acceptedLetter(popup, letter_container) {
     info_container.append(district_text)
 
     info_container.addEventListener("click", function() {
-        if (is_down == false) {
-            info_container.style.height = "20vh"
-            district_text.innerHTML = district_array.backstory
-            district_text.style.position = "absolute";
+            if (is_down == false) {
+                info_container.style.height = "20vh"
+                district_text.innerHTML = district_array.backstory
+                district_text.style.position = "absolute";
 
 
-            is_down = true;
-        } else {
-            info_container.style.height = "5vh"
-            district_text.innerHTML = ""
-            is_down = false
-        }
-    })
-    startGame()
+                is_down = true;
+            } else {
+                info_container.style.height = "5vh"
+                district_text.innerHTML = ""
+                is_down = false
+            }
+        })
+        // startGame()
 }
 
 //NOTE:FLYTTA TILL ADMIN SIDAN
 
-function startGame() {
-    let container = document.querySelector(".hourglas_container");
+// function startGame() {
+//     let container = document.querySelector(".hourglas_container");
 
-    //Button for starting the game
-    let start_button = document.createElement("button");
-    start_button.innerHTML = "STARTA SPEL TEST"
-    start_button.classList.add("start_button")
-    container.appendChild(start_button)
+//     //Button for starting the game
+//     let start_button = document.createElement("button");
+//     start_button.innerHTML = "STARTA SPEL TEST"
+//     start_button.classList.add("start_button")
+//     container.appendChild(start_button)
 
-    start_button.addEventListener('click', function() {
-        // // Send an AJAX request to the server to start the game
-        // var xhr = new XMLHttpRequest();
-        // xhr.open('POST', './DB/gameStatus.php', true);
-        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        // xhr.send();
-        // checkGameStatus();
+//     start_button.addEventListener('click', function() {
+//         // // Send an AJAX request to the server to start the game
+//         // var xhr = new XMLHttpRequest();
+//         // xhr.open('POST', './DB/gameStatus.php', true);
+//         // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+//         // xhr.send();
+//         // checkGameStatus();
 
-        // // Optionally, handle the response from the server
-        // xhr.onreadystatechange = function() {
-        //     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-        //         // Handle the response from the server if needed
-        //     }
-        // };
-        document.querySelector("#popup").style.display = "none";
-        getPlayer(player);
-    });
-}
+//         // // Optionally, handle the response from the server
+//         // xhr.onreadystatechange = function() {
+//         //     if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+//         //         // Handle the response from the server if needed
+//         //     }
+//         // };
+//         document.querySelector("#popup").style.display = "none";
+//         getPlayer(player);
+//     });
+// }
 
 // function checkGameStatus() {
 //     // Send an AJAX request to the server to check the game status
