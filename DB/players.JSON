@@ -132,7 +132,7 @@
         "image": ".\/IMG\/characters\/chef_woman.png",
         "alive": true,
         "backstory": "Ida \u00e4r en 18-\u00e5rig tjej fr\u00e5n Danmark som har en passion f\u00f6r matlagning. Hon har alltid fascinerats av olika kulturers matlagningstekniker och smaker och har rest runt i v\u00e4rlden f\u00f6r att utforska dem. Som en skicklig kock har Ida l\u00e4rt sig att anv\u00e4nda alla sina sinnen f\u00f6r att skapa magiska r\u00e4tter. Hon har en f\u00f6rm\u00e5ga att k\u00e4nna av vad som saknas i en r\u00e4tt och hur man kan g\u00f6ra den \u00e4nnu b\u00e4ttre. Ida \u00e4r ocks\u00e5 en mycket social person som l\u00e4tt knyter kontakter med andra. Hon \u00e4lskar att tr\u00e4ffa nya m\u00e4nniskor och utveckla relationer. Ida \u00e4r ocks\u00e5 mycket empatisk och f\u00f6rst\u00e5ende, och hon har en f\u00f6rm\u00e5ga att lyssna och ge goda r\u00e5d till andra. Trots sin passion f\u00f6r mat och sociala f\u00e4rdigheter \u00e4r Ida inte r\u00e4dd f\u00f6r tuffa utmaningar. Hon har alltid varit en t\u00e4vlingsm\u00e4nniska och en utmaning f\u00f6r henne \u00e4r ett tillf\u00e4lle att v\u00e4xa och l\u00e4ra sig nya saker. Men hon \u00e4r ocks\u00e5 medveten om att Sk\u00f6rden kommer att testa henne p\u00e5 olika s\u00e4tt, och hon \u00e4r beredd att anv\u00e4nda alla sina talanger och f\u00e4rdigheter f\u00f6r att \u00f6verleva och vinna.",
-        "in_use": false
+        "in_use": true
     },
     {
         "id": 16,
