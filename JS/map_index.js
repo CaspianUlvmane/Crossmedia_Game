@@ -5,6 +5,7 @@
 let map, infoWindow;
 let updateTimeout;
 const updateTime = 5000;
+let current_pos;
 
 function initMap() {
   localStorage.setItem("hurt", "0");
@@ -30,6 +31,9 @@ function initMap() {
     clickable: false,
   });
   render_constants();
+  render_hazards();
+  take_damage();
+  setTimeout(() => render_hazards(), updateTime); 
   if (navigator.geolocation) {
     navigator.geolocation.watchPosition(
       (position) => {
@@ -41,9 +45,6 @@ function initMap() {
         icon.setPosition(pos);
         location_update(pos);
         // console.log(icon);
-        setTimeout(() => {
-          render_hazards(), updateTime;
-        });
       },
       () => {
         handle_location_error(true, infoWindow, map.getCenter());
@@ -79,25 +80,25 @@ function location_update(pos) {
     };
     console.log(options);
     fetch("./DB/mapAPI.php", options)
-      .then((r) => r.json())
-      .then((r) => console.log(r));
+    .then((r) => r.json())
+    .then((r) => console.log(r));
   }
+  
 
-//   render_hazards();
-  updateTimeout = setTimeout(() => {
-    take_damage(pos);
-  }, updateTime);
+    current_pos= pos;
+
 }
 
-function take_damage(pos) {
+function take_damage() {
+  let pos = current_pos; 
   let hazard_zones_array = Array.from(
     document.querySelectorAll(".hazard_area")
-  );
-  if (hazard_zones_array[0]) {
-    if (hazard_zones_array.some((z) => hazard_zone_bool(z, pos))) {
-      let hit = localStorage.getItem("hurt");
-      if (hit < 1) {
-        let popup = document.getElementById("danger_popup");
+    );
+    if (hazard_zones_array[0]) {
+      if (hazard_zones_array.some((z) => hazard_zone_bool(z, pos))) {
+        let hit = localStorage.getItem("hurt");
+        if (hit < 1) {
+          let popup = document.getElementById("danger_popup");
         popup.style.display = "flex";
         popup.textContent = "Du står i en farozon!";
         setTimeout(() => {
@@ -120,6 +121,7 @@ function take_damage(pos) {
       localStorage.setItem("hurt", "0");
     }
   }
+  setTimeout(() => {take_damage(); render_hazards()}, updateTime)
 }
 
 function hazard_zone_bool(z, player_pos) {

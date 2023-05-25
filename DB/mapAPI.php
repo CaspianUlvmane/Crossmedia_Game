@@ -27,7 +27,7 @@ if($request_method === "GET"){
     if(isset($_GET["positions"])){
         $json = file_get_contents("positions.JSON");
         $positions = json_decode($json, true);
-        sendJSON($positions);
+        sendJSON($json);
     }
     $json = file_get_contents($filename);
     $hazards = json_decode($json, true);

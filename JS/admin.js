@@ -270,8 +270,9 @@ async function render_hazards() {
 
 async function render_users() {
   let response = await fetch("./DB/mapAPI.php?positions");
+  console.log(response);
   let positions = await response.json();
-  console.log(positions);
+  positions = JSON.parse(positions);
 
   const image = "./IMG/dot.svg";
   positions.forEach((pos) => {
